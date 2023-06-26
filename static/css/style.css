@@ -3,12 +3,14 @@
 body {
     background-color: #380202;
     font-family: Pioret-One, Trebuchet MS, sans-serif;
+    color: #ffcc80;
 }
 
 .container {
     width: 90%;
 }
 
+/* Navbar */
 .my-navbar {
     background-color: rgba(56, 2, 2, 0.978);
 }
@@ -38,7 +40,7 @@ body {
 }
 
 nav li a {
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     padding: 0 20px;
     font-size: small;
     font-weight: bold;
@@ -52,8 +54,10 @@ nav li a:hover {
     font-size: larger;
 }
 
+/* Footer */
 .page-footer {
     background-color: rgba(56, 2, 2, 0.978);
+    letter-spacing: 1px;
 }
 
 footer p {
@@ -66,7 +70,7 @@ footer h6 {
 
 footer i {
     font-size: x-large;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 footer a {
@@ -80,4 +84,16 @@ footer a {
 
 footer a:hover {
     color: #540505ec;
+}
+
+/* Main content on each page */
+.page-header {
+    font-family: Limelight, Trebuchet MS, sans-serif;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.page-subheader {
+    text-align: center;
+    letter-spacing: 1px;
 }
