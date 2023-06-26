@@ -1,16 +1,68 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cinerama Cinema for film enthusiasts in London, United Kingdom">
+    <meta name="keywords" content="cinerama, cinema, film, london, united kingdom">
     <title>Cinerama Cinema</title>
-    <!-- <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' /> -->
-    <link rel="shortcut icon" type="image/png" href="/static/favicon.ico"/>
+
+    <!-- Favicon link -->
+    <link rel="shortcut icon" type="image/png" href="/static/favicon.ico" />
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Font awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
-<body>
 
-    <h1>Hello Cinerama</h1>
-    
+<body>
+    <header>
+        <!-- Navbar from Materialize - "Icon Links" -->
+        <nav>
+            <div class="row">
+                <div class="nav-wrapper">
+                    <div class="col s6 l3">
+                        <div class="brand-logo">
+                            <a href="{% url 'home' %}" class="orange-text text-lighten-3"><i
+                                    class="fa-solid fa-film"></i>CINERAMA</a>
+                        </div>
+                    </div>
+                    <div class="col s6 l6 navlist-center">
+                        <ul class="hide-on-med-and-down">
+                            <li><a class="orange-text text-lighten-3" href="{% url 'home' %}">HOME</a></li>
+                            <li><a class="orange-text text-lighten-3" href="#">BOOK TICKETS</a></li>
+                            <li><a class="orange-text text-lighten-3" href="#">MY BOOKINGS</a></li>
+                            <li><a class="orange-text text-lighten-3" href="#">REGISTRATION</a></li>
+                            <li><a class="orange-text text-lighten-3" href="#">LOGIN</a></li>
+                        </ul>
+                    </div>
+                    <div class="col s6 l3">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div>
+
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
+
 </html>
