@@ -25,17 +25,17 @@
 
 <body>
     <header>
-        <!-- Navbar from Materialize - "Icon Links" -->
+        <!-- Navbar from Materialize - "Icon Links". Altered to fit this project -->
         <nav>
-            <div class="row">
+            <div class="row my-navbar">
                 <div class="nav-wrapper">
                     <div class="col s6 l3">
                         <div class="brand-logo">
-                            <a href="{% url 'home' %}" class="orange-text text-lighten-3"><i
+                            <a href="{% url 'home' %}"><i
                                     class="fa-solid fa-film"></i>CINERAMA</a>
                         </div>
                     </div>
-                    <div class="col s6 l6 navlist-center">
+                    <div class="col s6 l6 navlist-center center-align">
                         <ul class="hide-on-med-and-down">
                             <li><a class="orange-text text-lighten-3" href="{% url 'home' %}">HOME</a></li>
                             <li><a class="orange-text text-lighten-3" href="#">BOOK TICKETS</a></li>
@@ -52,14 +52,34 @@
         </nav>
     </header>
 
-
-
-    <div>
-
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
     </div>
 
-    <footer>
-
+    <!-- Footer from Materialize. Altered to fit this project. -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l4 s12 orange-text text-lighten-3 center-align footer-div">
+                    <i class="fa-regular fa-clock"></i>
+                    <h6>OPENING HOURS</h6>
+                    <p>Tuesday - Sunday 16.00-23.00</p>
+                </div>
+                <div class="col l4 s12 orange-text text-lighten-3 center-align footer-div">
+                    <span><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></span>
+                    <span><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></span>
+                    <span><a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></span>
+                    <h6>FOLLOW US!</h6>
+                </div>
+                <div class="col l4 s12 orange-text text-lighten-3 center-align footer-div">
+                    <i class="fa-solid fa-phone"></i>
+                    <h6>CONTACT</h6>
+                    <p>Film Street 12, 345 67 London</p>
+                    <p>info.cinerama@email.com</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
