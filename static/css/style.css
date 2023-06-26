@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Poiret+One&display=swap');
+
+body {
+    background-color: #380202;
+}
+
+.row {
+    background-color: rgba(56, 2, 2, 0.978);
+}
+
+.brand-logo {
+    font-family: Limelight, Trebuchet MS, sans-serif;
+}
+
+/* Code on line 17-28, to center align navbar list, is taken from this Stackoverflow page:
+ https://stackoverflow.com/questions/38964113/how-can-i-create-a-navbar-with-center-aligned-links-using-materialize */
+.navlist-center ul {
+    text-align: center;
+}
+
+.navlist-center ul li {
+    display: inline;
+    float: none;
+}
+
+.navlist-center ul li a {
+    display: inline-block;
+}
+
+nav li a {
+    font-family: Pioret-One, Trebuchet MS, sans-serif;
+    letter-spacing: 1px;
+    padding: 0 20px;
+    font-size: small;
+    font-weight: bold;
+}
+
+nav li a:hover {
+    background-color: #540505ec;
+}
+
+.brand-logo a i {
+    font-size: larger;
+}
