@@ -2,14 +2,24 @@
 
 body {
     background-color: #380202;
+    font-family: Pioret-One, Trebuchet MS, sans-serif;
 }
 
-.row {
+.container {
+    width: 90%;
+}
+
+.my-navbar {
     background-color: rgba(56, 2, 2, 0.978);
 }
 
-.brand-logo {
+.brand-logo a {
     font-family: Limelight, Trebuchet MS, sans-serif;
+    color: #ffcc80;
+}
+
+.brand-logo a:hover {
+    color: #540505ec;
 }
 
 /* Code on line 17-28, to center align navbar list, is taken from this Stackoverflow page:
@@ -28,7 +38,6 @@ body {
 }
 
 nav li a {
-    font-family: Pioret-One, Trebuchet MS, sans-serif;
     letter-spacing: 1px;
     padding: 0 20px;
     font-size: small;
@@ -41,4 +50,34 @@ nav li a:hover {
 
 .brand-logo a i {
     font-size: larger;
+}
+
+.page-footer {
+    background-color: rgba(56, 2, 2, 0.978);
+}
+
+footer p {
+    margin: 0;
+}
+
+footer h6 {
+    font-weight: bold;
+}
+
+footer i {
+    font-size: x-large;
+    padding: 0 10px;
+}
+
+footer a {
+    color: #ffcc80;
+}
+
+.footer-div {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+footer a:hover {
+    color: #540505ec;
 }
