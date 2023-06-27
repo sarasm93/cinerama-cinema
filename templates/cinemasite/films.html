@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="row col s12 intro">
-        <h1 class="page-header">Cinerama</h1>
+        <h2 class="page-header">Cinerama</h2>
         <h6 class="page-subheader">Blockbusters, indie films, sing-alongs, concerts, old classics - for all film lovers!
         </h6>
     </div>
@@ -14,13 +14,14 @@
     <div class="row">
         {% for film in films %}
         <div class="col s12 m6 l4">
-            <div class="card small hoverable">
+            <div class="card small hoverable yellow lighten-4">
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="{{ film.image.url }}">
+                    <img class="activator valign-wrapper" src="{{ film.image.url }}">
                 </div>
                 <div class="card-content yellow lighten-4">
-                    <span class="card-title activator grey-text text-darken-4">{{ film.title }}<i
-                            class="fa-solid fa-ellipsis-vertical right"></i></span>
+                    <span class="card-title activator grey-text text-darken-4">
+                        <p class="truncate">{{ film.title }}</p><i class="fa-solid fa-ellipsis-vertical right"></i>
+                    </span>
                     <span class="card-subtitle activator grey-text text-darken-4">{{ film.genre }} |
                         {{ film.runtime }}</span>
                 </div>

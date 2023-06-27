@@ -136,6 +136,10 @@ footer a:hover {
     padding: 15px;
 }
 
+.truncate {
+    white-space: nowrap;
+}
+
 .waves-block {
     display: inline-block;
 }
