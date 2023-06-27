@@ -3,8 +3,8 @@
 {% block content %}
 
 <div class="container">
-    <div class="row col s12">
-        <h1 class="page-header">CINERAMA</h1>
+    <div class="row col s12 intro">
+        <h1 class="page-header">Cinerama</h1>
         <h6 class="page-subheader">Blockbusters, indie films, sing-alongs, concerts, old classics - for all film lovers!
         </h6>
     </div>
@@ -14,29 +14,23 @@
     <div class="row">
         {% for film in films %}
         <div class="col s12 m6 l4">
-            <div class="card">
+            <div class="card small hoverable">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src="{{ film.image.url }}">
                 </div>
-                <div class="card-content orange lighten-3">
+                <div class="card-content yellow lighten-4">
                     <span class="card-title activator grey-text text-darken-4">{{ film.title }}<i
                             class="fa-solid fa-ellipsis-vertical right"></i></span>
-                    <span class="card-title activator grey-text text-darken-4">{{ film.genre }} |
+                    <span class="card-subtitle activator grey-text text-darken-4">{{ film.genre }} |
                         {{ film.runtime }}</span>
                 </div>
-                <div class="card-reveal  orange lighten-3">
+                <div class="card-reveal yellow lighten-4">
                     <span class="card-title grey-text text-darken-4">{{ film.title }}<i
                             class="fa-solid fa-xmark right"></i></span>
-                    <p>{{ film.description }}</p>
-                    <div class="row">
-                        <div class="col s6 grey-text text-darken-4">
-                            <p>{{ film.director }}</p>
-                        </div>
-                        <div class="col s6 grey-text text-darken-4">
-                            <p>{{ film.cast }}</p>
-                        </div>
-                    </div>
-                    <p class="grey-text text-darken-4"><a href="{{ film.trailer.url }}">Trailer</a></p>
+                    <p class="grey-text text-darken-4">{{ film.description }}</p>
+                    <p class="grey-text text-darken-4">Director: {{ film.director }}</p>
+                    <p class="grey-text text-darken-4">Cast: {{ film.cast }}</p>
+                    <p class="grey-text text-darken-4"><a id="trailer" href="{{ film.trailer.url }}">Trailer</a></p>
                 </div>
             </div>
         </div>

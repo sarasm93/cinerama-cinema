@@ -9,3 +9,4 @@ def get_films(request):
     }
     return render(request, "films.html", context)
 
+

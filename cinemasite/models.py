@@ -14,14 +14,13 @@ class Genre(models.Model):
 
 class Film(models.Model):
     """ Model for film """
-    genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
     title = models.CharField(max_length=200, unique=True)
+    genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
     description = models.TextField()
     runtime = models.CharField(max_length=25)
     director = models.CharField(max_length=100)
-    cast = models.CharField(max_length=500)
+    cast = models.TextField(max_length=500)
     image = CloudinaryField('image')
-    slug = models.SlugField(max_length=200, unique=True)
     trailer = models.URLField(max_length=300)
 
     # Function taken from Hello Django project:

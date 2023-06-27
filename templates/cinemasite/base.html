@@ -25,36 +25,33 @@
 
 <body>
     <header>
-        <!-- Navbar from Materialize - "Icon Links". Altered to fit this project -->
         <nav>
-            <div class="row my-navbar">
-                <div class="nav-wrapper">
-                    <div class="col s6 l3">
-                        <div class="brand-logo">
-                            <a href="{% url 'home' %}"><i
-                                    class="fa-solid fa-film"></i>CINERAMA</a>
-                        </div>
-                    </div>
-                    <div class="col s6 l6 navlist-center center-align">
-                        <ul class="hide-on-med-and-down">
-                            <li><a class="orange-text text-lighten-3" href="{% url 'home' %}">HOME</a></li>
-                            <li><a class="orange-text text-lighten-3" href="#">BOOK TICKETS</a></li>
-                            <li><a class="orange-text text-lighten-3" href="#">MY BOOKINGS</a></li>
-                            <li><a class="orange-text text-lighten-3" href="#">REGISTRATION</a></li>
-                            <li><a class="orange-text text-lighten-3" href="#">LOGIN</a></li>
-                        </ul>
-                    </div>
-                    <div class="col s6 l3">
-                    </div>
-                </div>
-            </div>
+            <div class="nav-wrapper">
+                <a class="brand-logo" href="{% url 'home' %}"><i
+                        class="fa-solid fa-film hide-on-med-and-down"></i>Cinerama</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a class="orange-text text-lighten-3" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="orange-text text-lighten-3" href="#">Book Tickets</a></li>
+                    <li><a class="orange-text text-lighten-3" href="#">My Bookings</a></li>
+                    <li><a class="orange-text text-lighten-3" href="#">Registration</a></li>
+                    <li><a class="orange-text text-lighten-3" href="#">Login</a></li>
+                </ul>
             </div>
         </nav>
+
+        <ul class="sidenav yellow lighten-4" id="mobile-demo">
+            <li><a class="grey-text text-darken-4" href="{% url 'home' %}">Home</a></li>
+            <li><a class="grey-text text-darken-4" href="#">Book Tickets</a></li>
+            <li><a class="grey-text text-darken-4" href="#">My Bookings</a></li>
+            <li><a class="grey-text text-darken-4" href="#">Registration</a></li>
+            <li><a class="grey-text text-darken-4" href="#">Login</a></li>
+        </ul>
     </header>
 
     <main class="container">
         {% block content %}
-        
+
         {% endblock content %}
     </main>
 
@@ -64,18 +61,21 @@
             <div class="row">
                 <div class="col l4 s12 orange-text text-lighten-3 center-align footer-div">
                     <i class="fa-regular fa-clock"></i>
-                    <h6>OPENING HOURS</h6>
+                    <h6>Opening hours</h6>
                     <p>Tuesday - Sunday 16.00-23.00</p>
                 </div>
                 <div class="col l4 s12 orange-text text-lighten-3 center-align footer-div">
-                    <span><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></span>
-                    <span><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></span>
-                    <span><a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></span>
-                    <h6>FOLLOW US!</h6>
+                    <span><a href="https://www.instagram.com/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a></span>
+                    <span><a href="https://www.facebook.com/" target="_blank"><i
+                                class="fa-brands fa-square-facebook"></i></a></span>
+                    <span><a href="https://www.linkedin.com/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a></span>
+                    <h6>Follow us!</h6>
                 </div>
                 <div class="col l4 s12 orange-text text-lighten-3 center-align footer-div">
                     <i class="fa-solid fa-phone"></i>
-                    <h6>CONTACT</h6>
+                    <h6>Contact</h6>
                     <p>Film Street 12, 345 67 London</p>
                     <p>info.cinerama@email.com</p>
                 </div>
@@ -84,6 +84,7 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 
 </html>

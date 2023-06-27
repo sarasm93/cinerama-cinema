@@ -11,21 +11,36 @@ body {
 }
 
 /* Navbar */
-.my-navbar {
+nav {
     background-color: rgba(56, 2, 2, 0.978);
 }
 
-.brand-logo a {
+.brand-logo {
     font-family: Limelight, Trebuchet MS, sans-serif;
+    text-transform: uppercase;
+    font-size: x-large;
+}
+
+nav .brand-logo {
+    color: #ffcc80;
+    margin-left: 1%;
+}
+
+.fa-bars {
     color: #ffcc80;
 }
 
-.brand-logo a:hover {
+.brand-logo:hover {
     color: #540505ec;
 }
 
+.brand-logo i {
+    font-size: xx-large;
+    line-height: 56px;
+}
+
 /* Code on line 17-28, to center align navbar list, is taken from this Stackoverflow page:
- https://stackoverflow.com/questions/38964113/how-can-i-create-a-navbar-with-center-aligned-links-using-materialize */
+ https://stackoverflow.com/questions/38964113/how-can-i-create-a-navbar-with-center-aligned-links-using-materialize 
 .navlist-center ul {
     text-align: center;
 }
@@ -37,21 +52,25 @@ body {
 
 .navlist-center ul li a {
     display: inline-block;
-}
+}*/
 
 nav li a {
     letter-spacing: 2px;
-    padding: 0 20px;
+    padding: 0 14px;
     font-size: small;
     font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sidenav li a {
+    letter-spacing: 2px;
+    font-size: small;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 nav li a:hover {
     background-color: #540505ec;
-}
-
-.brand-logo a i {
-    font-size: larger;
 }
 
 /* Footer */
@@ -66,6 +85,7 @@ footer p {
 
 footer h6 {
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 footer i {
@@ -79,7 +99,7 @@ footer a {
 
 .footer-div {
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 footer a:hover {
@@ -87,13 +107,50 @@ footer a:hover {
 }
 
 /* Main content on each page */
+.intro {
+    margin-bottom: 50px;
+}
+
 .page-header {
     font-family: Limelight, Trebuchet MS, sans-serif;
     margin-bottom: 10px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .page-subheader {
     text-align: center;
     letter-spacing: 1px;
+}
+
+/* Film cards */
+.card.small .card-image {
+    max-height: 70%;
+}
+
+.card.small .card-image+.card-content {
+    max-height: 30%;
+}
+
+.card .card-content {
+    padding: 15px;
+}
+
+.waves-block {
+    display: inline-block;
+}
+
+.card .card-title {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.card-reveal p {
+    font-size: medium;
+}
+
+#trailer {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #2e01d2;
 }
