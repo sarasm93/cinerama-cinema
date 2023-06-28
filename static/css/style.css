@@ -108,23 +108,29 @@ footer a:hover {
     color: #540505ec;
 }
 
-/* Intro content on each page */
+/* Intro content on pages */
 .intro {
     margin-bottom: 50px;
     padding-left: 0.75rem;
 }
 
-.page-header {
+.hero-header {
     font-family: Limelight, Trebuchet MS, sans-serif;
     margin-bottom: 10px;
     text-align: center;
     text-transform: uppercase;
 }
 
-.page-subheader {
+.hero-subheader {
     text-align: center;
     letter-spacing: 1px;
 }
+
+.page-header {
+    text-transform: uppercase;
+}
+
+
 
 /* Film cards */
 .card.small .card-image {
@@ -164,7 +170,7 @@ footer a:hover {
 
 /* Registration form */
 
-.input-field>label {
+label {
     color: #787777;
 }
 

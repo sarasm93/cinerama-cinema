@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="row col s12 intro">
-        <h2>Registration</h2>
+        <h2 class="page-header">Registration</h2>
         <h6>Fill in the form to register an account and book tickets</h6>
     </div>
 </div>
@@ -15,40 +15,7 @@
             <div class="card-panel red lighten-4">
                 <form class="col s12" method="POST" action="films.html">
                     {% csrf_token %}
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <input id="first_name" type="text" class="validate" data-length="50">
-                            <label for="first_name">First Name</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <input id="last_name" type="text" class="validate" data-length="50">
-                            <label for="last_name">Last Name</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="address" type="text" class="validate" data-length="200">
-                            <label for="address">Address</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="email" type="email" class="validate">
-                            <label for="email">Email</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="phone_number" type="number" class="validate">
-                            <label for="phone_number">Phone Number</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="password" type="password" class="validate" data-length="20">
-                            <label for="password">Password</label>
-                        </div>
-                    </div>
+                     {{ form.as_table }}
                 </form>
                 <div class="center-align">
                     <button class="btn waves-effect red darken-1 btn-medium hoverable register-btn" type="submit"
