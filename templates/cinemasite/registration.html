@@ -9,20 +9,21 @@
     </div>
 </div>
 
+
 <div class="container">
     <div class="row">
         <div class="col s12 m6">
-            <div class="card-panel red lighten-4">
-                <form class="col s12" method="POST" action="films.html">
+            <form class="col s12" method="POST" action="">
+                <div class="card-panel red lighten-4">
                     {% csrf_token %}
-                     {{ form.as_table }}
-                </form>
-                <div class="center-align">
-                    <button class="btn waves-effect red darken-1 btn-medium hoverable register-btn" type="submit"
-                        name="action">Register account
-                    </button>
+                    {{ form.as_ul }}
+                    <div class="center-align">
+                        <button class="btn waves-effect red darken-1 btn-medium hoverable register-btn" type="submit"
+                            name="register">Register account
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>

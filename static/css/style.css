@@ -111,7 +111,7 @@ footer a:hover {
 /* Intro content on pages */
 .intro {
     margin-bottom: 50px;
-    padding-left: 0.75rem;
+    padding-left: 1.4rem;
 }
 
 .hero-header {
@@ -171,7 +171,11 @@ footer a:hover {
 /* Registration form */
 
 label {
-    color: #787777;
+    color: #212121;
+}
+
+form li {
+    list-style-type: none;
 }
 
 input[type=text]:not(.browser-default) {
@@ -200,4 +204,8 @@ form .row {
 
 .registration-form {
     padding-left: 0;
+}
+
+labe::after {
+    content: none;
 }
