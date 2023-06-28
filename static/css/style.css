@@ -75,7 +75,9 @@ nav li a:hover {
 
 /* Footer */
 .page-footer {
-    background-color: rgba(56, 2, 2, 0.978);
+    background-color:#120101ac;
+     /*rgb(68, 2, 2);*/
+    
     letter-spacing: 1px;
 }
 
@@ -106,9 +108,10 @@ footer a:hover {
     color: #540505ec;
 }
 
-/* Main content on each page */
+/* Intro content on each page */
 .intro {
     margin-bottom: 50px;
+    padding-left: 0.75rem;
 }
 
 .page-header {
@@ -157,4 +160,38 @@ footer a:hover {
     font-weight: bold;
     text-decoration: underline;
     color: #2e01d2;
+}
+
+/* Registration form */
+
+.input-field>label {
+    color: #787777;
+}
+
+input[type=text]:not(.browser-default) {
+    border-bottom: 1px solid #212121;
+}
+
+input[type=email]:not(.browser-default) {
+    border-bottom: 1px solid #212121;
+}
+
+input[type=number]:not(.browser-default) {
+    border-bottom: 1px solid #212121;
+}
+
+input[type=password]:not(.browser-default) {
+    border-bottom: 1px solid #212121;
+}
+
+form .row {
+    margin-bottom: 0;
+}
+
+.register-btn {
+    margin: 20px;
+}
+
+.registration-form {
+    padding-left: 0;
 }
