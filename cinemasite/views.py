@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Film, Genre
 from .forms import RegistrationForm
+from django.contrib import messages
 
 
 def get_films(request):
@@ -19,8 +20,10 @@ def register_customer(request):
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Account registered!')
             return redirect("home")
     form = RegistrationForm()
+    messages.error(request, 'There is already an account registered with the entered email address. Try another email.')
     context = {
         "form": form
     }

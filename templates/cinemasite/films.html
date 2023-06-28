@@ -5,10 +5,21 @@
 <div class="container">
     <div class="row col s12 intro">
         <h2 class="hero-header">Cinerama</h2>
-        <h6 class="hero-subheader">Blockbusters, sing-alongs, concerts, old classics, documentaries - for all film lovers!
+        <h6 class="hero-subheader">Blockbusters, sing-alongs, concerts, old classics, documentaries - for all film
+            lovers!
         </h6>
     </div>
 </div>
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
 
 <div class="container">
     <div class="row">
