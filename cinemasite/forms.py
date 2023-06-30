@@ -3,7 +3,7 @@ from django import forms
 from django.contrib.auth.models import User
 
 
-# Code on line 7-16 taken from the below Geeksforgeeks.org page, to add first 
+# Code on line 9-18 taken from the below Geeksforgeeks.org page, to add first 
 # name and last name to allauth signup form:
 # https://www.geeksforgeeks.org/python-extending-and-customizing-django-allauth/
 class CustomSignupForm(SignupForm):

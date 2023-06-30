@@ -215,11 +215,14 @@ form .row {
     margin-top: 1rem;
 }
 
-.error {
+.alert-danger .alert-warning {
     color: #d50000;
 }
 
-.success {
+.alert-success {
     color: #01a81d;
 }
 
+.alert-info {
+    color: #343433;
+}

@@ -35,21 +35,25 @@
                     <li><a class="orange-text text-lighten-3" href="#">Book Tickets</a></li>
                     {% if user.is_authenticated %}
                     <li><a class="orange-text text-lighten-3" href="#">My Bookings</a></li>
-                    <li><a class="orange-text text-lighten-3" href="#">Logout</a></li>
+                    <li><a class="orange-text text-lighten-3" href="{% url 'account_logout' %}">Logout</a></li>
                     {% else %}
-                    <li><a class="orange-text text-lighten-3" href="{% url 'registration' %}">Registration</a></li>
-                    <li><a class="orange-text text-lighten-3" href="#">Login</a></li>
+                    <li><a class="orange-text text-lighten-3" href="{% url 'account_signup' %}">Registration</a></li>
+                    <li><a class="orange-text text-lighten-3" href="{% url 'account_login' %}">Login</a></li>
                     {% endif %}
                 </ul>
             </div>
         </nav>
 
         <ul class="sidenav yellow lighten-4" id="mobile-demo">
-            <li><a class="grey-text text-darken-4" href="{% url 'home' %}">Home</a></li>
-            <li><a class="grey-text text-darken-4" href="#">Book Tickets</a></li>
-            <li><a class="grey-text text-darken-4" href="#">My Bookings</a></li>
-            <li><a class="grey-text text-darken-4" href="{% url 'registration' %}">Registration</a></li>
-            <li><a class="grey-text text-darken-4" href="#">Login</a></li>
+            <li><a class="orange-text text-lighten-3" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="orange-text text-lighten-3" href="#">Book Tickets</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a class="orange-text text-lighten-3" href="#">My Bookings</a></li>
+                    <li><a class="orange-text text-lighten-3" href="{% url 'account_logout' %}">Logout</a></li>
+                    {% else %}
+                    <li><a class="orange-text text-lighten-3" href="{% url 'account_signup' %}">Registration</a></li>
+                    <li><a class="orange-text text-lighten-3" href="{% url 'account_login' %}">Login</a></li>
+                    {% endif %}
         </ul>
     </header>
 
@@ -62,7 +66,6 @@
             {% for message in messages %}
             <div class="alert alert-{{ message.tags }} alert-dismissible" id="msg" role="alert">
                 {{ message }}
-                <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             {% endfor %}
             {% endif %}
@@ -107,9 +110,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
     <script>
+        /* Code on line 113 is taken from the this site: 
+        https://www.appsloveworld.com/django/100/29/how-to-hide-django-message-after-it-is-displayed-for-few-seconds */
         setTimeout(function () {
             let messages = document.getElementById('msg');
-            let alert = new bootstrap.Alert(messages);
+            messages.style.display = "none";
             alert.close();
         }, 3000);
     </script>
