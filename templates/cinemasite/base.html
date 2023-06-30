@@ -33,9 +33,13 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a class="orange-text text-lighten-3" href="{% url 'home' %}">Home</a></li>
                     <li><a class="orange-text text-lighten-3" href="#">Book Tickets</a></li>
+                    {% if user.is_authenticated %}
                     <li><a class="orange-text text-lighten-3" href="#">My Bookings</a></li>
+                    <li><a class="orange-text text-lighten-3" href="#">Logout</a></li>
+                    {% else %}
                     <li><a class="orange-text text-lighten-3" href="{% url 'registration' %}">Registration</a></li>
                     <li><a class="orange-text text-lighten-3" href="#">Login</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
@@ -44,10 +48,27 @@
             <li><a class="grey-text text-darken-4" href="{% url 'home' %}">Home</a></li>
             <li><a class="grey-text text-darken-4" href="#">Book Tickets</a></li>
             <li><a class="grey-text text-darken-4" href="#">My Bookings</a></li>
-            <li><a class="grey-text text-darken-4" href="#">Registration</a></li>
+            <li><a class="grey-text text-darken-4" href="{% url 'registration' %}">Registration</a></li>
             <li><a class="grey-text text-darken-4" href="#">Login</a></li>
         </ul>
     </header>
+
+    <!-- Alert messages.
+    Code taken from Django project documentation (see link) and altered to fit this project:
+    https://docs.djangoproject.com/en/4.2/ref/contrib/messages/#displaying-messages -->
+    <div class="container">
+        <div class="row col s6 center-align grey lighten-2">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible" id="msg" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+
 
     <main class="container">
         {% block content %}
@@ -85,6 +106,13 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
+    <script>
+        setTimeout(function () {
+            let messages = document.getElementById('msg');
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+        }, 3000);
+    </script>
 </body>
 
 </html>

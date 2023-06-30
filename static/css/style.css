@@ -186,7 +186,7 @@ input[type=email]:not(.browser-default) {
     border-bottom: 1px solid #212121;
 }
 
-input[type=number]:not(.browser-default) {
+input[type=tel]:not(.browser-default) {
     border-bottom: 1px solid #212121;
 }
 
@@ -206,6 +206,20 @@ form .row {
     padding-left: 0;
 }
 
-labe::after {
-    content: none;
+.card-panel {
+    background-color: rgb(232, 240, 254);
 }
+
+/* Messages */
+.messages {
+    margin-top: 1rem;
+}
+
+.error {
+    color: #d50000;
+}
+
+.success {
+    color: #01a81d;
+}
+

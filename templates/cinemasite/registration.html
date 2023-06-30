@@ -9,16 +9,16 @@
     </div>
 </div>
 
-
-<div class="container">
+<!--<div class="container">
     <div class="row">
         <div class="col s12 m6">
             <form class="col s12" method="POST" action="">
-                <div class="card-panel red lighten-4">
+                <div class="card-panel">
                     {% csrf_token %}
-                    {{ form.as_ul }}
+                    {{ registration_form.as_p }}
                     <div class="center-align">
-                        <button class="btn waves-effect red darken-1 btn-medium hoverable register-btn" type="submit"
+                        <button"
+                            class="btn waves-effect red darken-1 btn-medium hoverable register-btn" type="submit"
                             name="register">Register account
                         </button>
                     </div>
@@ -26,6 +26,66 @@
             </form>
         </div>
     </div>
-</div>
+</div>-->
 
+<!--
+<div class="container">
+    <div class="row">
+        <div class="col s12 m6">
+            <div class="card-panel">
+                <form class="col s12" method="POST" action="films.html">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="first_name" type="text" class="validate" data-length="50">
+                            <label for="first_name">First Name</label>
+                            <span class="helper-text" data-error="wrong" data-success="right"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="last_name" type="text" class="validate" data-length="50">
+                            <label for="last_name">Last Name</label>
+                            <span class="helper-text" data-error="wrong" data-success="right"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="address" type="text" class="validate" data-length="200">
+                            <label for="address">Address</label>
+                            <span class="helper-text" data-error="wrong" data-success="right"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                            <span class="helper-text" data-error="wrong" data-success="right"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="phone_number" type="number" class="validate">
+                            <label for="phone_number">Phone Number</label>
+                            <span class="helper-text" data-error="wrong" data-success="right"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" class="validate" data-length="20">
+                            <label for="password">Password</label>
+                            <span class="helper-text" data-error="wrong" data-success="right"></span>
+                        </div>
+                    </div>
+                </form>
+                <div class="center-align">
+                    <button class="btn waves-effect red darken-1 btn-medium hoverable register-btn" type="submit"
+                        name="action">Register account
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
 {% endblock %}
