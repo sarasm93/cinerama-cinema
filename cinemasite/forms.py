@@ -7,8 +7,12 @@ from django.contrib.auth.models import User
 # name and last name to allauth signup form:
 # https://www.geeksforgeeks.org/python-extending-and-customizing-django-allauth/
 class CustomSignupForm(SignupForm):
-    first_name = forms.CharField(max_length=30, label='First Name')
-    last_name = forms.CharField(max_length=30, label='Last Name')
+    first_name = forms.CharField(
+        max_length=30, label='First Name', widget=forms.TextInput(
+            attrs={'placeholder': 'First name'}))
+    last_name = forms.CharField(
+        max_length=30, label='Last Name', widget=forms.TextInput(
+            attrs={'placeholder': 'Last name'}))
  
     def save(self, request):
         user = super(CustomSignupForm, self).save(request)  

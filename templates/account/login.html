@@ -16,15 +16,16 @@
   <p>{% blocktrans %}Don't have an account? Please sign up
     <a href="{{ signup_url }}">here</a> first.{% endblocktrans %}</p>
   <div class="row">
-    <div class="col s12 m6 card-panel signup-form">
-      <form class="login" method="POST" action="{% url 'account_login' %}">
+    <div class="col s12 m6 card">
+      <form class="login-form" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form.as_p }}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
         <div class="col s12 center-align">
-        <button class="btn waves-effect red darken-1 btn-medium hoverable signup-btn" type="submit">{% trans "Sign In" %}</button>
+          <button class="btn waves-effect red darken-1 btn-medium hoverable form-btn"
+            type="submit">{% trans "Sign In" %}</button>
         </div>
       </form>
     </div>
