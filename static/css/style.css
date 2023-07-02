@@ -170,23 +170,15 @@ footer a:hover {
 
 /* Registration form */
 
+form {
+    padding: 1rem;
+}
+
 label {
     color: #212121;
 }
 
-form li {
-    list-style-type: none;
-}
-
 input[type=text]:not(.browser-default) {
-    border-bottom: 1px solid #212121;
-}
-
-input[type=email]:not(.browser-default) {
-    border-bottom: 1px solid #212121;
-}
-
-input[type=tel]:not(.browser-default) {
     border-bottom: 1px solid #212121;
 }
 
@@ -194,19 +186,9 @@ input[type=password]:not(.browser-default) {
     border-bottom: 1px solid #212121;
 }
 
-form .row {
-    margin-bottom: 0;
+.signup-btn {
+    margin: 3rem;
 }
 
-.register-btn {
-    margin: 20px;
-}
 
-.registration-form {
-    padding-left: 0;
-}
-
-.card-panel {
-    background-color: rgb(232, 240, 254);
-}
 
