@@ -43,3 +43,20 @@ class FilmShowtime(models.Model):
     def __str__(self):
         return self.date.film_title.time
 
+
+class Snack(models.Model):
+    """ Model for snacks that can be added to ticket booking """
+    snack = models.CharField(max_length=25, unique=True)
+    price = models.IntegerField()
+
+
+class Booking(models.Model):
+    """ Model for ticket booking """
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.ForeignKey(FilmShowtime, on_delete=models.SET_NULL, null=True, related_name='filmdate')
+    filmtitle = models.ForeignKey(FilmShowtime, on_delete=models.SET_NULL, null=True)
+    time = models.ForeignKey(FilmShowtime, on_delete=models.SET_NULL, null=True, related_name='filmtime')
+    numoftickets = models.IntegerField()
+    snacks = models.ForeignKey(Snack, on_delete=models.SET_NULL, null=True)
+    cost = models.IntegerField()
+

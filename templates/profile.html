@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row col s12 intro">
+        <h2 class="page-header">My Bookings</h2>
+        <h6>Here you can handle all your bookings</h6>
+    </div>
+</div>
+
+<div class="col l12">
+    <table class="yellow lighten-4 grey-text text-darken-4 striped responsive-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Film</th>
+                <th>Time</th>
+                <th>Tickets</th>
+                <th>Snacks</th>
+                <th>Total cost (£)</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for booking in bookings %}
+            <tr>
+                <td>{{ booking.date }}</td>
+                <td>{{ booking.filmtitle }}</td>
+                <td>{{ booking.time }}</td>
+                <td>{{ booking.numoftickets }}</td>
+                <td>{{ booking.snacks }}</td>
+                <td>{{ booking.cost }}</td>
+                <button type="submit"
+                    class="btn waves-effect red darken-1 btn-medium hoverable form-btn">Edit</button><button
+                    type="submit" class="btn waves-effect red darken-1 btn-medium hoverable form-btn">Cancel</button>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
