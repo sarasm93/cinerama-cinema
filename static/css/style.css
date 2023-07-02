@@ -75,9 +75,9 @@ nav li a:hover {
 
 /* Footer */
 .page-footer {
-    background-color:#120101ac;
-     /*rgb(68, 2, 2);*/
-    
+    background-color: #120101ac;
+    /*rgb(68, 2, 2);*/
+
     letter-spacing: 1px;
 }
 
@@ -210,19 +210,3 @@ form .row {
     background-color: rgb(232, 240, 254);
 }
 
-/* Messages */
-.messages {
-    margin-top: 1rem;
-}
-
-.alert-danger .alert-warning {
-    color: #d50000;
-}
-
-.alert-success {
-    color: #01a81d;
-}
-
-.alert-info {
-    color: #343433;
-}
