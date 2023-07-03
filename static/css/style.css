@@ -4,6 +4,13 @@ body {
     background-color: #380202;
     font-family: Pioret-One, Trebuchet MS, sans-serif;
     color: #ffcc80;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 .container {
@@ -111,7 +118,6 @@ footer a:hover {
 /* Intro content on pages */
 .intro {
     margin-bottom: 50px;
-    padding-left: 1.4rem;
 }
 
 .hero-header {
@@ -206,5 +212,39 @@ input[type=password]:not(.browser-default) {
     margin: 3rem;
 }
 
+/* Booking page */
+#remember-info {
+    margin: 0;
+}
 
+.booking-card i {
+    font-size: x-large;
+    padding: 0 10px;
+}
 
+#datepicker {
+    height: 1.5rem;
+    width: 30%;
+}
+
+.datepicker-date-display,
+.datepicker-table td.is-selected {
+    background-color: #133f23;
+}
+
+.month-next:active, .month-prev:active {
+    background-color: #133f23;
+}
+
+.collapsible-header .row {
+    margin-bottom: 0;
+    margin-left: 0;
+}
+.collapsible-body {
+    background-color: #fffde7;
+}
+
+img.responsive-img {
+    max-width: 220px;
+    padding-right: 20px;
+}

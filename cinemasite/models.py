@@ -33,15 +33,17 @@ class Film(models.Model):
 class FilmShowtime(models.Model):
     """ Model for film program """
     date = models.DateField()
-    filmtitle = models.ForeignKey(Film, on_delete=models.SET_NULL, null=True)
+    filmtitle = models.ForeignKey(
+        Film, on_delete=models.SET_NULL, null=True, related_name='filmtitle', verbose_name='Film title')
+    filmimage = CloudinaryField('image')
     time = models.TimeField()
-    totnumofseats = models.IntegerField()
-    priceperseat = models.IntegerField()
+    totnumofseats = models.IntegerField(verbose_name='Total number of seats')
+    priceperseat = models.IntegerField(verbose_name='Price per seat')
 
     # Function taken from Hello Django project:
     # https://github.com/ckz8780/ci-fsf-hello-django/blob/9f484408bea5cbc9cc5fb45c0feebc3998ff5f49/todo/models.py
     def __str__(self):
-        return self.date.film_title.time
+        return f"{self.date}, {self.filmtitle}, {self.time}"
 
 
 class Snack(models.Model):

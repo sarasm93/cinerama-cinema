@@ -2,11 +2,9 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="row col s12 intro">
-        <h2 class="page-header">My Bookings</h2>
-        <h6>Here you can handle all your bookings</h6>
-    </div>
+<div class="row col s12 intro">
+    <h3 class="page-header">My Bookings</h3>
+    <h6>Here you can handle all your bookings</h6>
 </div>
 
 <div class="col l12">
@@ -32,9 +30,10 @@
                 <td>{{ booking.numoftickets }}</td>
                 <td>{{ booking.snacks }}</td>
                 <td>{{ booking.cost }}</td>
-                <button type="submit"
-                    class="btn waves-effect red darken-1 btn-medium hoverable form-btn">Edit</button><button
-                    type="submit" class="btn waves-effect red darken-1 btn-medium hoverable form-btn">Cancel</button>
+                <a href=""><button type="submit"
+                        class="btn waves-effect red darken-1 btn-medium hoverable form-btn">Edit</button></a><a
+                    href=""><button type="submit"
+                        class="btn waves-effect red darken-1 btn-medium hoverable form-btn">Cancel</button></a>
             </tr>
             {% endfor %}
         </tbody>

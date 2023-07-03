@@ -14,7 +14,7 @@
   <div class="row">
     <div class="col m3"></div>
     <div class="col s12 m6">
-      <p class="center-align">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign
+      <p class="center-align">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">log
           in</a>.{% endblocktrans %}</p>
       <div class="card signup-card">
         <form class="signup-form" id="signup_form" method="post" action="{% url 'account_signup' %}">
@@ -24,8 +24,8 @@
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
           {% endif %}
           <div class="col s12 center-align">
-          <button class="btn waves-effect red darken-1 btn-medium hoverable form-btn"
-            type="submit">{% trans "Register account" %}</button>
+            <button class="btn waves-effect red darken-1 btn-medium hoverable form-btn"
+              type="submit">{% trans "Register account" %}</button>
           </div>
         </form>
       </div>
