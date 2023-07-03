@@ -222,9 +222,9 @@ input[type=password]:not(.browser-default) {
     padding: 0 10px;
 }
 
-#datepicker {
+#id_date {
     height: 1.5rem;
-    width: 30%;
+    width: 20%;
 }
 
 .datepicker-date-display,

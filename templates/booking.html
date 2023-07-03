@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load widget_tweaks %}
+
 {% block content %}
 
 <div class="row col s12 intro">
@@ -18,29 +20,16 @@
         {% endif %}
         <div class="row">
             <p><i class="fa-regular fa-calendar-days"></i> Choose a date:</p>
-            <input type="text" class="datepicker" id="datepicker">
-        </div>
-        <div class="row">
-            <ul class="collapsible">
-                {% for showtime in showtimes %}
-                <li>
-                    <div class="collapsible-header z-depth-3">
-                        <img class="responsive-img hide-on-small-only" src="{{ showtime.filmimage.url }}">
-                        <h5>{{ showtime.filmtitle }}</h5>
-                    </div>
-                    <div class="collapsible-body yellow lighten-5">
-                        <span>Choose a time: {{ showtime.time }}</span><span>Choose number of
-                            tickets:</span><span><button type="submit"
-                                class="btn waves-effect red darken-1 btn-medium hoverable form-btn">Book
-                                tickets</button></span></div>
-                </li>
-                {% endfor %}
-            </ul>
+            <form method="get">
+                
+                {{ myfilter.form }}
+                
+            </form>
+
         </div>
     </div>
-</div>
 
-<!--
+    <!--
 <div class="container">
     <div class="card-panel grey-text text-darken-4 booking-card">
         {% if user.is_authenticated == False %}
@@ -78,4 +67,4 @@
 </div>
 -->
 
-{% endblock %}
+    {% endblock %}

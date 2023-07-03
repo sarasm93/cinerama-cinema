@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'django_filters',
+    'widget_tweaks',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cinemasite',

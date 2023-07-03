@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Film, FilmShowtime, Booking
 from django.contrib import messages
+from .filters import ShowtimeFilter
 
 
 def get_films(request):
@@ -11,14 +12,12 @@ def get_films(request):
     return render(request, 'films.html', context)
 
 
-def book_tickets(request):
+"""def book_tickets(request):
     showtimes = FilmShowtime.objects.all()
-    films = Film.objects.all()
     context = {
         'showtimes': showtimes,
-        'films': films
     }
-    return render(request, 'booking.html', context)
+    return render(request, 'booking.html', context)"""
 
 
 def view_bookings(request):
@@ -28,3 +27,13 @@ def view_bookings(request):
     }
     return render(request, 'profile.html', context)
 
+
+def view_showtimes(request):
+    showtimes = FilmShowtime.objects.all()
+    myfilter = ShowtimeFilter(request.GET, queryset=showtimes)
+    showtimes = myfilter.qs
+    context = {
+        'myfilter': myfilter,
+        'showtimes': showtimes,
+    }
+    return render(request, 'booking.html', context)
