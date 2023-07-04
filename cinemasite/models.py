@@ -49,7 +49,12 @@ class FilmShowtime(models.Model):
 class Snack(models.Model):
     """ Model for snacks that can be added to ticket booking """
     snack = models.CharField(max_length=25, unique=True)
-    price = models.IntegerField()
+    price = models.FloatField()
+
+    # Function taken from Hello Django project:
+    # https://github.com/ckz8780/ci-fsf-hello-django/blob/9f484408bea5cbc9cc5fb45c0feebc3998ff5f49/todo/models.py
+    def __str__(self):
+        return self.snack
 
 
 class Booking(models.Model):

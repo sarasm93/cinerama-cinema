@@ -19,13 +19,83 @@
         </div>
         {% endif %}
         <div class="row">
-            <p><i class="fa-regular fa-calendar-days"></i> Choose a date:</p>
+            <p><i class="fa-regular fa-calendar-days booking-form-icon"></i> Choose a date:</p>
             <form method="get">
-                
                 {{ myfilter.form }}
-                
+                <button type="submit"
+                    class="btn waves-effect red darken-1 btn-medium hoverable search-btn">Search</button>
             </form>
-
+        </div>
+        <div class="row">
+            <ul class="collapsible">
+                {% for showtime in showtimes %}
+                <li>
+                    <div class="collapsible-header z-depth-4">
+                        <img class="responsive-img hide-on-small-only" src="{{ showtime.filmimage.url }}">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <h5>{{ showtime.filmtitle }}</h5>
+                                    <p>{{ showtime.date }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapsible-body yellow lighten-5">
+                        <form action="get">
+                            <div class="row">
+                                <div class="col s12 l6 form-div">
+                                    <h6><i class="fa-solid fa-clock booking-form-icon"></i>Choose a time:</h6>
+                                    <label><input type="checkbox" id="time" class="filled-in radio" name="time"
+                                            value="{{ showtime.time }}" required>
+                                        <span>{{ showtime.time }}</span></label>
+                                </div>
+                                <div class="col s12 l6">
+                                    <h6 class="choice-header"><i class="fa-solid fa-ticket booking-form-icon"></i>Choose
+                                        tickets (qty):</h6>
+                                    <div class="input-field col s12 m4">
+                                        <select>
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                        </select>
+                                    </div>
+                                    <span id="price-per-seat"> £{{ showtime.priceperseat }} per ticket</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 l6">
+                                    <h6 class="choice-header"><i class="fa-solid fa-glass-water booking-form-icon"></i><i
+                                            class="fa-solid fa-bowl-rice booking-form-icon"></i>Some snacks?
+                                    </h6>
+                                    <div class="input-field col s12 l8">
+                                        <select>
+                                            <option value="" disabled selected>Options</option>
+                                            {% for snack in snacks %}
+                                            <option value="{{ snack.snack }}">{{ snack.snack }} £{{ snack.price }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col s12 l6">
+                                    {% if user.is_authenticated %}
+                                    <button type="submit"
+                                        class="btn waves-effect green darken-4 btn-medium hoverable book-tickets-btn">Book
+                                        tickets<i class="fa-solid fa-check submit-icon"></i></button>
+                                    {% endif %}
+                                </div>
+                            </div>
+                    </div>
+                    </form>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 

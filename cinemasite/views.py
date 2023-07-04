@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Film, FilmShowtime, Booking
+from .models import Film, FilmShowtime, Booking, Snack
 from django.contrib import messages
 from .filters import ShowtimeFilter
 
@@ -32,8 +32,11 @@ def view_showtimes(request):
     showtimes = FilmShowtime.objects.all()
     myfilter = ShowtimeFilter(request.GET, queryset=showtimes)
     showtimes = myfilter.qs
+    snacks = Snack.objects.all()
     context = {
         'myfilter': myfilter,
         'showtimes': showtimes,
-    }
+        'snacks': snacks,
+        }
     return render(request, 'booking.html', context)
+

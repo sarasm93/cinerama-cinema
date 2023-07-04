@@ -217,9 +217,9 @@ input[type=password]:not(.browser-default) {
     margin: 0;
 }
 
-.booking-card i {
+.booking-form-icon {
     font-size: x-large;
-    padding: 0 10px;
+    padding-right: 10px;
 }
 
 #id_date {
@@ -227,6 +227,7 @@ input[type=password]:not(.browser-default) {
     width: 20%;
 }
 
+/*
 .datepicker-date-display,
 .datepicker-table td.is-selected {
     background-color: #133f23;
@@ -234,17 +235,52 @@ input[type=password]:not(.browser-default) {
 
 .month-next:active, .month-prev:active {
     background-color: #133f23;
-}
+}*/
 
 .collapsible-header .row {
     margin-bottom: 0;
     margin-left: 0;
 }
+
 .collapsible-body {
     background-color: #fffde7;
+    padding: 1.5rem;
+}
+
+.form-div {
+    margin: 0 0 2rem 0;
+}
+
+.form-div h6 {
+    margin: 0 0 1rem 0;
+}
+
+.form-div span {
+    margin-left: 0.75rem;
 }
 
 img.responsive-img {
     max-width: 220px;
     padding-right: 20px;
+}
+
+.search-btn {
+    margin-left: 3rem;
+}
+
+.choice-header {
+    margin-bottom: 0;
+}
+
+.input-field {
+    margin-top: 0;
+}
+
+.submit-icon {
+    margin-left: 1rem;
+}
+
+#price-per-seat {
+    line-height: 3.5rem;
+    margin-left: 1rem;
 }
