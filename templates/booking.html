@@ -36,49 +36,57 @@
                             <div class="row">
                                 <div class="col">
                                     <h5>{{ showtime.filmtitle }}</h5>
-                                    <p>{{ showtime.date }}</p>
+                                    <p>{{ showtime.rundate }}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="collapsible-body yellow lighten-5">
-                        <form action="get">
+                        <form method="POST" action="my-bookings">
+                            {% csrf_token %}
+                            <label for="film">Film:</label>
+                            <input type="text" id="film" name="filmtitle" required>
+                            <label for="cost">Cost:</label>
+                            <input type="text" id="cost" name="cost" required>
                             <div class="row">
                                 <div class="col s12 l6 form-div">
                                     <h6><i class="fa-solid fa-clock booking-form-icon"></i>Choose a time:</h6>
                                     <label><input type="checkbox" id="time" class="filled-in radio" name="time"
-                                            value="{{ showtime.time }}" required>
-                                        <span>{{ showtime.time }}</span></label>
+                                            value="{{ showtime.runtime }}" required>
+                                        <span>{{ showtime.runtime }}</span></label>
                                 </div>
                                 <div class="col s12 l6">
                                     <h6 class="choice-header"><i class="fa-solid fa-ticket booking-form-icon"></i>Choose
                                         tickets (qty):</h6>
                                     <div class="input-field col s6 m4">
-                                        <select>
+                                        <select required="required" class="validate">
                                             <option value="" disabled selected>Select</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
+                                            <option value="1" name="numoftickets">1</option>
+                                            <option value="2" name="numoftickets">2</option>
+                                            <option value="3" name="numoftickets">3</option>
+                                            <option value="4" name="numoftickets">4</option>
+                                            <option value="5" name="numoftickets">5</option>
+                                            <option value="6" name="numoftickets">6</option>
+                                            <option value="7" name="numoftickets">7</option>
+                                            <option value="8" name="numoftickets">8</option>
                                         </select>
+                                        <label data-error="Please select number of tickets"></label>
                                     </div>
                                     <span id="price-per-seat"> £{{ showtime.priceperseat }} per ticket</span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col s12 l6">
-                                    <h6 class="choice-header"><i class="fa-solid fa-glass-water booking-form-icon"></i><i
+                                    <h6 class="choice-header"><i
+                                            class="fa-solid fa-glass-water booking-form-icon"></i><i
                                             class="fa-solid fa-bowl-rice booking-form-icon"></i>Some snacks?
                                     </h6>
                                     <div class="input-field col s12 l8">
                                         <select>
                                             <option value="" disabled selected>Options</option>
                                             {% for snack in snacks %}
-                                            <option value="{{ snack.snack }}">{{ snack.snack }} £{{ snack.price }}</option>
+                                            <option value="{{ snack.snack }}" name="snacks">{{ snack.snack }} £{{ snack.price }}
+                                            </option>
                                             {% endfor %}
                                         </select>
                                     </div>

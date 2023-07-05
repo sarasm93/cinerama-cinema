@@ -8,15 +8,16 @@
 </div>
 
 <div class="col l12">
-    <table class="yellow lighten-4 grey-text text-darken-4 striped responsive-table">
+    <table class="yellow lighten-3 grey-text text-darken-4 striped responsive-table">
         <thead>
             <tr>
-                <th>Date</th>
+                <th>Film Date</th>
                 <th>Film</th>
                 <th>Time</th>
-                <th>Tickets</th>
+                <th>Tickets (qty)</th>
                 <th>Snacks</th>
                 <th>Total cost (£)</th>
+                <th></th>
                 <th></th>
             </tr>
         </thead>
@@ -30,10 +31,10 @@
                 <td>{{ booking.numoftickets }}</td>
                 <td>{{ booking.snacks }}</td>
                 <td>{{ booking.cost }}</td>
-                <a href=""><button type="submit"
-                        class="btn waves-effect red darken-1 btn-medium hoverable form-btn">Edit</button></a><a
-                    href=""><button type="submit"
-                        class="btn waves-effect red darken-1 btn-medium hoverable form-btn">Cancel</button></a>
+                <td><a href="/edit"><button type="submit"
+                            class="btn waves-effect light-blue darken-4 btn-medium hoverable edit-btn">Edit</button></a></td>
+                <td><a href="/candel/{{'booking.id'}}"><button type="submit"
+                            class="btn waves-effect deep-orange accent-3 btn-medium hoverable cancel-btn">Cancel</button></a></td>
             </tr>
             {% endfor %}
         </tbody>

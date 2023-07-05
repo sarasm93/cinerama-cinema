@@ -21,4 +21,3 @@ class CustomSignupForm(SignupForm):
         user.save()
         return user
 
-

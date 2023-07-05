@@ -34,7 +34,7 @@
                     <li><a class="orange-text text-lighten-3" href="{% url 'home' %}">Home</a></li>
                     <li><a class="orange-text text-lighten-3" href="{% url 'booking' %}">Book Tickets</a></li>
                     {% if user.is_authenticated %}
-                    <li><a class="orange-text text-lighten-3" href="{% url 'profile' %}">My Bookings</a></li>
+                    <li><a class="orange-text text-lighten-3" href="{% url 'my-bookings' %}">My Bookings</a></li>
                     <li><a class="orange-text text-lighten-3" href="{% url 'account_logout' %}">Logout</a></li>
                     {% else %}
                     <li><a class="orange-text text-lighten-3" href="{% url 'account_signup' %}">Sign up</a></li>
@@ -48,7 +48,7 @@
             <li><a class="orange-text text-lighten-3" href="{% url 'home' %}">Home</a></li>
                     <li><a class="orange-text text-lighten-3" href="{% url 'booking' %}">Book Tickets</a></li>
                     {% if user.is_authenticated %}
-                    <li><a class="orange-text text-lighten-3" href="{% url 'profile' %}">My Bookings</a></li>
+                    <li><a class="orange-text text-lighten-3" href="{% url 'my-bookings' %}">My Bookings</a></li>
                     <li><a class="orange-text text-lighten-3" href="{% url 'account_logout' %}">Logout</a></li>
                     {% else %}
                     <li><a class="orange-text text-lighten-3" href="{% url 'account_signup' %}">Sign up</a></li>

@@ -32,18 +32,18 @@ class Film(models.Model):
 
 class FilmShowtime(models.Model):
     """ Model for film program """
-    date = models.DateField()
+    rundate = models.DateField(unique=True)
     filmtitle = models.ForeignKey(
         Film, on_delete=models.SET_NULL, null=True, related_name='filmtitle', verbose_name='Film title')
     filmimage = CloudinaryField('image')
-    time = models.TimeField()
+    runtime = models.TimeField(unique=True)
     totnumofseats = models.IntegerField(verbose_name='Total number of seats')
-    priceperseat = models.IntegerField(verbose_name='Price per seat')
+    priceperseat = models.FloatField(verbose_name='Price per seat')
 
     # Function taken from Hello Django project:
     # https://github.com/ckz8780/ci-fsf-hello-django/blob/9f484408bea5cbc9cc5fb45c0feebc3998ff5f49/todo/models.py
     def __str__(self):
-        return f"{self.date}, {self.filmtitle}, {self.time}"
+        return f"{self.rundate}"
 
 
 class Snack(models.Model):
@@ -60,10 +60,14 @@ class Snack(models.Model):
 class Booking(models.Model):
     """ Model for ticket booking """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    date = models.ForeignKey(FilmShowtime, on_delete=models.SET_NULL, null=True, related_name='filmdate')
-    filmtitle = models.ForeignKey(FilmShowtime, on_delete=models.SET_NULL, null=True)
-    time = models.ForeignKey(FilmShowtime, on_delete=models.SET_NULL, null=True, related_name='filmtime')
-    numoftickets = models.IntegerField()
-    snacks = models.ForeignKey(Snack, on_delete=models.SET_NULL, null=True)
+    date = models.ForeignKey(FilmShowtime, to_field="rundate", on_delete=models.SET_NULL, null=True, related_name='filmdate')
+    filmtitle = models.ForeignKey(Film, to_field="title", on_delete=models.SET_NULL, null=True, verbose_name="Film")
+    time = models.ForeignKey(FilmShowtime, to_field="runtime", on_delete=models.SET_NULL, null=True, related_name='filmtime', verbose_name="Runtime")
+    numoftickets = models.IntegerField(verbose_name="Number of tickets")
+    snacks = models.ForeignKey(Snack, to_field="snack", on_delete=models.SET_NULL, null=True)
     cost = models.IntegerField()
 
+    # Function taken from Hello Django project:
+    # https://github.com/ckz8780/ci-fsf-hello-django/blob/9f484408bea5cbc9cc5fb45c0feebc3998ff5f49/todo/models.py
+    def __str__(self):
+        return f"{self.user}, {self.filmtitle}"

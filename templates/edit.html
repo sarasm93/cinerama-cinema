@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row col s12 intro">
+    <h3 class="page-header">Edit booking</h3>
+</div>
+
+<div class="col l12">
+    <p>You can change the number of tickets and the snacks. If you want to see another film - cancel this booking and
+        make a new.</p>
+    <form method="POST">
+        {% csrf_token %}
+        <table class="yellow lighten-3 grey-text text-darken-4 striped responsive-table">
+            <thead>
+                <tr>
+                    <th>Film Date</th>
+                    <th>Film</th>
+                    <th>Time</th>
+                    <th>Tickets (qty)</th>
+                    <th>Snacks</th>
+                    <th>Total cost (£)</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>{{ booking.date }}</td>
+                    <td>{{ booking.filmtitle }}</td>
+                    <td>{{ booking.time }}</td>
+                    <td><input type="number" value="" name="numoftickets" min="1" max="8">
+                    </td>
+                    <td>
+                        <div class="input-field edit-snacks col s12 l8">
+                            <select>
+                                <option value="" disabled selected>Options</option>
+                                {% for snack in snacks %}
+                                <option value="" name="snacks">{{ snack.snack }} £{{ snack.price }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </td>
+                    <td>{{ booking.cost }}</td>
+                    <td><button type="submit"
+                            class="btn waves-effect light-blue darken-4 btn-medium hoverable edit-btn">Update
+                            booking</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,2125 @@
+[{
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2023-06-30T11:40:03.479Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "1",
+            "object_repr": "action",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2023-06-30T11:40:07.486Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "2",
+            "object_repr": "adventure",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2023-06-30T11:40:12.380Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "3",
+            "object_repr": "animated",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2023-06-30T11:40:18.985Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "4",
+            "object_repr": "comedy",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2023-06-30T11:40:23.458Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "5",
+            "object_repr": "concert",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 6,
+        "fields": {
+            "action_time": "2023-06-30T11:40:28.933Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "6",
+            "object_repr": "documentary",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 7,
+        "fields": {
+            "action_time": "2023-06-30T11:40:33.513Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "7",
+            "object_repr": "fantasy",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 8,
+        "fields": {
+            "action_time": "2023-06-30T11:40:39.189Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "8",
+            "object_repr": "horror",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 9,
+        "fields": {
+            "action_time": "2023-06-30T11:40:47.064Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "9",
+            "object_repr": "musical",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 10,
+        "fields": {
+            "action_time": "2023-06-30T11:40:56.145Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "10",
+            "object_repr": "sci-fi",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 11,
+        "fields": {
+            "action_time": "2023-06-30T13:28:33.182Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "1",
+            "object_repr": "Ziggy Stardust and the Spiders from Mars",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 12,
+        "fields": {
+            "action_time": "2023-06-30T13:29:05.765Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "1",
+            "object_repr": "Ziggy Stardust and the Spiders from Mars",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 13,
+        "fields": {
+            "action_time": "2023-06-30T15:09:30.022Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "4",
+            "object_repr": "hej",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 14,
+        "fields": {
+            "action_time": "2023-06-30T15:09:30.060Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "5",
+            "object_repr": "hello",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 15,
+        "fields": {
+            "action_time": "2023-06-30T15:09:30.094Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "2",
+            "object_repr": "test",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 16,
+        "fields": {
+            "action_time": "2023-06-30T15:09:30.129Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "3",
+            "object_repr": "test0",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 17,
+        "fields": {
+            "action_time": "2023-06-30T15:11:07.770Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "6",
+            "object_repr": "hej",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 18,
+        "fields": {
+            "action_time": "2023-07-01T12:28:36.667Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "17",
+            "object_repr": "dog",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 19,
+        "fields": {
+            "action_time": "2023-07-01T12:28:36.705Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "11",
+            "object_repr": "hallo",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 20,
+        "fields": {
+            "action_time": "2023-07-01T12:28:36.741Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "15",
+            "object_repr": "hallo5",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 21,
+        "fields": {
+            "action_time": "2023-07-01T12:28:36.777Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "13",
+            "object_repr": "hej",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 22,
+        "fields": {
+            "action_time": "2023-07-01T12:28:36.812Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "12",
+            "object_repr": "hello",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 23,
+        "fields": {
+            "action_time": "2023-07-01T12:28:36.848Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "9",
+            "object_repr": "hey",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 24,
+        "fields": {
+            "action_time": "2023-07-01T12:28:36.884Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "10",
+            "object_repr": "heya",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 25,
+        "fields": {
+            "action_time": "2023-07-01T12:28:36.919Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "8",
+            "object_repr": "hi",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 26,
+        "fields": {
+            "action_time": "2023-07-01T12:28:36.955Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "14",
+            "object_repr": "hi3",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 27,
+        "fields": {
+            "action_time": "2023-07-01T12:28:36.990Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "7",
+            "object_repr": "hola",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 28,
+        "fields": {
+            "action_time": "2023-07-01T12:28:37.025Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "16",
+            "object_repr": "katt",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 29,
+        "fields": {
+            "action_time": "2023-07-01T12:28:37.060Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "18",
+            "object_repr": "lama",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 30,
+        "fields": {
+            "action_time": "2023-07-02T11:35:02.428Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "2",
+            "object_repr": "Barbie",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 31,
+        "fields": {
+            "action_time": "2023-07-02T11:36:06.263Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "3",
+            "object_repr": "Star Wars Episode VI: Return of the Jedi",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 32,
+        "fields": {
+            "action_time": "2023-07-02T11:37:05.497Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "4",
+            "object_repr": "Marathon! - Iron Man",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 33,
+        "fields": {
+            "action_time": "2023-07-02T11:38:26.054Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "5",
+            "object_repr": "The Super Mario Bros. Movie",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 34,
+        "fields": {
+            "action_time": "2023-07-02T11:39:36.724Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "6",
+            "object_repr": "Child's Play",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 35,
+        "fields": {
+            "action_time": "2023-07-02T11:49:28.075Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "7",
+            "object_repr": "Transformers: Rise of the Beasts",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 36,
+        "fields": {
+            "action_time": "2023-07-02T11:50:32.311Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "8",
+            "object_repr": "Sing-along! - Mamma Mia",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 37,
+        "fields": {
+            "action_time": "2023-07-02T11:55:37.603Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "9",
+            "object_repr": "Interstellar",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 38,
+        "fields": {
+            "action_time": "2023-07-02T13:51:00.721Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "21",
+            "object_repr": "catsaregr8",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 39,
+        "fields": {
+            "action_time": "2023-07-02T13:51:00.760Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "19",
+            "object_repr": "hej",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 40,
+        "fields": {
+            "action_time": "2023-07-02T13:51:00.796Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "20",
+            "object_repr": "lama",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 41,
+        "fields": {
+            "action_time": "2023-07-03T10:11:12.805Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "6",
+            "object_repr": "FilmShowtime object (6)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 42,
+        "fields": {
+            "action_time": "2023-07-03T10:21:37.346Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "8",
+            "object_repr": "The Super Mario Bros. Movie, 2023-07-20, 18:00:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 43,
+        "fields": {
+            "action_time": "2023-07-03T10:22:16.472Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "9",
+            "object_repr": "The Super Mario Bros. Movie, 2023-07-20, 19:30:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 44,
+        "fields": {
+            "action_time": "2023-07-03T10:22:38.431Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "10",
+            "object_repr": "Barbie, 2023-07-20, 18:00:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 45,
+        "fields": {
+            "action_time": "2023-07-03T10:22:57.000Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "11",
+            "object_repr": "Barbie, 2023-07-20, 21:00:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 46,
+        "fields": {
+            "action_time": "2023-07-03T10:23:13.662Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "12",
+            "object_repr": "Barbie, 2023-07-21, 18:00:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 47,
+        "fields": {
+            "action_time": "2023-07-03T10:23:30.135Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "13",
+            "object_repr": "Barbie, 2023-07-21, 21:00:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 48,
+        "fields": {
+            "action_time": "2023-07-03T10:24:29.790Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "14",
+            "object_repr": "Marathon! - Iron Man, 2023-07-20, 16:30:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 49,
+        "fields": {
+            "action_time": "2023-07-03T10:24:51.350Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "15",
+            "object_repr": "Marathon! - Iron Man, 2023-07-21, 16:30:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 50,
+        "fields": {
+            "action_time": "2023-07-03T10:25:13.949Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "16",
+            "object_repr": "Child's Play, 2023-07-20, 19:00:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 51,
+        "fields": {
+            "action_time": "2023-07-03T10:25:39.532Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "17",
+            "object_repr": "Sing-along! - Mamma Mia, 2023-07-20, 21:00:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 52,
+        "fields": {
+            "action_time": "2023-07-03T10:26:03.468Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "18",
+            "object_repr": "Star Wars Episode VI: Return of the Jedi, 2023-07-21, 19:15:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 53,
+        "fields": {
+            "action_time": "2023-07-03T10:26:20.891Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "19",
+            "object_repr": "Transformers: Rise of the Beasts, 2023-07-21, 18:00:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 54,
+        "fields": {
+            "action_time": "2023-07-03T11:38:13.976Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "19",
+            "object_repr": "2023-07-21, Transformers: Rise of the Beasts, 18:00:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 55,
+        "fields": {
+            "action_time": "2023-07-03T11:38:14.010Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "18",
+            "object_repr": "2023-07-21, Star Wars Episode VI: Return of the Jedi, 19:15:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 56,
+        "fields": {
+            "action_time": "2023-07-03T11:38:14.044Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "17",
+            "object_repr": "2023-07-20, Sing-along! - Mamma Mia, 21:00:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 57,
+        "fields": {
+            "action_time": "2023-07-03T11:38:14.078Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "16",
+            "object_repr": "2023-07-20, Child's Play, 19:00:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 58,
+        "fields": {
+            "action_time": "2023-07-03T11:38:14.112Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "15",
+            "object_repr": "2023-07-21, Marathon! - Iron Man, 16:30:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 59,
+        "fields": {
+            "action_time": "2023-07-03T11:38:14.145Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "14",
+            "object_repr": "2023-07-20, Marathon! - Iron Man, 16:30:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 60,
+        "fields": {
+            "action_time": "2023-07-03T11:38:14.178Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "13",
+            "object_repr": "2023-07-21, Barbie, 21:00:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 61,
+        "fields": {
+            "action_time": "2023-07-03T11:38:14.212Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "12",
+            "object_repr": "2023-07-21, Barbie, 18:00:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 62,
+        "fields": {
+            "action_time": "2023-07-03T11:38:14.250Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "11",
+            "object_repr": "2023-07-20, Barbie, 21:00:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 63,
+        "fields": {
+            "action_time": "2023-07-03T11:38:14.283Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "10",
+            "object_repr": "2023-07-20, Barbie, 18:00:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 64,
+        "fields": {
+            "action_time": "2023-07-03T11:38:14.316Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "9",
+            "object_repr": "2023-07-20, The Super Mario Bros. Movie, 19:30:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 65,
+        "fields": {
+            "action_time": "2023-07-03T11:38:14.350Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "8",
+            "object_repr": "2023-07-20, The Super Mario Bros. Movie, 18:00:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 66,
+        "fields": {
+            "action_time": "2023-07-03T11:38:14.384Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "6",
+            "object_repr": "2023-07-18, The Super Mario Bros. Movie, 16:30:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 67,
+        "fields": {
+            "action_time": "2023-07-03T11:40:32.321Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "20",
+            "object_repr": "2023-07-18, Marathon! - Iron Man, 18:00:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 68,
+        "fields": {
+            "action_time": "2023-07-03T11:41:48.727Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "20",
+            "object_repr": "2023-07-18, Marathon! - Iron Man, 18:00:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 69,
+        "fields": {
+            "action_time": "2023-07-03T11:42:37.915Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "21",
+            "object_repr": "2023-07-17, The Super Mario Bros. Movie, 18:00:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 70,
+        "fields": {
+            "action_time": "2023-07-03T11:43:07.386Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "22",
+            "object_repr": "2023-07-19, Star Wars Episode VI: Return of the Jedi, 12:00:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 71,
+        "fields": {
+            "action_time": "2023-07-03T13:03:35.953Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "23",
+            "object_repr": "2023-07-17, Barbie, 19:30:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 72,
+        "fields": {
+            "action_time": "2023-07-03T13:12:15.229Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "23",
+            "object_repr": "2023-07-17, Barbie, 19:30:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 73,
+        "fields": {
+            "action_time": "2023-07-03T13:12:15.264Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "22",
+            "object_repr": "2023-07-19, Star Wars Episode VI: Return of the Jedi, 12:00:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 74,
+        "fields": {
+            "action_time": "2023-07-03T13:12:15.299Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "21",
+            "object_repr": "2023-07-17, The Super Mario Bros. Movie, 18:00:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 75,
+        "fields": {
+            "action_time": "2023-07-03T13:18:45.828Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "24",
+            "object_repr": "2023-07-17, Barbie, 19:30:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 76,
+        "fields": {
+            "action_time": "2023-07-03T13:46:11.841Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "24",
+            "object_repr": "2023-07-17, Barbie, 19:30:00",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Runtime\"]}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 77,
+        "fields": {
+            "action_time": "2023-07-03T13:54:34.131Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "24",
+            "object_repr": "2023-07-17, Barbie, 19:30:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 78,
+        "fields": {
+            "action_time": "2023-07-03T13:55:37.953Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "25",
+            "object_repr": "2023-07-19, Ziggy Stardust and the Spiders from Mars, 18:00:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 79,
+        "fields": {
+            "action_time": "2023-07-03T13:57:27.267Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "26",
+            "object_repr": "2023-07-20, Marathon! - Iron Man, 18:00:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 80,
+        "fields": {
+            "action_time": "2023-07-04T07:31:25.279Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "26",
+            "object_repr": "2023-07-20, Marathon! - Iron Man, 18:00:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 81,
+        "fields": {
+            "action_time": "2023-07-04T07:31:25.323Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "25",
+            "object_repr": "2023-07-19, Ziggy Stardust and the Spiders from Mars, 18:00:00",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 82,
+        "fields": {
+            "action_time": "2023-07-04T07:48:41.639Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "27",
+            "object_repr": "2023-07-20, Barbie, 19:15:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 83,
+        "fields": {
+            "action_time": "2023-07-04T07:49:05.960Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "28",
+            "object_repr": "2023-07-21, The Super Mario Bros. Movie, 16:30:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 84,
+        "fields": {
+            "action_time": "2023-07-04T07:49:33.081Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "29",
+            "object_repr": "2023-07-20, Ziggy Stardust and the Spiders from Mars, 21:00:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 85,
+        "fields": {
+            "action_time": "2023-07-04T07:50:12.612Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "30",
+            "object_repr": "2023-07-21, Sing-along! - Mamma Mia, 16:30:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 86,
+        "fields": {
+            "action_time": "2023-07-04T07:50:41.338Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "31",
+            "object_repr": "2023-07-22, Marathon! - Iron Man, 16:30:00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 87,
+        "fields": {
+            "action_time": "2023-07-04T16:07:17.551Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "1",
+            "object_repr": "Snack object (1)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 88,
+        "fields": {
+            "action_time": "2023-07-04T16:07:41.079Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "2",
+            "object_repr": "Snack object (2)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 89,
+        "fields": {
+            "action_time": "2023-07-04T16:07:52.775Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "3",
+            "object_repr": "Snack object (3)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 90,
+        "fields": {
+            "action_time": "2023-07-04T16:08:08.773Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "4",
+            "object_repr": "Snack object (4)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 91,
+        "fields": {
+            "action_time": "2023-07-04T16:08:23.160Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "5",
+            "object_repr": "Snack object (5)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 92,
+        "fields": {
+            "action_time": "2023-07-04T16:08:35.766Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "6",
+            "object_repr": "Snack object (6)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 93,
+        "fields": {
+            "action_time": "2023-07-04T16:09:59.146Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "6",
+            "object_repr": "Small soda",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Snack\"]}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 94,
+        "fields": {
+            "action_time": "2023-07-04T16:10:07.841Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "5",
+            "object_repr": "Medium soda",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Snack\"]}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 95,
+        "fields": {
+            "action_time": "2023-07-04T16:10:13.982Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "4",
+            "object_repr": "Large soda",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Snack\"]}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 96,
+        "fields": {
+            "action_time": "2023-07-04T16:10:20.060Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "3",
+            "object_repr": "Small popcorn",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Snack\"]}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 97,
+        "fields": {
+            "action_time": "2023-07-04T16:10:25.917Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "2",
+            "object_repr": "Medium popcorn",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Snack\"]}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 98,
+        "fields": {
+            "action_time": "2023-07-04T16:10:31.892Z",
+            "user": 1,
+            "content_type": 17,
+            "object_id": "1",
+            "object_repr": "Large popcorn",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Snack\"]}}]"
+        }
+    }, {
+        "model": "admin.logentry",
+        "pk": 99,
+        "fields": {
+            "action_time": "2023-07-04T18:41:59.208Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "31",
+            "object_repr": "2023-07-22, Marathon! - Iron Man, 16:30:00",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 1,
+        "fields": {
+            "name": "Can add log entry",
+            "content_type": 1,
+            "codename": "add_logentry"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 2,
+        "fields": {
+            "name": "Can change log entry",
+            "content_type": 1,
+            "codename": "change_logentry"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 3,
+        "fields": {
+            "name": "Can delete log entry",
+            "content_type": 1,
+            "codename": "delete_logentry"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 4,
+        "fields": {
+            "name": "Can view log entry",
+            "content_type": 1,
+            "codename": "view_logentry"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 5,
+        "fields": {
+            "name": "Can add permission",
+            "content_type": 2,
+            "codename": "add_permission"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 6,
+        "fields": {
+            "name": "Can change permission",
+            "content_type": 2,
+            "codename": "change_permission"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 7,
+        "fields": {
+            "name": "Can delete permission",
+            "content_type": 2,
+            "codename": "delete_permission"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 8,
+        "fields": {
+            "name": "Can view permission",
+            "content_type": 2,
+            "codename": "view_permission"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 9,
+        "fields": {
+            "name": "Can add group",
+            "content_type": 3,
+            "codename": "add_group"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 10,
+        "fields": {
+            "name": "Can change group",
+            "content_type": 3,
+            "codename": "change_group"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 11,
+        "fields": {
+            "name": "Can delete group",
+            "content_type": 3,
+            "codename": "delete_group"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 12,
+        "fields": {
+            "name": "Can view group",
+            "content_type": 3,
+            "codename": "view_group"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 13,
+        "fields": {
+            "name": "Can add user",
+            "content_type": 4,
+            "codename": "add_user"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 14,
+        "fields": {
+            "name": "Can change user",
+            "content_type": 4,
+            "codename": "change_user"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 15,
+        "fields": {
+            "name": "Can delete user",
+            "content_type": 4,
+            "codename": "delete_user"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 16,
+        "fields": {
+            "name": "Can view user",
+            "content_type": 4,
+            "codename": "view_user"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 17,
+        "fields": {
+            "name": "Can add content type",
+            "content_type": 5,
+            "codename": "add_contenttype"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 18,
+        "fields": {
+            "name": "Can change content type",
+            "content_type": 5,
+            "codename": "change_contenttype"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 19,
+        "fields": {
+            "name": "Can delete content type",
+            "content_type": 5,
+            "codename": "delete_contenttype"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 20,
+        "fields": {
+            "name": "Can view content type",
+            "content_type": 5,
+            "codename": "view_contenttype"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 21,
+        "fields": {
+            "name": "Can add session",
+            "content_type": 6,
+            "codename": "add_session"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 22,
+        "fields": {
+            "name": "Can change session",
+            "content_type": 6,
+            "codename": "change_session"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 23,
+        "fields": {
+            "name": "Can delete session",
+            "content_type": 6,
+            "codename": "delete_session"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 24,
+        "fields": {
+            "name": "Can view session",
+            "content_type": 6,
+            "codename": "view_session"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 25,
+        "fields": {
+            "name": "Can add customer",
+            "content_type": 7,
+            "codename": "add_customer"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 26,
+        "fields": {
+            "name": "Can change customer",
+            "content_type": 7,
+            "codename": "change_customer"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 27,
+        "fields": {
+            "name": "Can delete customer",
+            "content_type": 7,
+            "codename": "delete_customer"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 28,
+        "fields": {
+            "name": "Can view customer",
+            "content_type": 7,
+            "codename": "view_customer"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 29,
+        "fields": {
+            "name": "Can add film",
+            "content_type": 8,
+            "codename": "add_film"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 30,
+        "fields": {
+            "name": "Can change film",
+            "content_type": 8,
+            "codename": "change_film"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 31,
+        "fields": {
+            "name": "Can delete film",
+            "content_type": 8,
+            "codename": "delete_film"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 32,
+        "fields": {
+            "name": "Can view film",
+            "content_type": 8,
+            "codename": "view_film"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 33,
+        "fields": {
+            "name": "Can add genre",
+            "content_type": 9,
+            "codename": "add_genre"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 34,
+        "fields": {
+            "name": "Can change genre",
+            "content_type": 9,
+            "codename": "change_genre"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 35,
+        "fields": {
+            "name": "Can delete genre",
+            "content_type": 9,
+            "codename": "delete_genre"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 36,
+        "fields": {
+            "name": "Can view genre",
+            "content_type": 9,
+            "codename": "view_genre"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 37,
+        "fields": {
+            "name": "Can add film showtime",
+            "content_type": 10,
+            "codename": "add_filmshowtime"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 38,
+        "fields": {
+            "name": "Can change film showtime",
+            "content_type": 10,
+            "codename": "change_filmshowtime"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 39,
+        "fields": {
+            "name": "Can delete film showtime",
+            "content_type": 10,
+            "codename": "delete_filmshowtime"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 40,
+        "fields": {
+            "name": "Can view film showtime",
+            "content_type": 10,
+            "codename": "view_filmshowtime"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 41,
+        "fields": {
+            "name": "Can add site",
+            "content_type": 11,
+            "codename": "add_site"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 42,
+        "fields": {
+            "name": "Can change site",
+            "content_type": 11,
+            "codename": "change_site"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 43,
+        "fields": {
+            "name": "Can delete site",
+            "content_type": 11,
+            "codename": "delete_site"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 44,
+        "fields": {
+            "name": "Can view site",
+            "content_type": 11,
+            "codename": "view_site"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 45,
+        "fields": {
+            "name": "Can add email address",
+            "content_type": 12,
+            "codename": "add_emailaddress"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 46,
+        "fields": {
+            "name": "Can change email address",
+            "content_type": 12,
+            "codename": "change_emailaddress"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 47,
+        "fields": {
+            "name": "Can delete email address",
+            "content_type": 12,
+            "codename": "delete_emailaddress"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 48,
+        "fields": {
+            "name": "Can view email address",
+            "content_type": 12,
+            "codename": "view_emailaddress"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 49,
+        "fields": {
+            "name": "Can add email confirmation",
+            "content_type": 13,
+            "codename": "add_emailconfirmation"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 50,
+        "fields": {
+            "name": "Can change email confirmation",
+            "content_type": 13,
+            "codename": "change_emailconfirmation"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 51,
+        "fields": {
+            "name": "Can delete email confirmation",
+            "content_type": 13,
+            "codename": "delete_emailconfirmation"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 52,
+        "fields": {
+            "name": "Can view email confirmation",
+            "content_type": 13,
+            "codename": "view_emailconfirmation"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 53,
+        "fields": {
+            "name": "Can add social account",
+            "content_type": 14,
+            "codename": "add_socialaccount"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 54,
+        "fields": {
+            "name": "Can change social account",
+            "content_type": 14,
+            "codename": "change_socialaccount"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 55,
+        "fields": {
+            "name": "Can delete social account",
+            "content_type": 14,
+            "codename": "delete_socialaccount"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 56,
+        "fields": {
+            "name": "Can view social account",
+            "content_type": 14,
+            "codename": "view_socialaccount"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 57,
+        "fields": {
+            "name": "Can add social application",
+            "content_type": 15,
+            "codename": "add_socialapp"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 58,
+        "fields": {
+            "name": "Can change social application",
+            "content_type": 15,
+            "codename": "change_socialapp"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 59,
+        "fields": {
+            "name": "Can delete social application",
+            "content_type": 15,
+            "codename": "delete_socialapp"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 60,
+        "fields": {
+            "name": "Can view social application",
+            "content_type": 15,
+            "codename": "view_socialapp"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 61,
+        "fields": {
+            "name": "Can add social application token",
+            "content_type": 16,
+            "codename": "add_socialtoken"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 62,
+        "fields": {
+            "name": "Can change social application token",
+            "content_type": 16,
+            "codename": "change_socialtoken"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 63,
+        "fields": {
+            "name": "Can delete social application token",
+            "content_type": 16,
+            "codename": "delete_socialtoken"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 64,
+        "fields": {
+            "name": "Can view social application token",
+            "content_type": 16,
+            "codename": "view_socialtoken"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 65,
+        "fields": {
+            "name": "Can add snack",
+            "content_type": 17,
+            "codename": "add_snack"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 66,
+        "fields": {
+            "name": "Can change snack",
+            "content_type": 17,
+            "codename": "change_snack"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 67,
+        "fields": {
+            "name": "Can delete snack",
+            "content_type": 17,
+            "codename": "delete_snack"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 68,
+        "fields": {
+            "name": "Can view snack",
+            "content_type": 17,
+            "codename": "view_snack"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 69,
+        "fields": {
+            "name": "Can add booking",
+            "content_type": 18,
+            "codename": "add_booking"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 70,
+        "fields": {
+            "name": "Can change booking",
+            "content_type": 18,
+            "codename": "change_booking"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 71,
+        "fields": {
+            "name": "Can delete booking",
+            "content_type": 18,
+            "codename": "delete_booking"
+        }
+    }, {
+        "model": "auth.permission",
+        "pk": 72,
+        "fields": {
+            "name": "Can view booking",
+            "content_type": 18,
+            "codename": "view_booking"
+        }
+    }, {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$260000$nvpBgrq2iixapr3hZPnFxV$1OziTHrXYTa6Fa62LHHuBavUJaQKJqnhqG1SDHFjIbQ=",
+            "last_login": "2023-07-05T09:06:51.221Z",
+            "is_superuser": true,
+            "username": "nala852",
+            "first_name": "",
+            "last_name": "",
+            "email": "nala@email.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-06-30T11:39:31.417Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    }, {
+        "model": "auth.user",
+        "pk": 22,
+        "fields": {
+            "password": "pbkdf2_sha256$260000$j3ra9RCfpTLl4OB5BwXJEp$wl0qewjOtia551nuIL7Qd0spqTKPAqROON+OYm0uiAw=",
+            "last_login": "2023-07-05T08:33:03.028Z",
+            "is_superuser": false,
+            "username": "lama",
+            "first_name": "lama",
+            "last_name": "lama",
+            "email": "lama@email.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-07-02T13:51:27.393Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 1,
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 2,
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 3,
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 4,
+        "fields": {
+            "app_label": "auth",
+            "model": "user"
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 5,
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 6,
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 7,
+        "fields": {
+            "app_label": "cinemasite",
+            "model": "customer"
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 8,
+        "fields": {
+            "app_label": "cinemasite",
+            "model": "film"
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 9,
+        "fields": {
+            "app_label": "cinemasite",
+            "model": "genre"
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 10,
+        "fields": {
+            "app_label": "cinemasite",
+            "model": "filmshowtime"
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 11,
+        "fields": {
+            "app_label": "sites",
+            "model": "site"
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 12,
+        "fields": {
+            "app_label": "account",
+            "model": "emailaddress"
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 13,
+        "fields": {
+            "app_label": "account",
+            "model": "emailconfirmation"
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 14,
+        "fields": {
+            "app_label": "socialaccount",
+            "model": "socialaccount"
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 15,
+        "fields": {
+            "app_label": "socialaccount",
+            "model": "socialapp"
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 16,
+        "fields": {
+            "app_label": "socialaccount",
+            "model": "socialtoken"
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 17,
+        "fields": {
+            "app_label": "cinemasite",
+            "model": "snack"
+        }
+    }, {
+        "model": "contenttypes.contenttype",
+        "pk": 18,
+        "fields": {
+            "app_label": "cinemasite",
+            "model": "booking"
+        }
+    }, {
+        "model": "sessions.session",
+        "pk": "8nl9pilq9tim8cahesmxrgv69ol5g5ra",
+        "fields": {
+            "session_data": ".eJxVjDsOwyAQBe9CHSHzNaRM7zMgll2CkwgkY1dR7h5bcpG0b2bem4W4rSVsnZYwI7sywS6_G8T0pHoAfMR6bzy1ui4z8EPhJ-18akiv2-n-HZTYy15Lkb0zCCQUCR-NNT47slGBAq8cDCQTyiyMBoEEVo-jBJlxj2TWbmCfL-dLN94:1qGyTL:CN66k-8Q_s4DmySvqvTBZ8JhDukk3el7ljBpuFMVrn0",
+            "expire_date": "2023-07-19T09:06:51.256Z"
+        }
+    }, {
+        "model": "sites.site",
+        "pk": 1,
+        "fields": {
+            "domain": "example.com",
+            "name": "example.com"
+        }
+    }, {
+        "model": "account.emailaddress",
+        "pk": 21,
+        "fields": {
+            "user": 22,
+            "email": "lama@email.com",
+            "verified": false,
+            "primary": true
+        }
+    }, {
+        "model": "cinemasite.genre",
+        "pk": 1,
+        "fields": {
+            "genre": "action"
+        }
+    }, {
+        "model": "cinemasite.genre",
+        "pk": 2,
+        "fields": {
+            "genre": "adventure"
+        }
+    }, {
+        "model": "cinemasite.genre",
+        "pk": 3,
+        "fields": {
+            "genre": "animated"
+        }
+    }, {
+        "model": "cinemasite.genre",
+        "pk": 4,
+        "fields": {
+            "genre": "comedy"
+        }
+    }, {
+        "model": "cinemasite.genre",
+        "pk": 5,
+        "fields": {
+            "genre": "concert"
+        }
+    }, {
+        "model": "cinemasite.genre",
+        "pk": 6,
+        "fields": {
+            "genre": "documentary"
+        }
+    }, {
+        "model": "cinemasite.genre",
+        "pk": 7,
+        "fields": {
+            "genre": "fantasy"
+        }
+    }, {
+        "model": "cinemasite.genre",
+        "pk": 8,
+        "fields": {
+            "genre": "horror"
+        }
+    }, {
+        "model": "cinemasite.genre",
+        "pk": 9,
+        "fields": {
+            "genre": "musical"
+        }
+    }, {
+        "model": "cinemasite.genre",
+        "pk": 10,
+        "fields": {
+            "genre": "sci-fi"
+        }
+    }, {
+        "model": "cinemasite.film",
+        "pk": 1,
+        "fields": {
+            "title": "Ziggy Stardust and the Spiders from Mars",
+            "genre": 6,
+            "description": "The July 3rd, 1973 historic concert of the 'leper Messiah'. This was to be David Bowie's last concert with the Ziggy persona and the Spiders from Mars. A great medley of 'Wild Eyed Boy From Freecloud', 'All The Young Dudes','Oh! You Pretty Things', a Lou Reed cover, and a Rolling Stones cover are but some of the highlights.",
+            "runtime": "1h 30m",
+            "director": "D.A. Pennebaker",
+            "cast": "David Bowie, Mick Ronson, Trevor Bolder, Mick Woodmansey, Ken Fordham, Brian Wilshaw, Geoffrey MacCormack, John 'Hutch' Hutchinson, Mike Garson etc.",
+            "image": "image/upload/v1688131712/djgu1jbp9tiurz062haq.jpg",
+            "trailer": "https://www.youtube.com/watch?v=Sc39uFmVQB4"
+        }
+    }, {
+        "model": "cinemasite.film",
+        "pk": 2,
+        "fields": {
+            "title": "Barbie",
+            "genre": 4,
+            "description": "To live in Barbie Land is to be a perfect being in a perfect place. Unless you have a full-on existential crisis. Or you're a Ken.",
+            "runtime": "1h 54m",
+            "director": "Greta Gerwig",
+            "cast": "Margot Robbie, Kingsley Ben-Adir, Ryan Gosling, Hari Nef, Ariana Greenblatt, Helen Mirren, Michael Cera, John Cena, Nicola Coughlan, Emma Mackey, Simu Liu, Will Ferrell etc.",
+            "image": "image/upload/v1688297701/lnvhgwtmqih8i8nwzqrp.jpg",
+            "trailer": "https://www.imdb.com/video/vi945734681/?playlistId=tt1517268&ref_=tt_pr_ov_vi"
+        }
+    }, {
+        "model": "cinemasite.film",
+        "pk": 3,
+        "fields": {
+            "title": "Star Wars Episode VI: Return of the Jedi",
+            "genre": 7,
+            "description": "When the Trade Federation organize a blockade around the planet Naboo, the Supreme Chancellor Valorum sends the Jedi Qui-Gon Jinn and Obi-Wan Kenobi to negotiate the end of the blockade. However the evil Viceroy Nute Gunray is ordered to kill the Jedi and invade Naboo. However the Jedi escape and Qui-Gon saves the life of the clumsy Gungan Jar Jar Binks. The outcast native takes the Jedi to his submerged city and the Gungan leader gives transportation to them. The Jedi head to the capital to warn Queen Amidala about the invasion. However she has been captured by the Federation droids but the Jedi rescue the queen and her court and they flee in a spacecraft that is damaged when they cross the blockade. They land on a desert planet and Qui-Gon Jinn goes to the town with Jar Jar, the droid R2-D2 and the queen's assistant Padmé to seek the necessary part for the spacecraft. When they find the component, they do not have money to buy it. But the slave boy Anakin Skywalker offers to dispute a race with his pod to raise the necessary money. Qui-Gon feels the Force in the boy and accepts his offer. Will the boy win the race? What will happen to Naboo? Will Queen Amidala be capable to convince the politicians to release her planet from the Trade Federation?",
+            "runtime": "2h 16m",
+            "director": "George Lucas",
+            "cast": "Liam Neeson, Ewan McGregor, Natalie Portman, Jake Lloyd, Ian McDiarmid, Pernilla August, Oliver Ford Davies, Hugh Quarshie, Ahmed Best, Anthony Daniels\\t, Kenny Baker, Frank Oz, Terence Stamp, Brian Blessed, Andy Secombe, Ray Park, Lewis Macleod, Warwick Davis etc.",
+            "image": "image/upload/v1688297765/iqrodxwyfgyzf42eqvq3.jpg",
+            "trailer": "https://www.imdb.com/video/vi2143788569/?playlistId=tt0120915&ref_=tt_pr_ov_vi"
+        }
+    }, {
+        "model": "cinemasite.film",
+        "pk": 4,
+        "fields": {
+            "title": "Marathon! - Iron Man",
+            "genre": 1,
+            "description": "Watch all three Iron Man films with us!",
+            "runtime": "6h 30m",
+            "director": "Jon Favreau, Shane Black",
+            "cast": "Robert Downey Jr., Terrence Howard, Gwyneth Paltrow, Jeff Bridges etc.",
+            "image": "image/upload/v1688297824/qgatpcyceeyidmjnqjo6.jpg",
+            "trailer": "https://www.imdb.com/video/vi447873305/?playlistId=tt0371746&ref_=tt_pr_ov_vi"
+        }
+    }, {
+        "model": "cinemasite.film",
+        "pk": 5,
+        "fields": {
+            "title": "The Super Mario Bros. Movie",
+            "genre": 4,
+            "description": "A Brooklyn plumber named Mario travels through the Mushroom Kingdom with a princess named Peach and an anthropomorphic mushroom named Toad to find Mario's brother, Luigi, and to save the world from a ruthless fire-breathing Koopa named Bowser.",
+            "runtime": "1h 32m",
+            "director": "Aaron Horvath, Michael Jelenic, Pierre Leduc",
+            "cast": "Kevin Michael Richardson, Jack Black, Khary Payton, Chris Pratt, Charlie Day, Charles Martinet, Sebastian Maniscalco, Rino Romano, John DiMaggio etc.",
+            "image": "image/upload/v1688297904/cqye2fs6itqzsadshmu2.jpg",
+            "trailer": "https://www.imdb.com/video/vi1463075865/?playlistId=tt6718170&ref_=tt_pr_ov_vi"
+        }
+    }, {
+        "model": "cinemasite.film",
+        "pk": 6,
+        "fields": {
+            "title": "Child's Play",
+            "genre": 8,
+            "description": "When Charles Lee Ray needs to get a quick escape from cop Mike Norris, he takes his soul and buries it into playful, seemingly good guy doll Chucky. Little does he know a little boy by the name of Andy Barclay will be the new owner of him soon-to-come. Charles confides in Andy while he commits numerous murders and once the adults accept Andy's story as truth, it's too late.",
+            "runtime": "1h 27m",
+            "director": "Tom Holland",
+            "cast": "Catherine Hicks, Chris Sarandon, Alex Vincen, Brad Dourif, Dinah Manoff, Tommy Swerdlow, Jack Colvin, Neil Giuntoli, Juan Ramírez, Alane Wilder etc.",
+            "image": "image/upload/v1688297976/olctr9swhslao60jza68.jpg",
+            "trailer": "https://www.imdb.com/video/vi3092038425/?playlistId=tt0094862&ref_=tt_pr_ov_vi"
+        }
+    }, {
+        "model": "cinemasite.film",
+        "pk": 7,
+        "fields": {
+            "title": "Transformers: Rise of the Beasts",
+            "genre": 1,
+            "description": "Returning to the action and spectacle that have captured moviegoers around the world, Transformers: Rise of the Beasts will take audiences on a '90s globetrotting adventure with the Autobots and introduce a whole new faction of Transformers - the Maximals - to join them as allies in the existing battle for earth. Directed by Steven Caple Jr. and starring Anthony Ramos and Dominique Fishback.",
+            "runtime": "2h 7m",
+            "director": "Steven Caple Jr.",
+            "cast": "Anthony Ramos, Dominique Fishback, Luna Lauren Velez, Dean Scott Vazquez, Tobe Nwigwe, Sarah Stiles, Leni Parker etc.",
+            "image": "image/upload/v1688298567/lyls0cirs57lh6sunqen.jpg",
+            "trailer": "https://www.imdb.com/video/vi4232692761/?playlistId=tt5090568&ref_=tt_pr_ov_vi"
+        }
+    }, {
+        "model": "cinemasite.film",
+        "pk": 8,
+        "fields": {
+            "title": "Sing-along! - Mamma Mia",
+            "genre": 4,
+            "description": "Welcome to a fantastic sing-along evening!",
+            "runtime": "1h 48m",
+            "director": "Phyllida Lloyd",
+            "cast": "Meryl Streep, Pierce Brosnan, Amanda Seyfried, Colin Firth, Stellan Skarsgård, Julie Walters, Christine Baranski etc.",
+            "image": "image/upload/v1688298631/lp3coxsmlbaqsjjvdxyy.jpg",
+            "trailer": "https://www.imdb.com/video/vi3165782297/?playlistId=tt0795421&ref_=tt_ov_vi"
+        }
+    }, {
+        "model": "cinemasite.film",
+        "pk": 9,
+        "fields": {
+            "title": "Interstellar",
+            "genre": 10,
+            "description": "Earth's future has been riddled by disasters, famines, and droughts. There is only one way to ensure mankind's survival: Interstellar travel. A newly discovered wormhole in the far reaches of our solar system allows a team of astronauts to go where no man has gone before, a planet that may have the right environment to sustain human life.",
+            "runtime": "2h 49m",
+            "director": "Christopher Nolan",
+            "cast": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow, Timothée Chalamet, David Oyelowo, Collette Wolfe, Francis X. McCarthy, Bill Irwin, Anne Hathaway etc.",
+            "image": "image/upload/v1688298937/itkmvkteofmznze9zqhc.jpg",
+            "trailer": "https://www.imdb.com/video/vi1586278169/?playlistId=tt0816692&ref_=tt_pr_ov_vi"
+        }
+    }]

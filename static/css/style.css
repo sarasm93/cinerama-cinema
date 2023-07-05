@@ -208,8 +208,17 @@ input[type=password]:not(.browser-default) {
     border-bottom: 1px solid #212121;
 }
 
+input[type=number]:not(.browser-default) {
+    border-bottom: 1px solid #212121;
+}
+
 .form-btn {
     margin: 3rem;
+}
+
+/* Materialize error message for invalid login input*/
+ul:not(.browser-default).errorlist {
+    color: #ff0000;
 }
 
 /* Booking page */
@@ -222,9 +231,9 @@ input[type=password]:not(.browser-default) {
     padding-right: 10px;
 }
 
-#id_date {
+#id_rundate {
     height: 1.5rem;
-    width: 20%;
+    width: 8.5rem;
 }
 
 /*
@@ -265,7 +274,7 @@ img.responsive-img {
 }
 
 .search-btn {
-    margin-left: 3rem;
+    margin-left: 2.5rem;
 }
 
 .choice-header {
@@ -284,4 +293,30 @@ img.responsive-img {
 #price-per-seat {
     line-height: 3.5rem;
     margin-left: 1rem;
+}
+
+/* Code on lines 297-309 was taken from this Stackoverflow site:
+https://stackoverflow.com/questions/34248898/how-to-validate-select-option-for-a-materialize-dropdown
+The code helps show error message for invalid input for "Choose tickets" field in booking form. */
+select[required]:focus{
+    outline: none !important;
+}
+
+select[required]{
+    display: block;
+    padding: 0;
+    position: absolute;
+    background: transparent;
+    color: transparent;
+    border: none;
+    top: 0;
+}
+
+/* My bookings page  */
+th {
+    text-transform: uppercase;
+}
+
+.edit-snacks {
+    margin-bottom: 0;
 }
