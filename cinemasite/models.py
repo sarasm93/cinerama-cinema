@@ -62,7 +62,7 @@ class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.ForeignKey(FilmShowtime, to_field="rundate", on_delete=models.SET_NULL, null=True, related_name='filmdate')
     filmtitle = models.ForeignKey(Film, to_field="title", on_delete=models.SET_NULL, null=True, verbose_name="Film")
-    time = models.ForeignKey(FilmShowtime, to_field="runtime", on_delete=models.SET_NULL, null=True, related_name='filmtime', verbose_name="Runtime")
+    # time = models.ForeignKey(FilmShowtime, to_field="runtime", on_delete=models.SET_NULL, null=True, related_name='filmtime', verbose_name="Runtime")
     numoftickets = models.IntegerField(verbose_name="Number of tickets")
     snacks = models.ForeignKey(Snack, to_field="snack", on_delete=models.SET_NULL, null=True)
     cost = models.IntegerField()

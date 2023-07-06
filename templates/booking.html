@@ -42,12 +42,8 @@
                         </div>
                     </div>
                     <div class="collapsible-body yellow lighten-5">
-                        <form method="POST" action="my-bookings">
+                        <form method="POST" action="{% url 'book_film' showtime.pk %}">
                             {% csrf_token %}
-                            <label for="film">Film:</label>
-                            <input type="text" id="film" name="filmtitle" required>
-                            <label for="cost">Cost:</label>
-                            <input type="text" id="cost" name="cost" required>
                             <div class="row">
                                 <div class="col s12 l6 form-div">
                                     <h6><i class="fa-solid fa-clock booking-form-icon"></i>Choose a time:</h6>
@@ -59,7 +55,7 @@
                                     <h6 class="choice-header"><i class="fa-solid fa-ticket booking-form-icon"></i>Choose
                                         tickets (qty):</h6>
                                     <div class="input-field col s6 m4">
-                                        <select required="required" class="validate">
+                                        <select required="required" class="validate" name="numoftickets">
                                             <option value="" disabled selected>Select</option>
                                             <option value="1" name="numoftickets">1</option>
                                             <option value="2" name="numoftickets">2</option>
@@ -82,10 +78,10 @@
                                             class="fa-solid fa-bowl-rice booking-form-icon"></i>Some snacks?
                                     </h6>
                                     <div class="input-field col s12 l8">
-                                        <select>
+                                        <select  name="snacks">
                                             <option value="" disabled selected>Options</option>
                                             {% for snack in snacks %}
-                                            <option value="{{ snack.snack }}" name="snacks">{{ snack.snack }} £{{ snack.price }}
+                                            <option value="{{ snack.pk }}">{{ snack.snack }} £{{ snack.price }}
                                             </option>
                                             {% endfor %}
                                         </select>
@@ -106,43 +102,5 @@
             </ul>
         </div>
     </div>
-
-    <!--
-<div class="container">
-    <div class="card-panel grey-text text-darken-4 booking-card">
-        {% if user.is_authenticated == False %}
-        <div class="row">
-            <p id="remember-info">*Remember - to be able to book tickets, you need to <a
-                    href="{% url 'account_signup' %}">register an account</a> and <a href="{% url 'account_login' %}">log in</a>.</p>
-        </div>
-        {% endif %}
-        <div class="row">
-            <p><i class="fa-regular fa-calendar-days"></i> Choose a date:</p>
-            <input type="text" class="datepicker" id="datepicker">
-        </div>
-        <div class="row">
-            <div class="col s12">
-                <div class="card">
-                    <div class="col s6 m2">
-                        <img src="images/sample-1.jpg">
-                    </div>
-                    <div class="col s6 m5" class="white-text">I am a very simple card. I am good at containing small
-                        bits of information.
-                        I am convenient because I require little markup to use effectively. I am similar to what is
-                        called a panel in other frameworks.
-                    </div>
-                    <div class="col s12 m3">
-                        <p>Choose number of tickets:</p>
-                    </div>
-                    <div class="col s12 m2">
-                        <a href=""><button type="submit"
-                                class="btn waves-effect red darken-1 btn-medium hoverable form-btn">Continue</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
--->
 
     {% endblock %}
