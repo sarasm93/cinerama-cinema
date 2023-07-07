@@ -253,7 +253,11 @@ ul:not(.browser-default).errorlist {
 
 .collapsible-body {
     background-color: #fffde7;
-    padding: 1.5rem;
+    padding: 1rem;
+}
+
+form .row {
+    margin-bottom: 0;
 }
 
 .form-div {
@@ -291,8 +295,13 @@ img.responsive-img {
 }
 
 #price-per-seat {
+    font-size: small;
     line-height: 3.5rem;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
+}
+
+.input-field p {
+    font-size: small;
 }
 
 /* Code on lines 297-309 was taken from this Stackoverflow site:

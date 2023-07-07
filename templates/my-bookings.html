@@ -31,9 +31,9 @@
                 <td>{{ booking.numoftickets }}</td>
                 <td>{{ booking.snacks }}</td>
                 <td>{{ booking.cost }}</td>
-                <td><a href="{% url 'edit' booking.pk%}"><button type="submit"
+                <td><a href="{% url 'edit' booking.pk %}"><button type="submit"
                             class="btn waves-effect light-blue darken-4 btn-medium hoverable edit-btn">Edit</button></a></td>
-                <td><a href="/candel/{{'booking.id'}}"><button type="submit"
+                <td><a href="{% url 'home' %}"><button type="submit"
                             class="btn waves-effect deep-orange accent-3 btn-medium hoverable cancel-btn">Cancel</button></a></td>
             </tr>
             {% endfor %}

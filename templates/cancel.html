@@ -3,11 +3,11 @@
 {% block content %}
 
 <div class="row col s12 intro">
-    <h3 class="page-header">My Bookings</h3>
-    <h6>Here you can handle all your bookings</h6>
+    <h3 class="page-header">Edit booking</h3>
 </div>
 
 <div class="col l12">
+    <p>You are about to cancel this booking. Are you sure?</p>
     <table class="yellow lighten-3 grey-text text-darken-4 striped responsive-table">
         <thead>
             <tr>
@@ -23,7 +23,6 @@
         </thead>
 
         <tbody>
-            {% for booking in bookings %}
             <tr>
                 <td>{{ booking.date }}</td>
                 <td>{{ booking.filmtitle }}</td>
@@ -31,12 +30,11 @@
                 <td>{{ booking.numoftickets }}</td>
                 <td>{{ booking.snacks }}</td>
                 <td>{{ booking.cost }}</td>
-                <td><a href="/edit/{{'booking.id'}}"><button type="submit"
-                            class="btn waves-effect light-blue darken-4 btn-medium hoverable edit-btn">Edit</button></a></td>
-                <td><a href="/candel/{{'booking.id'}}"><button type="submit"
-                            class="btn waves-effect deep-orange accent-3 btn-medium hoverable cancel-btn">Cancel</button></a></td>
+                <td><button type="submit"
+                        class="btn waves-effect light-blue darken-4 btn-medium hoverable edit-btn">Yes, cancel
+                        booking</button>
+                </td>
             </tr>
-            {% endfor %}
         </tbody>
     </table>
 </div>
