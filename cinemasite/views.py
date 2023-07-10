@@ -41,15 +41,16 @@ def make_booking(request, showtime_id):
     film_showtime = FilmShowtime.objects.get(pk=showtime_id)
     booking_form = BookingForm(data=request.POST)
 
-    if booking_form.is_valid():
-        booking_form.instance.user = request.user
-        booking_form.instance.date = film_showtime
-        booking_form.instance.time = film_showtime.showtime
-        booking = booking_form.save(commit=False)
-        booking.cost = calculate_price(booking.numoftickets, film_showtime.priceperseat, booking.snacks.price)
-        booking_form.save()
-    else:
-        return redirect("booking")
+    if request.method == 'POST':
+        if booking_form.is_valid():
+            booking_form.instance.user = request.user
+            booking_form.instance.date = film_showtime
+            booking_form.instance.time = film_showtime.showtime
+            booking = booking_form.save(commit=False)
+            booking.cost = calculate_price(booking.numoftickets, film_showtime.priceperseat, booking.snacks.price)
+            booking_form.save()
+        else:
+            return redirect("booking")
 
     bookings = Booking.objects.all()
     return render(request, 'my-bookings.html', {'bookings': bookings})        
@@ -88,3 +89,17 @@ def edit_booking(request, booking_id):
         return redirect('my-bookings')
 
     return render(request, 'edit.html', context)
+
+
+def cancel_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    context = {
+        'booking': booking,
+    }
+    
+    if request.method == 'POST':
+        booking.delete()
+
+        return redirect('booking')
+
+    return render(request, 'cancel.html', context)

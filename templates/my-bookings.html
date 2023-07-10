@@ -7,7 +7,7 @@
     <h6>Here you can handle all your bookings</h6>
 </div>
 
-<div class="col l12">
+<div class="col s12">
     <table class="yellow lighten-3 grey-text text-darken-4 striped responsive-table">
         <thead>
             <tr>
@@ -32,7 +32,7 @@
                 <td><a href="{% url 'edit' booking.pk %}"><button type="submit"
                             class="btn waves-effect light-blue darken-4 btn-medium hoverable edit-btn">Edit</button></a>
                 </td>
-                <td><a href="{% url 'home' %}"><button type="submit"
+                <td><a href="{% url 'cancel' booking.pk %}"><button type="submit"
                             class="btn waves-effect deep-orange accent-3 btn-medium hoverable cancel-btn">Cancel</button></a>
                 </td>
             </tr>

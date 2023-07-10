@@ -355,3 +355,8 @@ th {
     font-size: x-small;
     margin-top: 1rem;
 }
+
+/* Cancel page */
+.cancel-div {
+    margin: 5rem;
+}
