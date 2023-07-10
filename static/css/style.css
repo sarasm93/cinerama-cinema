@@ -137,7 +137,6 @@ footer a:hover {
 }
 
 
-
 /* Film cards */
 .card.small .card-image {
     max-height: 70%;
@@ -231,7 +230,7 @@ ul:not(.browser-default).errorlist {
     padding-right: 10px;
 }
 
-#id_rundate {
+#id_showtimedate {
     height: 1.5rem;
     width: 8.5rem;
 }
@@ -253,7 +252,7 @@ ul:not(.browser-default).errorlist {
 
 .collapsible-body {
     background-color: #fffde7;
-    padding: 1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
 }
 
 form .row {
@@ -326,6 +325,26 @@ th {
     text-transform: uppercase;
 }
 
-.edit-snacks {
-    margin-bottom: 0;
+/* Edit page */
+.edit-tickets input[type=number]:not(.browser-default) {
+    height: 1.5rem;
+}
+
+.edit-tickets input[type=text]:not(.browser-default) {
+    height: 1.5rem;
+}
+
+#tickets-left {
+    margin: 0;
+    font-size: x-small;
+    text-transform: none;
+    color: #da0707;
+}
+
+.not-editable {
+    color: #696868;
+}
+
+.booking-btn {
+    margin: 1.5rem;
 }

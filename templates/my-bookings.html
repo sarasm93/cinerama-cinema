@@ -11,8 +11,7 @@
     <table class="yellow lighten-3 grey-text text-darken-4 striped responsive-table">
         <thead>
             <tr>
-                <th>Film Date</th>
-                <th>Film</th>
+                <th>(Date) Film</th>
                 <th>Time</th>
                 <th>Tickets (qty)</th>
                 <th>Snacks</th>
@@ -26,7 +25,6 @@
             {% for booking in bookings %}
             <tr>
                 <td>{{ booking.date }}</td>
-                <td>{{ booking.filmtitle }}</td>
                 <td>{{ booking.time }}</td>
                 <td>{{ booking.numoftickets }}</td>
                 <td>{{ booking.snacks }}</td>

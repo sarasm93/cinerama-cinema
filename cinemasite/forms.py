@@ -1,7 +1,7 @@
 from allauth.account.forms import SignupForm
 from django import forms
 from django.contrib.auth.models import User
-from .models import Booking, Snack
+from .models import Booking, Snack, FilmShowtime
 
 
 # Code on line 9-18 taken from the below Geeksforgeeks.org page, to add first 
@@ -26,5 +26,5 @@ class CustomSignupForm(SignupForm):
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ['time', 'numoftickets', 'snacks']
-
+        fields = ['numoftickets', 'snacks']
+        

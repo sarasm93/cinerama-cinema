@@ -4,9 +4,9 @@ from .models import FilmShowtime
 
 
 class ShowtimeFilter(django_filters.FilterSet):
-    rundate = django_filters.DateFilter(widget=forms.DateInput(
-            attrs={'name': 'rundate', 'type': 'date', 'class': 'form-control'}), label="")
+    showtimedate = django_filters.DateFilter(widget=forms.DateInput(
+            attrs={'name': 'date', 'type': 'date', 'class': 'form-control'}), label="")
 
     class Meta:
         model = FilmShowtime
-        fields = ['rundate', ]
+        fields = ['showtimedate', ]

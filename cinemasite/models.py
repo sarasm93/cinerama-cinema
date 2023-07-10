@@ -1,6 +1,8 @@
 from django.db import models
+from django import forms
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.contrib.postgres.fields import ArrayField
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 
@@ -31,16 +33,16 @@ class Film(models.Model):
 
 class FilmShowtime(models.Model):
     """ Model for film program """
-    rundate = models.DateField(unique=True)
+    showtimedate = models.DateField(unique=True)
     filmtitle = models.ForeignKey(
         Film, on_delete=models.SET_NULL, null=True, related_name='filmtitle', verbose_name='Film title')
     filmimage = CloudinaryField('image')
-    runtime = models.TimeField(unique=True)
+    showtime = models.TimeField(max_length=5, blank=True, null=True)
     totnumofseats = models.IntegerField(verbose_name='Total number of seats')
     priceperseat = models.FloatField(verbose_name='Price per seat')
 
     def __str__(self):
-        return f"{self.rundate}"
+        return f"{self.showtimedate}, {self.filmtitle}"
 
 
 class Snack(models.Model):
@@ -55,13 +57,11 @@ class Snack(models.Model):
 class Booking(models.Model):
     """ Model for ticket booking """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    date = models.ForeignKey(FilmShowtime, to_field="rundate", on_delete=models.SET_NULL, null=True, related_name='filmdate')
-    filmtitle = models.ForeignKey(Film, to_field="title", on_delete=models.SET_NULL, null=True, verbose_name="Film")
-    time = models.ForeignKey(FilmShowtime, to_field="runtime", on_delete=models.SET_NULL, null=True, related_name='filmtime', verbose_name="Runtime")
-    numoftickets = models.IntegerField(default=0, validators=[MaxValueValidator(8), MinValueValidator(1)], verbose_name="Number of tickets")
+    date = models.ForeignKey(FilmShowtime, to_field="showtimedate", on_delete=models.SET_NULL, null=True, related_name='filmdate')
+    numoftickets = models.IntegerField(validators=[MaxValueValidator(8), MinValueValidator(1)], verbose_name="Number of tickets")
     snacks = models.ForeignKey(Snack, to_field="snack", on_delete=models.SET_NULL, null=True)
     cost = models.IntegerField()
 
     def __str__(self):
-        return f"{self.user}, {self.filmtitle}"
+        return f"{self.user}, {self.date}"
 

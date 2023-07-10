@@ -8,16 +8,15 @@
 
 <div class="col l12">
     <p>You can change the number of tickets and the snacks. If you want to see another film - cancel this booking and
-        make a new.</p>
-    <form method="POST">
+        make a new booking.</p>
+    <form method="POST" action="{% url 'edit' booking.pk %}">
         {% csrf_token %}
         <table class="yellow lighten-3 grey-text text-darken-4 striped responsive-table">
             <thead>
                 <tr>
-                    <th>Film Date</th>
-                    <th>Film</th>
+                    <th>(Date) Film</th>
                     <th>Time</th>
-                    <th>Tickets (qty)</th>
+                    <th>Tickets (qty)<p id="tickets-left">15 of {{ showtime.totnumofseats }} tickets left</p></th>
                     <th>Snacks</th>
                     <th>Total cost (£)</th>
                     <th></th>
@@ -27,23 +26,15 @@
 
             <tbody>
                 <tr>
-                    <td>{{ booking.date }}</td>
-                    <td>{{ booking.filmtitle }}</td>
-                    <td>{{ booking.time }}</td>
-                    <td><input type="number" value="{{booking.numoftickets}}" name="numoftickets" min="1" max="8">
+                    <td class="not-editable">{{ booking.date }}</td>
+                    <td class="not-editable">{{ booking.time }}</td>
+                    <td>
+                        <div class="edit-tickets">{{ booking_form.numoftickets }}</div>
                     </td>
                     <td>
-                        <div class="input-field edit-snacks col s12 l8">
-                            <select>
-                                <option value="" disabled selected>Options</option>
-                                {% for snack in snacks %}
-                                <option value="" name="snacks">{{ snack.snack }} £{{ snack.price }}
-                                </option>
-                                {% endfor %}
-                            </select>
-                        </div>
+                        <div class="edit-tickets">{{ booking_form.snacks }}</div>
                     </td>
-                    <td>{{ booking.cost }}</td>
+                    <td class="not-editable">{{ booking.cost }}</td>
                     <td><button type="submit"
                             class="btn waves-effect light-blue darken-4 btn-medium hoverable edit-btn">Update
                             booking</button>
