@@ -328,10 +328,12 @@ th {
 /* Edit page */
 .edit-tickets input[type=number]:not(.browser-default) {
     height: 1.5rem;
+    margin-top: 0.5rem;
 }
 
 .edit-tickets input[type=text]:not(.browser-default) {
     height: 1.5rem;
+    margin-top: 0.5rem;
 }
 
 #tickets-left {
@@ -347,4 +349,9 @@ th {
 
 .booking-btn {
     margin: 1.5rem;
+}
+
+#seat-price {
+    font-size: x-small;
+    margin-top: 1rem;
 }

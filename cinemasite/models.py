@@ -37,7 +37,7 @@ class FilmShowtime(models.Model):
     filmtitle = models.ForeignKey(
         Film, on_delete=models.SET_NULL, null=True, related_name='filmtitle', verbose_name='Film title')
     filmimage = CloudinaryField('image')
-    showtime = models.TimeField(max_length=5, blank=True, null=True)
+    showtime = models.TimeField(max_length=5)
     totnumofseats = models.IntegerField(verbose_name='Total number of seats')
     priceperseat = models.FloatField(verbose_name='Price per seat')
 
@@ -58,9 +58,10 @@ class Booking(models.Model):
     """ Model for ticket booking """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.ForeignKey(FilmShowtime, to_field="showtimedate", on_delete=models.SET_NULL, null=True, related_name='filmdate')
+    time = models.CharField(max_length=20)
     numoftickets = models.IntegerField(validators=[MaxValueValidator(8), MinValueValidator(1)], verbose_name="Number of tickets")
     snacks = models.ForeignKey(Snack, to_field="snack", on_delete=models.SET_NULL, null=True)
-    cost = models.IntegerField()
+    cost = models.FloatField()
 
     def __str__(self):
         return f"{self.user}, {self.date}"

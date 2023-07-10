@@ -16,9 +16,10 @@
                 <tr>
                     <th>(Date) Film</th>
                     <th>Time</th>
-                    <th>Tickets (qty)<p id="tickets-left">15 of {{ showtime.totnumofseats }} tickets left</p></th>
+                    <th>Tickets (qty)<p id="tickets-left">15 of {{ film_showtime.totnumofseats }} tickets left</p>
+                    </th>
                     <th>Snacks</th>
-                    <th>Total cost (£)</th>
+                    <th>Total cost</th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -29,12 +30,20 @@
                     <td class="not-editable">{{ booking.date }}</td>
                     <td class="not-editable">{{ booking.time }}</td>
                     <td>
-                        <div class="edit-tickets">{{ booking_form.numoftickets }}</div>
+                        <div class="row">
+                            <div class="col s4">
+                                <div class="edit-tickets">{{ booking_form.numoftickets }}</div>
+                            </div>
+                            <div class="col s6">
+                                <p id="seat-price">£{{ seat_price }}/ ticket</p>
+                            </div>
+                        </div>
+
                     </td>
                     <td>
                         <div class="edit-tickets">{{ booking_form.snacks }}</div>
                     </td>
-                    <td class="not-editable">{{ booking.cost }}</td>
+                    <td class="not-editable">£{{ booking.cost }}</td>
                     <td><button type="submit"
                             class="btn waves-effect light-blue darken-4 btn-medium hoverable edit-btn">Update
                             booking</button>

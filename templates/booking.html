@@ -28,7 +28,7 @@
         </div>
         <div class="row">
             <ul class="collapsible">
-                {% for showtime in showtimes %}
+                {% for showtime in showtimes %} 
                 <li>
                     <div class="collapsible-header z-depth-4">
                         <img class="responsive-img hide-on-small-only" src="{{ showtime.filmimage.url }}">
@@ -69,6 +69,7 @@
                                     </h6>
                                     <div class="input-field">
                                         {{ booking_form.snacks }}
+                                        <p>{{ snacks.price }}</p>
                                     </div>
                                 </div>
                             </div>
