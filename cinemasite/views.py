@@ -45,15 +45,16 @@ def make_booking(request, showtime_id):
         if booking_form.is_valid():
             booking_form.instance.user = request.user
             booking_form.instance.date = film_showtime
+            booking_form.instance.filmtitle = film_showtime.filmtitle
             booking_form.instance.time = film_showtime.showtime
             booking = booking_form.save(commit=False)
             booking.cost = calculate_price(booking.numoftickets, film_showtime.priceperseat, booking.snacks.price)
             booking_form.save()
         else:
+            messages.error(request, 'Booking NOT ADDED. You can book minimum 1 and maximum 8 tickets.')
             return redirect("booking")
 
-    bookings = Booking.objects.all()
-    return render(request, 'my-bookings.html', {'bookings': bookings})        
+    return redirect('my-bookings')        
 
 
 def view_bookings(request):
@@ -81,12 +82,17 @@ def edit_booking(request, booking_id):
 
     booking_form = BookingForm(data=request.POST, instance=booking)
 
-    if booking_form.is_valid():
-        film_showtime = booking.date
-        updated_booking = booking_form.save(commit=False)
-        updated_booking.cost = calculate_price(updated_booking.numoftickets, film_showtime.priceperseat, updated_booking.snacks.price)
-        updated_booking.save()
-        return redirect('my-bookings')
+    if request.method == 'POST':
+        if booking_form.is_valid():
+            film_showtime = booking.date
+            updated_booking = booking_form.save(commit=False)
+            updated_booking.cost = calculate_price(updated_booking.numoftickets, film_showtime.priceperseat, updated_booking.snacks.price)
+            updated_booking.save()
+            messages.success(request, 'Your booking was EDITED.')
+            return redirect('booking')
+        else:
+            messages.error(request, 'Booking NOT EDITED. You can book minimum 1 and maximum 8 tickets.')
+            return redirect('edit', booking_id=booking_id)
 
     return render(request, 'edit.html', context)
 
@@ -99,7 +105,7 @@ def cancel_booking(request, booking_id):
     
     if request.method == 'POST':
         booking.delete()
-
-        return redirect('booking')
+        messages.success(request, 'Your booking was CANCELLED.')
+        return redirect('my-bookings')
 
     return render(request, 'cancel.html', context)

@@ -42,7 +42,7 @@ class FilmShowtime(models.Model):
     priceperseat = models.FloatField(verbose_name='Price per seat')
 
     def __str__(self):
-        return f"{self.showtimedate}, {self.filmtitle}"
+        return f"({self.showtimedate}) - {self.filmtitle}"
 
 
 class Snack(models.Model):
@@ -59,7 +59,8 @@ class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.ForeignKey(FilmShowtime, to_field="showtimedate", on_delete=models.SET_NULL, null=True, related_name='filmdate')
     time = models.CharField(max_length=20)
-    numoftickets = models.IntegerField(validators=[MaxValueValidator(8), MinValueValidator(1)], verbose_name="Number of tickets")
+    numoftickets = models.IntegerField(
+        validators=[MaxValueValidator(8), MinValueValidator(1)], verbose_name="Number of tickets")
     snacks = models.ForeignKey(Snack, to_field="snack", on_delete=models.SET_NULL, null=True)
     cost = models.FloatField()
 

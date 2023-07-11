@@ -27,4 +27,3 @@ class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = ['numoftickets', 'snacks']
-        

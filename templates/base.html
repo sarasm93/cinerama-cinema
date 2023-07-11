@@ -45,15 +45,15 @@
         </nav>
 
         <ul class="sidenav yellow lighten-4 grey-text text-lighten-4" id="mobile-demo">
-            <li><a class="orange-text text-lighten-3" href="{% url 'home' %}">Home</a></li>
-                    <li><a class="orange-text text-lighten-3" href="{% url 'booking' %}">Book Tickets</a></li>
-                    {% if user.is_authenticated %}
-                    <li><a class="orange-text text-lighten-3" href="{% url 'my-bookings' %}">My Bookings</a></li>
-                    <li><a class="orange-text text-lighten-3" href="{% url 'account_logout' %}">Logout</a></li>
-                    {% else %}
-                    <li><a class="orange-text text-lighten-3" href="{% url 'account_signup' %}">Sign up</a></li>
-                    <li><a class="orange-text text-lighten-3" href="{% url 'account_login' %}">Login</a></li>
-                    {% endif %}
+            <li><a class="grey-text text-darken-4" href="{% url 'home' %}">Home</a></li>
+            <li><a class="grey-text text-darken-4" href="{% url 'booking' %}">Book Tickets</a></li>
+            {% if user.is_authenticated %}
+            <li><a class="grey-text text-darken-4" href="{% url 'my-bookings' %}">My Bookings</a></li>
+            <li><a class="grey-text text-darken-4" href="{% url 'account_logout' %}">Logout</a></li>
+            {% else %}
+            <li><a class="grey-text text-darken-4" href="{% url 'account_signup' %}">Sign up</a></li>
+            <li><a class="grey-text text-darken-4" href="{% url 'account_login' %}">Login</a></li>
+            {% endif %}
         </ul>
     </header>
 
@@ -90,15 +90,14 @@
             </div>
         </div>
     </footer>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
     <script>
         /* Alert messages, presented with Materialize Toasts */
-        {% if messages %}
-            {% for message in messages %}
-                M.toast({html: '{{ message }}', classes: 'white black-text'}, 3000);
-            {% endfor %}
+        {% if messages %} 
+        {% for message in messages %}
+            M.toast({html: '{{ message }}', classes: 'white black-text', displayLength: 6000}); 
+        {% endfor %} 
         {% endif %}
     </script>
 </body>

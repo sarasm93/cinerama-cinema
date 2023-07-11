@@ -235,16 +235,6 @@ ul:not(.browser-default).errorlist {
     width: 8.5rem;
 }
 
-/*
-.datepicker-date-display,
-.datepicker-table td.is-selected {
-    background-color: #133f23;
-}
-
-.month-next:active, .month-prev:active {
-    background-color: #133f23;
-}*/
-
 .collapsible-header .row {
     margin-bottom: 0;
     margin-left: 0;
@@ -325,6 +315,11 @@ th {
     text-transform: uppercase;
 }
 
+table {
+    margin-bottom: 5rem;
+}
+
+
 /* Edit page */
 .edit-tickets input[type=number]:not(.browser-default) {
     height: 1.5rem;
@@ -348,7 +343,7 @@ th {
 }
 
 .booking-btn {
-    margin: 1.5rem;
+    margin: 0 1.5rem 1.5rem 1.5rem;
 }
 
 #seat-price {
@@ -358,5 +353,5 @@ th {
 
 /* Cancel page */
 .cancel-div {
-    margin: 5rem;
+    margin: 0 0 3rem 0;
 }
