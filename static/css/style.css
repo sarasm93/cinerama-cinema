@@ -77,9 +77,11 @@ footer p {
     margin: 0;
 }
 
-footer h6 {
+.footer-header {
     font-weight: bold;
     text-transform: uppercase;
+    font-size: 1.15rem;
+    padding: 1rem;
 }
 
 footer i {
@@ -245,15 +247,6 @@ ul:not(.browser-default).errorlist {
     height: 1.5rem;
 }
 
-.edit-tickets {
-    line-height: 0.1rem;
-}
-
-.edit-tickets label {
-    font-size: 0;
-    visibility: hidden;
-}
-
 .collapsible-header .row {
     margin-bottom: 0;
     margin-left: 0;
@@ -365,6 +358,15 @@ table {
 #seat-price {
     font-size: x-small;
     margin-top: 1rem;
+}
+
+.edit-tickets {
+    line-height: 0.1rem;
+}
+
+.edit-tickets label {
+    font-size: 0;
+    visibility: hidden;
 }
 
 

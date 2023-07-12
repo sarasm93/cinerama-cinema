@@ -11,7 +11,7 @@
         make a new booking.</p>
     <form method="POST" action="{% url 'edit' booking.pk %}">
         {% csrf_token %}
-        <table class="yellow lighten-3 grey-text text-darken-4 striped responsive-table">
+        <table class="yellow lighten-3 grey-text text-darken-4 striped responsive-table edit-form">
             <thead>
                 <tr>
                     <th>(Date) Film</th>
