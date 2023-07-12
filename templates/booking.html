@@ -31,6 +31,10 @@
             </div>
         </div>
         <div class="row">
+            <!-- Materialize collapsible view for booking form. Altered to fit this project.
+                Also using Materialize select dropdown list to show snack menu.
+            https://materializecss.com/collapsible.html 
+            https://materializecss.com/select.html --> 
             <ul class="collapsible">
                 {% for showtime in showtimes %}
                 <li>
@@ -61,7 +65,6 @@
                                         number of tickets:</h6>
                                     <div class="input-field col s7">
                                         {{ booking_form.numoftickets }}
-                                        <p>15 of {{ showtime.totnumofseats }} tickets left</p>
                                     </div>
                                     <span class="price-per-seat"> £{{ showtime.priceperseat }}/ ticket</span>
                                 </div>

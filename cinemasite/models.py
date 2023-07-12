@@ -40,7 +40,6 @@ class FilmShowtime(models.Model):
         related_name='filmtitle', verbose_name='Film title')
     filmimage = CloudinaryField('image')
     showtime = models.TimeField(max_length=5)
-    totnumofseats = models.IntegerField(verbose_name='Total number of seats')
     priceperseat = models.FloatField(verbose_name='Price per seat')
 
     def __str__(self):

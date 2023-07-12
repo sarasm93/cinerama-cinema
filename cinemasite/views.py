@@ -15,12 +15,6 @@ def get_films(request):
 
 
 def view_showtimes(request):
-    def calculate_tickets_left():
-        booked_tickets = Booking.objects.values(
-            'date').order_by('date').annotate(
-                total_booked_tickets=Sum('numoftickets'))
-        print(booked_tickets)
-
     showtimes = FilmShowtime.objects.all()
     myfilter = ShowtimeFilter(request.GET, queryset=showtimes)
     showtimes = myfilter.qs

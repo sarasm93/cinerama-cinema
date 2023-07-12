@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Limelight&family=Poiret+One&display=swap');
 
+/* Code on lines 9-16 is Materialize code to make sticky footer. 
+https://materializecss.com/footer.html */
 body {
     background-color: #380202;
     font-family: Pioret-One, Trebuchet MS, sans-serif;
@@ -301,7 +303,7 @@ img.responsive-img {
     font-size: small;
 }
 
-/* Code on lines 287-399 was taken from this Stackoverflow site:
+/* Code on lines 309-321 was taken from this Stackoverflow site:
 https://stackoverflow.com/questions/34248898/how-to-validate-select-option-for-a-materialize-dropdown
 The code helps show error message for invalid input for "Choose tickets" field in booking form. */
 select[required]:focus{
@@ -367,6 +369,10 @@ table {
 .edit-tickets label {
     font-size: 0;
     visibility: hidden;
+}
+
+.table-header {
+    line-height: 3rem;
 }
 
 

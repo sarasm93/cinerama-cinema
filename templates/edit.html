@@ -6,6 +6,8 @@
     <h3 class="page-header">Edit booking</h3>
 </div>
 
+<!-- Materialize responsive table. Altered to fit this project.
+https://materializecss.com/table.html -->
 <div class="col l12">
     <p>You can change the number of tickets and the snacks. If you want to see another film - cancel this booking and
         make a new booking.</p>
@@ -16,9 +18,8 @@
                 <tr>
                     <th>(Date) Film</th>
                     <th>Time</th>
-                    <th>Tickets (qty)<p id="tickets-left">15 of {{ film_showtime.totnumofseats }} tickets left</p>
-                    </th>
-                    <th>Snacks</th>
+                    <th class="table-header">Tickets (qty)</th>
+                    <th class="table-header">Snacks</th>
                     <th>Total cost</th>
                     <th></th>
                 </tr>

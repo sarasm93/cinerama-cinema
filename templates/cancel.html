@@ -6,6 +6,8 @@
     <h3 class="page-header">Cancel booking</h3>
 </div>
 
+<!-- Materialize responsive table. Altered to fit this project.
+https://materializecss.com/table.html -->
 <div class="col l12">
     <form method="POST" action="{% url 'cancel' booking.pk %}">
         {% csrf_token %}
