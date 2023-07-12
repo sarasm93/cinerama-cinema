@@ -19,17 +19,15 @@
         </div>
         {% endif %}
         <div class="row">
-            <p><i class="fa-regular fa-calendar-days booking-form-icon"></i> Choose a date:</p>
-            <div class="col s6 m3 l2">
+            <div class="col s12 m7 l5">
                 <form method="get">
                     <table id="booking-filter-form">
                         {{ myfilter.form }}
                     </table>
                 </form>
             </div>
-            <div class="col s6 m3 l2">
-                <button type="submit"
-                    class="btn waves-effect red darken-1 btn-medium hoverable search-btn">Search</button>
+            <div class="col s12 m3 l4">
+                <button type="submit" class="btn waves-effect red darken-3 btn-medium hoverable">Search</button>
             </div>
         </div>
         <div class="row">
@@ -67,8 +65,6 @@
                                     </div>
                                     <span class="price-per-seat"> £{{ showtime.priceperseat }}/ ticket</span>
                                 </div>
-
-
                                 <div class="col s12 l4">
                                     <h6 class="choice-header"><i
                                             class="fa-solid fa-glass-water booking-form-icon"></i><i

@@ -26,4 +26,8 @@ class CustomSignupForm(SignupForm):
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ['numoftickets', 'snacks']
+        fields = ["numoftickets", "snacks"]
+        labels = {
+            "numoftickets": "Choose tickets (qty)",
+            "snacks": "Choose some snacks (opt)",
+        }

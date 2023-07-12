@@ -224,7 +224,7 @@ ul:not(.browser-default).errorlist {
 }
 
 #booking-filter-form {
-    margin-bottom: 0;
+    margin-bottom: 0.7rem;
     border-collapse: separate;
 }
 
@@ -243,7 +243,15 @@ ul:not(.browser-default).errorlist {
 
 #id_showtimedate {
     height: 1.5rem;
-    width: 8.5rem;
+}
+
+.edit-tickets {
+    line-height: 0.1rem;
+}
+
+.edit-tickets label {
+    font-size: 0;
+    visibility: hidden;
 }
 
 .collapsible-header .row {
@@ -275,10 +283,6 @@ form .row {
 img.responsive-img {
     max-width: 220px;
     padding-right: 20px;
-}
-
-.search-btn {
-    margin-left: 2rem;
 }
 
 .choice-header {
