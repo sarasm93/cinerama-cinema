@@ -30,7 +30,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['cinerama-cinema-4c2cf705bc92.herokuapp.com', '8000-sarasm93-cineramacinema-g8epztv7gsc.ws-eu101.gitpod.io']
                                                     
