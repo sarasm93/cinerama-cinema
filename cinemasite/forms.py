@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from .models import Booking, Snack, FilmShowtime
 
 
-# Code on line 9-18 taken from the below Geeksforgeeks.org page, to add first
+# Code on line 10-23 taken from the below Geeksforgeeks.org page, to add first
 # name and last name to allauth signup form:
 # https://www.geeksforgeeks.org/python-extending-and-customizing-django-allauth/
 class CustomSignupForm(SignupForm):

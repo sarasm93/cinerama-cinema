@@ -29,7 +29,8 @@ def view_showtimes(request):
         'myfilter': myfilter,
         'showtimes': showtimes,
         'snacks': snacks,
-        'booking_form': BookingForm(initial={'snacks': 'None £0.00'}),
+        'booking_form': BookingForm(
+            initial={'snacks': 'None £0.00'}, auto_id=False),
     }
     return render(request, 'booking.html', context)
 

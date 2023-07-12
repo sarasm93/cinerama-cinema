@@ -220,7 +220,7 @@ ul:not(.browser-default).errorlist {
 
 /* Booking page */
 #remember-info {
-    margin: none;
+    margin: 0;
 }
 
 #booking-filter-form {
@@ -294,7 +294,7 @@ img.responsive-img {
     margin-left: 1rem;
 }
 
-#price-per-seat {
+.price-per-seat {
     font-size: small;
     line-height: 3.5rem;
     margin-left: 0.5rem;
