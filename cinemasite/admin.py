@@ -6,4 +6,3 @@ admin.site.register(Genre)
 admin.site.register(FilmShowtime)
 admin.site.register(Booking)
 admin.site.register(Snack)
-

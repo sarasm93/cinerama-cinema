@@ -10,7 +10,8 @@ class Genre(models.Model):
     """ Model for film genre """
     genre = models.CharField(max_length=30, unique=True)
 
-    # The def__str__(self): functions used for the models are taken from the Hello Django project:
+    # The def__str__(self): functions used for the models
+    # are taken from the Hello Django project:
     # https://github.com/ckz8780/ci-fsf-hello-django/blob/9f484408bea5cbc9cc5fb45c0feebc3998ff5f49/todo/models.py
     def __str__(self):
         return self.genre
@@ -35,7 +36,8 @@ class FilmShowtime(models.Model):
     """ Model for film program """
     showtimedate = models.DateField(unique=True)
     filmtitle = models.ForeignKey(
-        Film, on_delete=models.SET_NULL, null=True, related_name='filmtitle', verbose_name='Film title')
+        Film, on_delete=models.SET_NULL, null=True,
+        related_name='filmtitle', verbose_name='Film title')
     filmimage = CloudinaryField('image')
     showtime = models.TimeField(max_length=5)
     totnumofseats = models.IntegerField(verbose_name='Total number of seats')
@@ -57,13 +59,16 @@ class Snack(models.Model):
 class Booking(models.Model):
     """ Model for ticket booking """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    date = models.ForeignKey(FilmShowtime, to_field="showtimedate", on_delete=models.SET_NULL, null=True, related_name='filmdate')
+    date = models.ForeignKey(
+        FilmShowtime, to_field="showtimedate", on_delete=models.SET_NULL,
+        null=True, related_name='filmdate')
     time = models.TimeField(max_length=10)
     numoftickets = models.IntegerField(
-        validators=[MaxValueValidator(8), MinValueValidator(1)], verbose_name="Number of tickets")
-    snacks = models.ForeignKey(Snack, to_field="snack", on_delete=models.SET_NULL, null=True)
+        validators=[MaxValueValidator(8), MinValueValidator(1)],
+        verbose_name="Number of tickets")
+    snacks = models.ForeignKey(
+        Snack, to_field="snack", on_delete=models.SET_NULL, null=True)
     cost = models.FloatField()
 
     def __str__(self):
         return f"{self.user}, {self.date}"
-

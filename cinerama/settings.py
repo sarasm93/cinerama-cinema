@@ -14,7 +14,6 @@ from pathlib import Path
 import os
 import dj_database_url
 
-
 if os.path.isfile("env.py"):
     import env
 
@@ -29,11 +28,13 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
-ALLOWED_HOSTS = ['cinerama-cinema-4c2cf705bc92.herokuapp.com', '8000-sarasm93-cineramacinema-g8epztv7gsc.ws-eu101.gitpod.io']
-                                                    
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = [
+    'cinerama-cinema-4c2cf705bc92.herokuapp.com',
+    '8000-sarasm93-cineramacinema-g8epztv7gsc.ws-eu101.gitpod.io']
 
 
 # Application definition
@@ -95,13 +96,6 @@ WSGI_APPLICATION = 'cinerama.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default':
         dj_database_url.parse(os.environ.get("DATABASE_URL"))
@@ -131,7 +125,6 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_SESSION_REMEMBER = False
 
-
 ACCOUNT_FORMS = {
     'signup': 'cinemasite.forms.CustomSignupForm',
 }
@@ -157,7 +150,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'

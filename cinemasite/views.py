@@ -48,13 +48,17 @@ def make_booking(request, showtime_id):
             booking_form.instance.filmtitle = film_showtime.filmtitle
             booking_form.instance.time = film_showtime.showtime
             booking = booking_form.save(commit=False)
-            booking.cost = calculate_price(booking.numoftickets, film_showtime.priceperseat, booking.snacks.price)
+            booking.cost = calculate_price(
+                booking.numoftickets, film_showtime.priceperseat,
+                booking.snacks.price)
             booking_form.save()
         else:
-            messages.error(request, 'Booking NOT ADDED. You can book minimum 1 and maximum 8 tickets.')
+            messages.error(
+                request, 'Booking NOT ADDED.'
+                ' You can book minimum 1 and maximum 8 tickets.')
             return redirect("booking")
 
-    return redirect('my-bookings')        
+    return redirect('my-bookings')
 
 
 def view_bookings(request):
@@ -68,7 +72,7 @@ def view_bookings(request):
 def edit_booking(request, booking_id):
     def calculate_price(number_of_tickets, priceperseat, snack_price):
         return (priceperseat * int(number_of_tickets)) + snack_price
-    
+
     booking = get_object_or_404(Booking, id=booking_id)
     film = booking.date
     seat_price = film.priceperseat
@@ -77,7 +81,10 @@ def edit_booking(request, booking_id):
         'booking': booking,
         'snacks': snacks,
         'seat_price': seat_price,
-        'booking_form': BookingForm(instance=booking, initial={'numoftickets': booking.numoftickets, 'snacks': booking.snacks}),
+        'booking_form': BookingForm(
+            instance=booking, initial={
+                'numoftickets': booking.numoftickets,
+                'snacks': booking.snacks}),
     }
 
     booking_form = BookingForm(data=request.POST, instance=booking)
@@ -86,12 +93,16 @@ def edit_booking(request, booking_id):
         if booking_form.is_valid():
             film_showtime = booking.date
             updated_booking = booking_form.save(commit=False)
-            updated_booking.cost = calculate_price(updated_booking.numoftickets, film_showtime.priceperseat, updated_booking.snacks.price)
+            updated_booking.cost = calculate_price(
+                updated_booking.numoftickets, film_showtime.priceperseat,
+                updated_booking.snacks.price)
             updated_booking.save()
             messages.success(request, 'Your booking was EDITED.')
             return redirect('booking')
         else:
-            messages.error(request, 'Booking NOT EDITED. You can book minimum 1 and maximum 8 tickets.')
+            messages.error(
+                request, 'Booking NOT EDITED.'
+                ' You can book minimum 1 and maximum 8 tickets.')
             return redirect('edit', booking_id=booking_id)
 
     return render(request, 'edit.html', context)
@@ -102,7 +113,7 @@ def cancel_booking(request, booking_id):
     context = {
         'booking': booking,
     }
-    
+
     if request.method == 'POST':
         booking.delete()
         messages.success(request, 'Your booking was CANCELLED.')

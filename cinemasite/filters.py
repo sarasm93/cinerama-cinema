@@ -5,7 +5,8 @@ from .models import FilmShowtime
 
 class ShowtimeFilter(django_filters.FilterSet):
     showtimedate = django_filters.DateFilter(widget=forms.DateInput(
-            attrs={'name': 'date', 'type': 'date', 'class': 'form-control'}), label="")
+            attrs={'type': 'date', 'class': 'form-control'}),
+            label="")
 
     class Meta:
         model = FilmShowtime
