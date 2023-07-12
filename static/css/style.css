@@ -17,6 +17,7 @@ main {
     width: 90%;
 }
 
+
 /* Navbar */
 nav {
     background-color: rgba(56, 2, 2, 0.978);
@@ -46,21 +47,6 @@ nav .brand-logo {
     line-height: 56px;
 }
 
-/* Code on line 17-28, to center align navbar list, is taken from this Stackoverflow page:
- https://stackoverflow.com/questions/38964113/how-can-i-create-a-navbar-with-center-aligned-links-using-materialize 
-.navlist-center ul {
-    text-align: center;
-}
-
-.navlist-center ul li {
-    display: inline;
-    float: none;
-}
-
-.navlist-center ul li a {
-    display: inline-block;
-}*/
-
 nav li a {
     letter-spacing: 2px;
     padding: 0 14px;
@@ -80,11 +66,10 @@ nav li a:hover {
     background-color: #540505ec;
 }
 
+
 /* Footer */
 .page-footer {
     background-color: #120101ac;
-    /*rgb(68, 2, 2);*/
-
     letter-spacing: 1px;
 }
 
@@ -115,6 +100,7 @@ footer a:hover {
     color: #540505ec;
 }
 
+
 /* Intro content on pages */
 .intro {
     margin-bottom: 50px;
@@ -138,6 +124,11 @@ footer a:hover {
 
 
 /* Film cards */
+#page-separator {
+    border: 2px solid #540505ec;
+    margin: 2rem;
+}
+
 .card.small .card-image {
     max-height: 70%;
 }
@@ -173,8 +164,8 @@ footer a:hover {
     color: #2e01d2;
 }
 
-/* Registration and login form */
 
+/* Registration and login form */
 .login-form {
     padding: 1rem;
 }
@@ -212,13 +203,15 @@ input[type=number]:not(.browser-default) {
 }
 
 .form-btn {
-    margin: 3rem;
+    margin: 2.5rem;
 }
 
-/* Materialize error message for invalid login input*/
+
+/* Materialize error message for invalid signup and login input*/
 ul:not(.browser-default).errorlist {
     color: #ff0000;
 }
+
 
 /* Booking page */
 #remember-info {
@@ -293,7 +286,7 @@ img.responsive-img {
     font-size: small;
 }
 
-/* Code on lines 297-309 was taken from this Stackoverflow site:
+/* Code on lines 287-399 was taken from this Stackoverflow site:
 https://stackoverflow.com/questions/34248898/how-to-validate-select-option-for-a-materialize-dropdown
 The code helps show error message for invalid input for "Choose tickets" field in booking form. */
 select[required]:focus{
@@ -310,13 +303,14 @@ select[required]{
     top: 0;
 }
 
+
 /* My bookings page  */
 th {
     text-transform: uppercase;
 }
 
 table {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 
@@ -343,13 +337,14 @@ table {
 }
 
 .booking-btn {
-    margin: 0 1.5rem 1.5rem 1.5rem;
+    margin: 2rem;
 }
 
 #seat-price {
     font-size: x-small;
     margin-top: 1rem;
 }
+
 
 /* Cancel page */
 .cancel-div {

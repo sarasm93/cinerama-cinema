@@ -58,7 +58,7 @@ class Booking(models.Model):
     """ Model for ticket booking """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.ForeignKey(FilmShowtime, to_field="showtimedate", on_delete=models.SET_NULL, null=True, related_name='filmdate')
-    time = models.CharField(max_length=20)
+    time = models.TimeField(max_length=10)
     numoftickets = models.IntegerField(
         validators=[MaxValueValidator(8), MinValueValidator(1)], verbose_name="Number of tickets")
     snacks = models.ForeignKey(Snack, to_field="snack", on_delete=models.SET_NULL, null=True)
