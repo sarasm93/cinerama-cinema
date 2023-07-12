@@ -30,11 +30,11 @@
                 <td>{{ booking.numoftickets }}</td>
                 <td>{{ booking.snacks }}</td>
                 <td>£{{ booking.cost }}</td>
-                <td><a href="{% url 'edit' booking.pk %}"><button type="submit"
-                            class="btn waves-effect light-blue darken-4 btn-medium hoverable edit-btn">Edit</button></a>
+                <td><form action="{% url 'edit' booking.pk %}"><button type="submit"
+                            class="btn waves-effect light-blue darken-4 btn-medium hoverable edit-btn">Edit</button></form>
                 </td>
-                <td><a href="{% url 'cancel' booking.pk %}"><button type="submit"
-                            class="btn waves-effect deep-orange accent-3 btn-medium hoverable cancel-btn">Cancel</button></a>
+                <td><form action="{% url 'cancel' booking.pk %}"><button type="submit"
+                            class="btn waves-effect deep-orange accent-3 btn-medium hoverable cancel-btn">Cancel</button></form>
                 </td>
             </tr>
             {% endfor %}

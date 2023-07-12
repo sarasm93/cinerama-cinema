@@ -22,11 +22,11 @@
                     <img class="activator valign-wrapper" src="{{ film.image.url }}" alt="Film image">
                 </div>
                 <div class="card-content yellow lighten-4">
-                    <span class="card-title activator grey-text text-darken-4">
-                        <p class="truncate">{{ film.title }}</p><i class="fa-solid fa-ellipsis-vertical right"></i>
-                    </span>
-                    <span class="card-subtitle activator grey-text text-darken-4">{{ film.genre }} |
-                        {{ film.runtime }}</span>
+                    <p class="card-title activator grey-text text-darken-4">
+                        {{ film.title }}<i class="fa-solid fa-ellipsis-vertical right"></i>
+                    </p>
+                    <p class="card-subtitle activator grey-text text-darken-4">{{ film.genre }} |
+                        {{ film.runtime }}</p>
                 </div>
                 <div class="card-reveal yellow lighten-4">
                     <span class="card-title grey-text text-darken-4">{{ film.title }}<i
@@ -36,7 +36,8 @@
                     <p class="grey-text text-darken-4">Storyline: {{ film.description }}</p>
                     <p class="grey-text text-darken-4">Director: {{ film.director }}</p>
                     <p class="grey-text text-darken-4">Cast: {{ film.cast }}</p>
-                    <p class="grey-text text-darken-4"><a class="trailer" href="{{ film.trailer }}" target="_blank">Trailer</a></p>
+                    <p class="grey-text text-darken-4"><a class="trailer" href="{{ film.trailer }}"
+                            target="_blank">Trailer</a></p>
                 </div>
             </div>
         </div>

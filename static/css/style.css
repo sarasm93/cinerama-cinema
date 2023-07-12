@@ -130,19 +130,24 @@ footer a:hover {
 }
 
 .card.small .card-image {
-    max-height: 70%;
+    max-height: 65%;
 }
 
 .card.small .card-image+.card-content {
-    max-height: 30%;
+    max-height: 35%;
 }
 
 .card .card-content {
     padding: 15px;
 }
 
-.truncate {
-    white-space: nowrap;
+.card .card-content .card-title {
+    line-height: 28px; 
+    margin-bottom: 0;
+}
+
+.card.small {
+    height: 320px;
 }
 
 .waves-block {
@@ -223,7 +228,11 @@ ul:not(.browser-default).errorlist {
     border-collapse: separate;
 }
 
-#booking-filter-form, td, th {
+#booking-filter-form th {
+    padding: 0.5rem 0 0 0;
+}
+
+#booking-filter-form td {
     padding: 0.5rem 0 0 0;
 }
 
