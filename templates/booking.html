@@ -20,18 +20,25 @@
         {% endif %}
         <div class="row">
             <p><i class="fa-regular fa-calendar-days booking-form-icon"></i> Choose a date:</p>
-            <form method="get">
-                {{ myfilter.form }}
+            <div class="col s6 m3 l2">
+                <form method="get">
+                    <table id="booking-filter-form">
+                        {{ myfilter.form }}
+                    </table>
+                </form>
+            </div>
+            <div class="col s6 m3 l2">
                 <button type="submit"
                     class="btn waves-effect red darken-1 btn-medium hoverable search-btn">Search</button>
-            </form>
+            </div>
         </div>
         <div class="row">
             <ul class="collapsible">
                 {% for showtime in showtimes %}
                 <li>
                     <div class="collapsible-header z-depth-4">
-                        <img class="responsive-img hide-on-small-only" src="{{ showtime.filmimage.url }}">
+                        <img class="responsive-img hide-on-small-only" src="{{ showtime.filmimage.url }}"
+                            alt="Film image">
                         <div class="col">
                             <div class="row">
                                 <div class="col">
@@ -52,7 +59,8 @@
                                     </div>
                                 </div>
                                 <div class="col s12 l4 form-div">
-                                    <h6 class="choice-header"><i class="fa-solid fa-ticket booking-form-icon"></i>Choose number of tickets:</h6>
+                                    <h6 class="choice-header"><i class="fa-solid fa-ticket booking-form-icon"></i>Choose
+                                        number of tickets:</h6>
                                     <div class="input-field col s7">
                                         {{ booking_form.numoftickets }}
                                         <p>15 of {{ showtime.totnumofseats }} tickets left</p>
@@ -90,5 +98,5 @@
             </ul>
         </div>
     </div>
-
-    {% endblock %}
+</div>
+{% endblock %}
