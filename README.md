@@ -4,7 +4,7 @@ Cinerama Cinema is a cinema for all film lovers. It offers all kinds of films - 
 
 The app is a booking system for tickets and snacks so that almost everything is done when the user comes to the cinema. All the users have to do at the cinema is to pick up the snacks and pay, then they´re ready to go! The site acts as a repository for bookings as the users can store, update and cancel all their bookings through the app. They can also read about films that they might be interested in watching in the future. 
 
-![AN image of the deployed app on different screen sizes](documentation/LÄÄÄÄÄÄÄÄÄÄÄÄÄNK)
+![An image of the deployed app on different screen sizes](documentation/LÄÄÄÄÄÄÄÄÄÄÄÄÄNK)
 
 You can find the site [here](LÄÄÄÄÄÄÄÄÄÄÄNK).
 
@@ -146,11 +146,98 @@ The above features are listed in a GitHub Project used as backlog for the app. T
 
 ## **Testing**
 
+TABEEEEEEEEEEELL???????????
+
+The accessibility of the site has been checked with Lighthouse in DevTools. The results for the final site is shown below.
+
+![Lighthouse testing score](documentation/validation/NNNNNNNNAAAAAAAAAMMMMMMMMMNNNNNN PÅ LIGHTHOUSE BILD FÖR FINAL SCORE)
+
+The first Lighthouse test showed an overall good performance for the site. The testing showed a slightly lower score, 87-89% accessability, for the booking page (booking.html) and edit booking page (edit.html) due to missing labels on form fields and use of `<h6>` elements in the footer. To solve this a changed all `<h6>` elements to `<p>` elements. A label was added in filters.py to the filter date form, replacing a `<p>` element and icon that was there before. Then I did some restyling in style.css to make the form look good again. For the edit booking form I added labels in forms.py using a widget and then hidd the labels with `visibility: hidden` and `font-size: 0;` in style.css in order for the booking data to still fit into the table nicely. This made the accessability score increase to 91% and 98%. - KKKKKKAAAAAAAAAAAANNNNNNNNNSSSSSSKKKKEEE ÄNDRA NÅGOT, BEROENDE PÅ VAD SISTA TESTERNA VISAR!
+
 ### **Validator testing**
+
+I have validated my HTML, CSS, Javascript and Python code with the below websites.
+
+- HTML: [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input)
+- CSS: [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
+- Javascript: [JSHint](https://jshint.com/)
+- Python: [CI Python Linter](https://pep8ci.herokuapp.com/)
+
+Validation of the HTML, CSS and Javascript code didn´t return any errors or warnings except for some trailing whitespaces or lines of code that were too long. These warnings/errors were solved by removing the whitespaces and dividing the too long code lines into multiple lines with proper indentation.
+
+Validation of the python code returned some warnings and errors. They are presented below together with actions taken to solve them.
+
+#### **Home page**
+**Error:** In the films.html `id=trailer` was added to the anchor element for the trailer link on the film card. This was of course noticed by the validator raising an error saying that the page contained duplicate IDs when several film cards are displayed on the page.<br>
+**Solution:** The `id` was changed to a `class`, which is the correct way to style an element if more than one is being styled.
+![Validation error on home page](documentation/validation/validation-home-duplicate-ids.png)
+
+**Error:** Missing `alt` attribute on the image element in the films.html.<br> 
+**Solution:** adding an `alt` attribute to the image element.
+![Validation error on home page](documentation/validation/validation-home-missing-alt-attribute.png)
+
+**Error:** Not allowed to have a `<p>` element inside `<span>`. The reason behind this error was because of a truncate-class (Materialize class) that I had added to the film title `<p>` on the card in films.html (see 'Before' below). The `<span>` made it possible to truncate the film title without making the overflowing title text hide the genre and runtime text under the title. Without the `<span>` the genre and runtime was overflown with empty overflow (see image below).<br> 
+**Solution:** The `<span>` containing the `<p>` with the film title was changed to a `<p>` element (to keep all the styling classes). Then the original `<p>` with truncate class was removed. This prevent the film title to push the genre and runtime outside of the card when the film title dosen´t fit on one line, the line-height and margin for the film card content and title was adjusted, the card height was increased and the styling of the text for the film title and genre was changed so that it got more space on the card at the same time as the image got a little less space. 
+
+![Bug due to truncated text on card](documentation/bugs/bug-truncated-text.png)
+
+	Before:
+	`<span class="card-title activator grey-text text-darken-4">
+                        	<p class="truncate">{{ film.title }}</p><i class="fa-solid fa-ellipsis-vertical right"></i>
+                    	</span>
+                    	<span class="card-subtitle activator grey-text text-darken-4">{{ film.genre }} |
+                        	{{ film.runtime }}</span>`
+
+	After:
+	`<p class="card-title activator grey-text text-darken-4 clip-text">
+                        {{ film.title }}<i class="fa-solid fa-ellipsis-vertical right"></i>
+                    </p>
+                    <p class="card-subtitle activator grey-text text-darken-4">{{ film.genre }} |
+                        {{ film.runtime }}</p>`
+
+
+#### **Book tickets page**
+**Error:** Missing `alt` attribute on the image element and a missing closing `<div>` tag, in booking.html.<br>
+**Solution:** adding an `alt` attribute to the image element and the missing closing `<div>` tag at the correct place in the code.
+
+**Error:** Stray start and end tags for table elements `<tr>`, `<th>` and `<td>` on the booking page (booking.html). The table content is created when the date form to filter films by date on the booking page is used.<br>
+**Solution:** The form template variable `{{ myfilter.form }}` is put within `<table>` tags, and the filter form and the button is put into separate columns to keep the responsivness. 
+![Validation error on booking page](documentation/validation/validation-booking-stray-tabletags.png)
+
+**Error:** Double IDs for number of tickets, snacks and price per seat form fields on booking page.<br> 
+**Solution:** For the price per seat field, the error was caused by a manually added `id`. The `id` just changed to a `class` in order to solve the error. The ids for number of tickets and snacks fields were auto generated by Django. To remove them `auto_id=False` was added to the context BookingForm in the `view_showtimes`-function in views.py, used to render the film showtimes.   
+![Validation error on booking page](documentation/validation/validation-booking-duplicate-ids.png)
+
+#### **My Bookings page**
+**Error:** Button element nnot allowed in anchor element in my-bookings.html, caused by "Edit" and "Cancel" buttons in the table for all the users bookings.<br>
+**Solution:** This was solevd by replacing the anchor elements with forms with action attributes. 
+![Validation error on my bookings page](documentation/validation/validation-mybookings-button-in-anchor.png)
+
+#### **Edit page**
+**Error:** An error saying that the column with for `<td>` in the edit.html file is not matching the width for the `<th>`. This is caused by the fact that one extra `<th>` element had been added to the edit table to make the "Update" button fit nicely into the table, with som extra space around it. <br>
+**Solution:** As the space around the button can be added with styling instead, the extra `<th>` element was removed to solve the error. 
+![Validation error on edit page](documentation/validation/validation-edit-extra-th.png)
 
 ### **Resolved problems**
 
 ### **Bugs**
+
+The favicon wouldn´t show up when trying to add it in the early stages of the app. This was due to it being added to the root directory. To solve the bug the icon was moved to the static folder adn then it rendered correctly. 
+
+Early on in the development of the app, all footer icons had custom Materialize color classes. I tried to add a hover effect to change the color of the "follow us"-icons anchor tags, but it didn´t work. To solve this I removed the Materialize color class and added standard css color styling on the anchor tags instead. Then the hover effect worked. For better user experiance, this needed to be solved since there are many other icons on the page that are not clickable. The once that are clickable should be highlighted. 
+
+When making a booking, booking snacks should not be required. Therefore `blank=True` was added to the Booking model snack field. But, if this is done a bug is created when the total price for the booking is calculated caused by the fact the `blank=True` means that `None` is returned. When trying to calculate the price the below error was thrown. To solve this I removed `blank=True` from the model field and added a new alternative to the snack menu (a new post in the model) called "None" with a price of 0. I also made the "None" alternative the initial value, prefilled in the booking form when it renders, so that the form wasn´t adding any unexpected items and costs to the booking.
+
+![Error on booking page caused by `blank=True` put on model snack field](documentation/bugs/bug-nonetype-no-attribute1.png)
+![Error on booking page caused by `blank=True` put on model snack field](documentation/bugs/bug-nonetype-no-attribute2.png)
+
+On the My Bookings page, the color of the table headers disappear on smaller devices when there are no bookings in the table, see image below (as soon as bookings are added the color shows). To solve this, background-color is added with a Materialize color class on the `<thead>` in the my-bookings.html file, like this: `<thead class="yellow lighten-3">`. 
+
+![Color bug on my bookings page](documentation/bugs/bug-color-disappears.png)
+
+Another bug that showed up was for the sign up form. If a user tries to sign up with for example a username and email that is already registered with another user, error messages are shown in the sign up form. If there ere many error messages, the submit button was pushed of the white sign up container/card, see image below. To solve this I put the button on a separate row in the sign up form container (it was previously on the same row as the form). 
+
+![Bug causing button to be missplaced on sign up form](documentation/bugs/bug-signup-button-outside-card.png) 
 
 ## **Deployment**
 
@@ -214,11 +301,15 @@ Each registered user should only see it´s own bookings. I used [this Stackoverf
 
 The [Django documentation](https://docs.djangoproject.com/en/2.2/ref/validators/#writing-validators) for validation of user input to form was used to understand how to validate that only 1-8 tickets can be booked.
 
+This [Django documentation](https://docs.djangoproject.com/en/4.2/ref/forms/api/#configuring-form-elements-html-id-attributes-and-label-tags) was used to understand how to remove Django auto generated form field ids, causing validator errors on the booking page. 
+
 To increase Lighthouse accessability scores by adding form labels I used these pages to understand how to do add the labels and hide them: [Django form documentation](https://docs.djangoproject.com/en/4.2/topics/forms/), [Stackoverflow page on hiding labels](https://stackoverflow.com/questions/40029976/how-to-hide-label-for-css) and [Stackoverflow on labels](https://stackoverflow.com/questions/12597780/how-can-i-hide-a-django-label-in-a-custom-django-form).
 
 To customize the django allauth signup form to include first and last name, I used code from this [Geeksforgeeks.org](https://www.geeksforgeeks.org/python-extending-and-customizing-django-allauth/) page. The code is used on line 10-23 in forms.py. To make the email field required and unique I used [this](https://stackoverflow.com/questions/23956288/django-all-auth-email-required) and [this](https://stackoverflow.com/questions/27967319/django-allauth-email-login-always-wrong) Stackoverflow page to understand how to do this. 
 
 [This page](https://django-allauth.readthedocs.io/en/latest/configuration.html) was used to understand how to remove the "Remember me" functionality for the user registration, by adding `ACCOUNT_SESSION_REMEMBER = False` in settings.py. 
+
+[This Stackoverflow page](https://stackoverflow.com/questions/2906582/how-do-i-create-an-html-button-that-acts-like-a-link) was used to remind me that buttons are not allowed in anchor elements and that forms can be used instead, solving one of the validation errors for the app.
 
 All information about the films is taken from [Imdb.com](https://www.imdb.com/?ref_=nv_home). Most trailers are hosted at Imdb, but some are hosted on Youtube.com. 
 
