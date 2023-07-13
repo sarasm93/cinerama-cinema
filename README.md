@@ -183,20 +183,23 @@ Validation of the python code returned some warnings and errors. They are presen
 
 ![Bug due to truncated text on card](documentation/bugs/bug-truncated-text.png)
 
-	Before:
-	`<span class="card-title activator grey-text text-darken-4">
-                        	<p class="truncate">{{ film.title }}</p><i class="fa-solid fa-ellipsis-vertical right"></i>
-                    	</span>
-                    	<span class="card-subtitle activator grey-text text-darken-4">{{ film.genre }} |
-                        	{{ film.runtime }}</span>`
+Before:
+```
+<span class="card-title activator grey-text text-darken-4">
+                       	<p class="truncate">{{ film.title }}</p><i class="fa-solid fa-ellipsis-vertical right"></i>
+                   	</span>
+                   	<span class="card-subtitle activator grey-text text-darken-4">{{ film.genre }} |
+                       	{{ film.runtime }}</span>
+```
 
-	After:
-	`<p class="card-title activator grey-text text-darken-4 clip-text">
-                        {{ film.title }}<i class="fa-solid fa-ellipsis-vertical right"></i>
-                    </p>
-                    <p class="card-subtitle activator grey-text text-darken-4">{{ film.genre }} |
-                        {{ film.runtime }}</p>`
-
+After:
+```
+<p class="card-title activator grey-text text-darken-4 clip-text">
+                    {{ film.title }}<i class="fa-solid fa-ellipsis-vertical right"></i>
+                </p>
+                <p class="card-subtitle activator grey-text text-darken-4">{{ film.genre }} |
+                    {{ film.runtime }}</p>
+```
 
 #### **Book tickets page**
 **Error:** Missing `alt` attribute on the image element and a missing closing `<div>` tag, in booking.html.<br>
@@ -204,6 +207,7 @@ Validation of the python code returned some warnings and errors. They are presen
 
 **Error:** Stray start and end tags for table elements `<tr>`, `<th>` and `<td>` on the booking page (booking.html). The table content is created when the date form to filter films by date on the booking page is used.<br>
 **Solution:** The form template variable `{{ myfilter.form }}` is put within `<table>` tags.
+
 ![Validation error on booking page](documentation/validation/validation-booking-stray-tabletags.png)
 
 **Error:** Double IDs for number of tickets, snacks and price per seat form fields on booking page.<br> 
@@ -220,16 +224,13 @@ Validation of the python code returned some warnings and errors. They are presen
 **Solution:** As the space around the button can be added with styling instead, the extra `<th>` element was removed to solve the error. 
 ![Validation error on edit page](documentation/validation/validation-edit-extra-th.png)
 
-### **Resolved problems**
-
-
-
-
-### **Bugs**
+### **Resolved problems and bugs**
 
 The favicon wouldn´t show up when trying to add it in the early stages of the app. This was due to it being added to the root directory. To solve the bug the icon was moved to the static folder adn then it rendered correctly. 
 
 Early on in the development of the app, all footer icons had custom Materialize color classes. I tried to add a hover effect to change the color of the "follow us"-icons anchor tags, but it didn´t work. To solve this I removed the Materialize color class and added standard css color styling on the anchor tags instead. Then the hover effect worked. For better user experiance, this needed to be solved since there are many other icons on the page that are not clickable. The once that are clickable should be highlighted. 
+
+Early on the plan was also to place the brand logo in the top left corner of the navbar on mobile and tablet devices. But when working with Materialize I realised that the default placement of the 'brand-logo'-class was in the middle. To not go against the framework I removed the Materialize navbar I first selected and replaced it with one that better handles collapsing of the navbar list items on small devices. 
 
 When making a booking, booking snacks should not be required. Therefore `blank=True` was added to the Booking model snack field. But, if this is done a bug is created when the total price for the booking is calculated caused by the fact the `blank=True` means that `None` is returned. When trying to calculate the price the below error was thrown. To solve this I removed `blank=True` from the model field and added a new alternative to the snack menu (a new post in the model) called "None" with a price of 0. I also made the "None" alternative the initial value, prefilled in the booking form when it renders, so that the form wasn´t adding any unexpected items and costs to the booking.
 
@@ -246,9 +247,53 @@ Another bug that showed up was for the sign up form. If a user tries to sign up 
 
 ## **Deployment**
 
+The site was deployed to Heroku from GitHub with the following steps:
 
+1. Create an external database using [ElephantSQL](elephantsql.com). When logged in to your ElephantSQL account, click on “Create New Instance”, choose a plan and give it a name. Then select a region, click the "Review" button to view the details for your plan and finally click "Create instance". 
 
+2. Create a Heroku app by logging in to your Heroku account. Click the "New" button in the top right corner and then "Create new app". Give it a name, choose a region and then click the "Create app" button. 
 
+3. Attach the external database. 
+	- In the Heroku app that you created, you need to create environment variables, called Config Var in Heroku. This is done under the "Settings"-tab in the top menu. Click the tab. On the settings page scroll down to the Config Vars-section and click the "Reveal Config Vars"-button. 
+	- Go back to your ElephantSQL account, and from the dashboard click on the database instance name for the project. When in the project instance, copy the ElephantSQL database url by clicking on the copy icon. In the Config Vars section in at Heroku, add this url to the VALUE field and add DATABASE_URL to the KEY field. 
+	- In your workspace, create a file called env.py in the top level directory. Add env.py to the list of files in .gitignore. In the env.py file, import the os library and add the ElephantSQL DATABASE_URL and a chosen SECRET_KEY value. Also, at Heroku, add you secret key as a config var. Add SECRET_KEY in the KEY field and the secret key in the VALUE field. 
+
+4. Prepare the settings.py file and the environment starting by adding:	
+
+```
+import os
+import dj_database_url
+
+if os.path.isfile("env.py"):
+    import env
+```
+Then remove the default secret key and replace it with SECRET_KEY. Comment out or remove the default database configuration and add this instead:
+
+```
+DATABASES = {
+    'default':
+        dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
+```
+Save all files and make migrations. 
+
+5. Set up Cloudinary by (when logged in to your account on Cloudinary) copying your url on the Cloudinary dashboard and paste it into the env.py file, like you did with the SECRET_KEY and DATABASE_URL. Then go to Heroku and the url to the config vars. Add CLOUDINARY_URL in the KEY field and your url in the VALUE field. If you deploy your app early on in the project process, also add DISABLE_COLLECTSTATIC in KEY field and 1 to VALUE field (remove it before final deployment). Add Cloudinary Libraries to the list of installed apps in settings.py. Then also add static files settings in settings.py to tell Django to use Cloudinary. Type:
+
+```
+STATIC_URL = '/static/'
+
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+```
+The link the file to the templates directory in Heroku by typing `TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')` and then change the templates directory to TEMPLATES_DIR, so that it looks like this `'DIRS': [TEMPLATES_DIR]`. Finally add your Heroku hostname to allowed hosts, together with you local host. 
+
+6. Create files and directories. Add a requirements.txt file. Create 3 folders called media, static and templates on top level directory. Also create a file on the top level directory called Procfile and add this code `web: gunicorn your-project-name.wsgi`.
+
+7. Before your final deployment you need to set `Debug=False` in the settings.py file. Then save all files, add, commit and push your code to GitHub. Then go to Heroku. Scroll to the top menu and click the "Deploy"-tab. Scroll to the "Deployment method"-sction and select GitHub. In the "Connect to Github"-section that shows up, click on "Connect to GitHub". When the connecting is done you will see a search bar where you can search for the repository name. Click on the "Connect"-button that shows up when Heroku has found your repository. Scroll further down and choose either to deploy automatically by clicking the "Enable Automatic Deploys" or deploy manually by clicking the "Deploy Branch"-button. When the deployment is finished you can go to the "Settings"-tab again and scroll down to the "Domains"-section where you can find the link to your deployed app.
 
 ## **Technologies, Languages, Frameworks, Libraries, Servers, Programs and Sites used**
 
@@ -326,6 +371,8 @@ I used [this Geeksforgeeks.com page](https://www.geeksforgeeks.org/best-full-sta
 
 This [Youtube video](https://www.youtube.com/watch?v=fQo9ivqX4xs) helped me to better understand how a Django app is built and how to use Cloudinary.
 
+The app was deployed with the help of the instructions file from Code Institute for the Django Blog project. The file is found under the link namned "Django Deployment Instructions" at [this Code Institute lesson page](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/9236975633b64a12a61a00e0cca7c47d/?child=first).
+
 This [Pluralsight guide](https://www.pluralsight.com/guides/break-down-agile-user-stories-into-tasks-and-estimate-level-of-effort) was used to better understand how to create good acceptance criteria and tasks for the user stories. 
 
 When creating my GitHub issues template for the user stories, I used Code Institutes example of an issue template shown in [this video](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+AG101+2021_T1/courseware/a4e548ca70a3473aa890ba2ab9bf612c/db69a5829de8467eb071e63bde630a2e/). I also used the issue labels shown in [this Code Institute lesson](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+AG101+2021_T1/courseware/a4e548ca70a3473aa890ba2ab9bf612c/71fe6c52cccf477688e924c9889f5fec/?child=first) in my project, as I think they are very useful for prioritization. 
@@ -340,7 +387,7 @@ When adding a new posts to a model, via the admin site, by default the new posts
 
 [Tinypng.com](https://tinypng.com/) was used to minimize the image size of all images used.
 
-I used the readme.md file for [The Easy Eater project](https://github.com/AliOKeeffe/PP4_My_Meal_Planner) as inspiration for the readme.md file for this project. I also used the entity-relationship diagram made for that project to help identify what data types to use for the data in this project. More inspiration for the readme was gotten from the [Traffic Sign Memory project](https://github.com/sarasm93/traffic-sign-memory).
+I used the readme.md file for [The Easy Eater project](https://github.com/AliOKeeffe/PP4_My_Meal_Planner) as inspiration for the readme.md file for this project. I also used the entity-relationship diagram made for that project to help identify what data types to use for the data in this project. More inspiration for the readme was gotten from the [Traffic Sign Memory project](https://github.com/sarasm93/traffic-sign-memory) and the [Blog Website PP4 project](https://github.com/jyotiyadav2508/Blog_Website_PP4). Some text for the deployment section of the readme was taken from the readme of my own [Trivia quiz project](https://github.com/sarasm93/trivia-quiz).
 
 The user interface design for this project was inspired by the website for [Spegeln cinema](https://biografspegeln.se/). 
 
