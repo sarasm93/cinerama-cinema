@@ -4,7 +4,7 @@
 https://materializecss.com/footer.html */
 body {
     background-color: #380202;
-    font-family: Pioret-One, Trebuchet MS, sans-serif;
+    font-family: "Poiret-One", "Trebuchet MS", sans-serif;
     color: #ffcc80;
     display: flex;
     min-height: 100vh;
@@ -26,7 +26,7 @@ nav {
 }
 
 .brand-logo {
-    font-family: Limelight, Trebuchet MS, sans-serif;
+    font-family: "Limelight", "Trebuchet MS", sans-serif;
     text-transform: uppercase;
     font-size: x-large;
 }
@@ -111,7 +111,7 @@ footer a:hover {
 }
 
 .hero-header {
-    font-family: Limelight, Trebuchet MS, sans-serif;
+    font-family: "Limelight", "Trebuchet MS", sans-serif;
     margin-bottom: 10px;
     text-align: center;
     text-transform: uppercase;
