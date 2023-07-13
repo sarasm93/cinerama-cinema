@@ -14,8 +14,8 @@
         {% if user.is_authenticated == False %}
         <div class="row">
             <p id="remember-info">*Remember - to be able to book tickets, you need to <a
-                    href="{% url 'account_signup' %}">register an account</a> and <a
-                    href="{% url 'account_login' %}">log in</a>.</p>
+                    href="{% url 'account_signup' %}" aria-label="register account">register an account</a> and <a
+                    href="{% url 'account_login' %}" aria-label="log in">log in</a>.</p>
         </div>
         {% endif %}
         <div class="row">
@@ -24,7 +24,8 @@
                     <table id="booking-filter-form">
                         {{ myfilter.form }}
                     </table>
-                    <button type="submit" class="btn waves-effect red darken-3 btn-medium hoverable">Search</button>
+                    <button type="submit" class="btn waves-effect red darken-3 btn-medium hoverable"
+                        aria-label="search">Search</button>
                 </form>
             </div>
         </div>

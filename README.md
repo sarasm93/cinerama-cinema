@@ -4,9 +4,9 @@ Cinerama Cinema is a cinema for all film lovers. It offers all kinds of films - 
 
 The app is a booking system for tickets and snacks so that almost everything is done when the user comes to the cinema. All the users have to do at the cinema is to pick up the snacks and pay, then they´re ready to go! The site acts as a repository for bookings as the users can store, update and cancel all their bookings through the app. They can also read about films that they might be interested in watching in the future. 
 
-![An image of the deployed app on different screen sizes](documentation/LÄÄÄÄÄÄÄÄÄÄÄÄÄNK)
+![An image of the deployed app on different screen sizes](documentation/readme-intro.png)
 
-You can find the site [here](LÄÄÄÄÄÄÄÄÄÄÄNK).
+You can find the site [here](https://cinerama-cinema-4c2cf705bc92.herokuapp.com/).
 
 ## **UX**
 

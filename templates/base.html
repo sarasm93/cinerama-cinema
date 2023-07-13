@@ -33,14 +33,20 @@
                         class="fa-solid fa-film hide-on-med-and-down"></i>Cinerama</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a class="orange-text text-lighten-3" href="{% url 'home' %}">Home</a></li>
-                    <li><a class="orange-text text-lighten-3" href="{% url 'booking' %}">Book Tickets</a></li>
+                    <li><a class="orange-text text-lighten-3" href="{% url 'home' %}"
+                            aria-label="Visit our Home page">Home</a></li>
+                    <li><a class="orange-text text-lighten-3" href="{% url 'booking' %}"
+                            aria-label="Visit the booking page">Book Tickets</a></li>
                     {% if user.is_authenticated %}
-                    <li><a class="orange-text text-lighten-3" href="{% url 'my-bookings' %}">My Bookings</a></li>
-                    <li><a class="orange-text text-lighten-3" href="{% url 'account_logout' %}">Logout</a></li>
+                    <li><a class="orange-text text-lighten-3" href="{% url 'my-bookings' %}"
+                            aria-label="Visit you profile page with your bookings">My Bookings</a></li>
+                    <li><a class="orange-text text-lighten-3" href="{% url 'account_logout' %}"
+                            aria-label="Log out">Logout</a></li>
                     {% else %}
-                    <li><a class="orange-text text-lighten-3" href="{% url 'account_signup' %}">Sign up</a></li>
-                    <li><a class="orange-text text-lighten-3" href="{% url 'account_login' %}">Login</a></li>
+                    <li><a class="orange-text text-lighten-3" href="{% url 'account_signup' %}"
+                            aria-label="Sign up">Sign up</a></li>
+                    <li><a class="orange-text text-lighten-3" href="{% url 'account_login' %}"
+                            aria-label="Log in">Login</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -48,14 +54,19 @@
         <!-- Materialize sidenavbar. Altered to fit this project.
         https://materializecss.com/sidenav.html -->
         <ul class="sidenav yellow lighten-4 grey-text text-lighten-4" id="mobile-demo">
-            <li><a class="grey-text text-darken-4" href="{% url 'home' %}">Home</a></li>
-            <li><a class="grey-text text-darken-4" href="{% url 'booking' %}">Book Tickets</a></li>
+            <li><a class="grey-text text-darken-4" href="{% url 'home' %}" aria-label="Visit our Home page">Home</a>
+            </li>
+            <li><a class="grey-text text-darken-4" href="{% url 'booking' %}" aria-label="Visit the booking page">Book
+                    Tickets</a></li>
             {% if user.is_authenticated %}
-            <li><a class="grey-text text-darken-4" href="{% url 'my-bookings' %}">My Bookings</a></li>
-            <li><a class="grey-text text-darken-4" href="{% url 'account_logout' %}">Logout</a></li>
+            <li><a class="grey-text text-darken-4" href="{% url 'my-bookings' %}"
+                    aria-label="Visit you profile page with your bookings">My Bookings</a></li>
+            <li><a class="grey-text text-darken-4" href="{% url 'account_logout' %}" aria-label="Log out">Logout</a>
+            </li>
             {% else %}
-            <li><a class="grey-text text-darken-4" href="{% url 'account_signup' %}">Sign up</a></li>
-            <li><a class="grey-text text-darken-4" href="{% url 'account_login' %}">Login</a></li>
+            <li><a class="grey-text text-darken-4" href="{% url 'account_signup' %}" aria-label="Sign up">Sign up</a>
+            </li>
+            <li><a class="grey-text text-darken-4" href="{% url 'account_login' %}" aria-label="Log in">Login</a></li>
             {% endif %}
         </ul>
     </header>
@@ -77,11 +88,14 @@
                     <p>Tuesday - Sunday 16.00-23.00</p>
                 </div>
                 <div class="col l4 s12 orange-text text-lighten-3 center-align footer-div">
-                    <span><a href="https://www.instagram.com/" target="_blank" aria-label="Visit our Instagram page! (opens up in a new tab)"><i
+                    <span><a href="https://www.instagram.com/" target="_blank"
+                            aria-label="Visit our Instagram page! (opens up in a new tab)"><i
                                 class="fa-brands fa-instagram"></i></a></span>
-                    <span><a href="https://www.facebook.com/" target="_blank" aria-label="Visit our Facebook page! (opens up in a new tab)"><i
+                    <span><a href="https://www.facebook.com/" target="_blank"
+                            aria-label="Visit our Facebook page! (opens up in a new tab)"><i
                                 class="fa-brands fa-square-facebook"></i></a></span>
-                    <span><a href="https://www.linkedin.com/" target="_blank" aria-label="Visit our LinkedIn page! (opens up in a new tab)"><i
+                    <span><a href="https://www.linkedin.com/" target="_blank"
+                            aria-label="Visit our LinkedIn page! (opens up in a new tab)"><i
                                 class="fa-brands fa-linkedin"></i></a></span>
                     <p class="footer-header">Follow us!</p>
                 </div>

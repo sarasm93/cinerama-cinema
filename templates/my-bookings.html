@@ -32,11 +32,15 @@ https://materializecss.com/table.html -->
                 <td>{{ booking.numoftickets }}</td>
                 <td>{{ booking.snacks }}</td>
                 <td>£{{ booking.cost }}</td>
-                <td><form action="{% url 'edit' booking.pk %}"><button type="submit"
-                            class="btn waves-effect light-blue darken-4 btn-medium hoverable edit-btn">Edit</button></form>
+                <td>
+                    <form action="{% url 'edit' booking.pk %}"><button type="submit"
+                            class="btn waves-effect light-blue darken-4 btn-medium hoverable edit-btn"
+                            aria-label="edit">Edit</button></form>
                 </td>
-                <td><form action="{% url 'cancel' booking.pk %}"><button type="submit"
-                            class="btn waves-effect deep-orange accent-3 btn-medium hoverable cancel-btn">Cancel</button></form>
+                <td>
+                    <form action="{% url 'cancel' booking.pk %}"><button type="submit"
+                            class="btn waves-effect deep-orange accent-3 btn-medium hoverable cancel-btn"
+                            aria-label="cancel">Cancel</button></form>
                 </td>
             </tr>
             {% endfor %}
