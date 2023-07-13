@@ -41,7 +41,6 @@ The site was built with the goal to give it a feeling of a cinema in Paris in th
 
 The main fonts used are Limelight and Poiret-One. They are imported with [Google Fonts](https://fonts.google.com/). They were chosen because they look like fonts used by cinemas in Paris in the 1940-1950s.
 
-
 #### **Wireframes**
 
 <details>
@@ -137,6 +136,9 @@ The genre model was created so that each film can have a genre added to it. This
 
 ### **Existing features**
 
+
+
+
 ### **Future features**
 
 - User cannot change or cancel booking within 2 days of the film. 
@@ -201,7 +203,7 @@ Validation of the python code returned some warnings and errors. They are presen
 **Solution:** adding an `alt` attribute to the image element and the missing closing `<div>` tag at the correct place in the code.
 
 **Error:** Stray start and end tags for table elements `<tr>`, `<th>` and `<td>` on the booking page (booking.html). The table content is created when the date form to filter films by date on the booking page is used.<br>
-**Solution:** The form template variable `{{ myfilter.form }}` is put within `<table>` tags, and the filter form and the button is put into separate columns to keep the responsivness. 
+**Solution:** The form template variable `{{ myfilter.form }}` is put within `<table>` tags.
 ![Validation error on booking page](documentation/validation/validation-booking-stray-tabletags.png)
 
 **Error:** Double IDs for number of tickets, snacks and price per seat form fields on booking page.<br> 
@@ -219,6 +221,9 @@ Validation of the python code returned some warnings and errors. They are presen
 ![Validation error on edit page](documentation/validation/validation-edit-extra-th.png)
 
 ### **Resolved problems**
+
+
+
 
 ### **Bugs**
 
@@ -240,6 +245,10 @@ Another bug that showed up was for the sign up form. If a user tries to sign up 
 ![Bug causing button to be missplaced on sign up form](documentation/bugs/bug-signup-button-outside-card.png) 
 
 ## **Deployment**
+
+
+
+
 
 ## **Technologies, Languages, Frameworks, Libraries, Servers, Programs and Sites used**
 
@@ -345,6 +354,7 @@ All images used come from Pixabay.com, Unsplash.com and Pexels.com.
 - [Transformers](https://pixabay.com/photos/transformers-optimus-prime-car-1333083/)
 - [Mamma mia sing along](https://pixabay.com/photos/the-star-of-pop-music-figure-of-wax-3981219/)
 - [Interstellar](https://pixabay.com/photos/moon-landing-apollo-11-nasa-space-4924131/)
+- [Sound of music](https://pixabay.com/photos/julie-andrews-female-portrait-1266086/)
 
 [Tinypng](https://tinypng.com/) was used to compress the images.
 

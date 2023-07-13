@@ -24,17 +24,15 @@
                     <table id="booking-filter-form">
                         {{ myfilter.form }}
                     </table>
+                    <button type="submit" class="btn waves-effect red darken-3 btn-medium hoverable">Search</button>
                 </form>
-            </div>
-            <div class="col s12 m3 l4">
-                <button type="submit" class="btn waves-effect red darken-3 btn-medium hoverable">Search</button>
             </div>
         </div>
         <div class="row">
             <!-- Materialize collapsible view for booking form. Altered to fit this project.
                 Also using Materialize select dropdown list to show snack menu.
             https://materializecss.com/collapsible.html 
-            https://materializecss.com/select.html --> 
+            https://materializecss.com/select.html -->
             <ul class="collapsible">
                 {% for showtime in showtimes %}
                 <li>

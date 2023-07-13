@@ -34,7 +34,7 @@ class Film(models.Model):
 
 class FilmShowtime(models.Model):
     """ Model for film program """
-    showtimedate = models.DateField(unique=True)
+    showtimedate = models.DateField()
     filmtitle = models.ForeignKey(
         Film, on_delete=models.SET_NULL, null=True,
         related_name='filmtitle', verbose_name='Film title')
@@ -59,7 +59,7 @@ class Booking(models.Model):
     """ Model for ticket booking """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.ForeignKey(
-        FilmShowtime, to_field="showtimedate", on_delete=models.SET_NULL,
+        FilmShowtime, on_delete=models.SET_NULL,
         null=True, related_name='filmdate')
     time = models.TimeField(max_length=10)
     numoftickets = models.IntegerField(
