@@ -246,13 +246,13 @@ The above features are listed in a GitHub Project used as backlog for the app. T
 
 The site has been tested so that it works on different browsers. It has been tested on Google Chrome, Microsoft Edge, Firefox and Samsung Internet.
 
-The accessibility of the site has been checked with Lighthouse in DevTools. The results for the final site is shown below. The first image is for the home page and the second for the booking page. The other pages had as high scores as the home page. KONTROLLLLLLLLLLEERRRA DEETTAAA!
+The accessibility of the site has been checked with Lighthouse in DevTools. The results for the final site is shown below.
 
-The first Lighthouse test showed an overall good performance for the site. The testing showed a slightly lower score, 87-89% accessability, for the booking page (booking.html) and edit booking page (edit.html) due to missing labels on form fields and use of `<h6>` elements in the footer. To solve this a changed all `<h6>` elements to `<p>` elements. A label was added in filters.py to the filter date form, replacing a `<p>` element and icon that was there before. Then I did some restyling in style.css to make the form look good again. For the edit booking form I added labels in forms.py using a widget and then hidd the labels with `visibility: hidden` and `font-size: 0;` in style.css in order for the booking data to still fit into the table nicely. This made the accessability score increase to 98%. 
+The first Lighthouse test showed an overall good performance. The testing showed a slightly lower score, 87-89% accessability, for the booking page (booking.html) and edit booking page (edit.html) due to missing labels on form fields and use of `<h6>` elements in the footer. To solve this a changed all `<h6>` elements to `<p>` elements. A label was added in filters.py to the filter date form, replacing a `<p>` element and icon that was there before. Then I did some restyling in style.css to make the form look good again. For the edit booking form I added labels in forms.py using a widget and then hidd the labels with `visibility: hidden` and `font-size: 0;` in style.css in order for the booking data to still fit into the table nicely. This made the accessability score increase to 98%. 
 
 For the booking page the performance score dropped when adding data to the FilmShowtime model as it includes many images. These images are more or less the essence of the site layout and very important to make it attractive for the user. However, the choice of images are limited to free images therefore making it hard to find images of smaller size. Efforts has been made to make all images smaller but putting them through [Tinypng](https://tinypng.com/).
 
-![Lighthouse testing score](documentation/validation/lighthouse-test1.png)
+![Lighthouse testing score](documentation/validation/lighthouse-test-home.png)
 ![Lighthouse testing score](documentation/validation/lighthouse-test2.png)
 
 ### **Manual testing**
