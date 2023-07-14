@@ -250,10 +250,39 @@ The accessibility of the site has been checked with Lighthouse in DevTools. The 
 
 The first Lighthouse test showed an overall good performance. The testing showed a slightly lower score, 87-89% accessability, for the booking page (booking.html) and edit booking page (edit.html) due to missing labels on form fields and use of `<h6>` elements in the footer. To solve this a changed all `<h6>` elements to `<p>` elements. A label was added in filters.py to the filter date form, replacing a `<p>` element and icon that was there before. Then I did some restyling in style.css to make the form look good again. For the edit booking form I added labels in forms.py using a widget and then hidd the labels with `visibility: hidden` and `font-size: 0;` in style.css in order for the booking data to still fit into the table nicely. This made the accessability score increase to 98%. 
 
-For the home and booking page the performance score dropped when adding data to the FilmShowtime model as it includes images. These images are more or less the essence of the site layout and very important to make it attractive for the user. However, the choice of images are limited to free images therefore making it hard to find images of smaller size. Efforts has been made to make all images smaller by putting them through [Tinypng](https://tinypng.com/).
+For the home and booking page the performance score dropped when adding data to the FilmShowtime model as it includes images. These images are important to make the site attractive for the user. However, the choice of images are limited to free images therefore making it hard to find images of smaller size. Efforts has been made to make all images smaller by putting them through [Tinypng](https://tinypng.com/).
+
+- Home page
 
 ![Lighthouse testing score](documentation/validation/lighthouse-test-home.png)
-![Lighthouse testing score](documentation/validation/lighthouse-test2.png)
+
+- Booking page
+
+![Lighthouse testing score](documentation/validation/lighthouse-test-booking.png)
+
+- Sign up page
+
+![Lighthouse testing score](documentation/validation/lighthouse-test-signup.png)
+
+- Login page
+
+![Lighthouse testing score](documentation/validation/lighthouse-test-login.png)
+
+- Logout page
+
+![Lighthouse testing score](documentation/validation/lighthouse-test-logout.png)
+
+- My bookings page
+
+![Lighthouse testing score](documentation/validation/lighthouse-test-my-bookings.png)
+
+- Edit page
+
+![Lighthouse testing score](documentation/validation/lighthouse-test-edit.png)
+
+- Cancel page
+
+![Lighthouse testing score](documentation/validation/lighthouse-test-cancel.png)
 
 ### **Manual testing**
 
