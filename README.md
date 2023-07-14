@@ -244,18 +244,135 @@ The above features are listed in a GitHub Project used as backlog for the app. T
 
 ## **Testing**
 
-TABEEEEEEEEEEELL???????????
-
 The site has been tested so that it works on different browsers. It has been tested on Google Chrome, Microsoft Edge, Firefox and Samsung Internet.
 
-The accessibility of the site has been checked with Lighthouse in DevTools. The results for the final site is shown below. The first image is for the home page and the second for the booking page. The other pages had as high scores as the home page.
-
-![Lighthouse testing score](documentation/validation/lighthouse1)
-![Lighthouse testing score](documentation/validation/lighthouse2)
+The accessibility of the site has been checked with Lighthouse in DevTools. The results for the final site is shown below. The first image is for the home page and the second for the booking page. The other pages had as high scores as the home page. KONTROLLLLLLLLLLEERRRA DEETTAAA!
 
 The first Lighthouse test showed an overall good performance for the site. The testing showed a slightly lower score, 87-89% accessability, for the booking page (booking.html) and edit booking page (edit.html) due to missing labels on form fields and use of `<h6>` elements in the footer. To solve this a changed all `<h6>` elements to `<p>` elements. A label was added in filters.py to the filter date form, replacing a `<p>` element and icon that was there before. Then I did some restyling in style.css to make the form look good again. For the edit booking form I added labels in forms.py using a widget and then hidd the labels with `visibility: hidden` and `font-size: 0;` in style.css in order for the booking data to still fit into the table nicely. This made the accessability score increase to 98%. 
 
-HUUUUUUURRRRR SEERRRR performance score ut för booking page när sidan är deployed till heroku? OMMMM det ser bra ut där, ta bort nedan ----->  For the booking page the performance score was lowered when adding data to the FilmShowtime model as it includes many images. These iamges are more or less the essence of the site layout and very important to make it attractive for the user. The choice of images are also limited to free images therefore making it hard to find images of smaller size.  
+For the booking page the performance score dropped when adding data to the FilmShowtime model as it includes many images. These images are more or less the essence of the site layout and very important to make it attractive for the user. However, the choice of images are limited to free images therefore making it hard to find images of smaller size. Efforts has been made to make all images smaller but putting them through [Tinypng](https://tinypng.com/).
+
+![Lighthouse testing score](documentation/validation/lighthouse-test1.png)
+![Lighthouse testing score](documentation/validation/lighthouse-test2.png)
+
+### **Manual testing**
+
+#### **Navbar**
+| Feature | Action | Expected outcome | Pass/Fail |
+| --- | --- | --- | --- |
+| logo | hover | change color to red | pass |
+| navbar items | hover | change background color to light red | pass |
+| logo | click | redirect to home | pass |
+| navbar Home item | click | redirect to home | pass |
+| navbar Book tickets item | click | open Book Tickets page | pass |
+
+When logged in:
+| Feature | Action | Expected outcome | Pass/Fail |
+| --- | --- | --- | --- |
+| navbar My Bookings item | click | open My Bookings page | pass |
+| navbar Logout item | click | open Log out page | pass |
+
+When logged out:
+| Feature | Action | Expected outcome | Pass/Fail |
+| --- | --- | --- | --- |
+| navbar Sign Up item | click | open Sign Up page | pass |
+| navbar Login item | click | open Log in page | pass |
+
+#### **Footer**
+| Feature | Action | Expected outcome | Pass/Fail |
+| --- | --- | --- | --- |
+| social media icons | hover | change color to red | pass |
+| social media icons | click | open social media page in separate tab | pass |
+
+#### **Home page**
+| Feature | Action | Expected outcome | Pass/Fail |
+| --- | --- | --- | --- |
+| film card image | click | wave effect | pass |
+| film card image, text and icon shown on card when page is rendered | click | reveal more information about the film i.e. storyline, director, cast and so on | pass |
+| film title and icon, on card that has revealed film information i.e. has been clicked already | click | hide revealed film information (storyline, director and so on) | pass |
+| film card with revealed film information(storyline, director and so on) | scroll | be able to read all revealed information | pass |
+| trailer link in film card with revealed film information(storyline, director and so on) | click | open trailer vidoe in separate tag | pass |
+
+#### **Book tickets page**
+| Feature | Action | Expected outcome | Pass/Fail |
+| --- | --- | --- | --- |
+| "register an account" link | click | open Sign Up page | pass |
+| "log in" link | click | open Log In page | pass |
+| calender icon in form date filter above film table | click | open datepicker where a date can be chosen | pass |
+| date field in date form | click on date in datepicker | filled with the date picked | pass |
+| search button | click | filter below film showtime table depending on date chosen in datepicker | pass |
+| film table row | click | reveal film runtime and booking form for the film on the clicked row and stil keep the whole showtime table within the yellow booking form container | pass |
+| search button | hover | shadow on the button | pass |
+| "Choose number of tickets" booking form field | click | be able to add a number by typing or clicking the arrow buttons | pass |
+| "Some snacks" booking form field | click | open select meny with snacks options that can be chosen (only on option) | pass |
+
+
+When logged in:
+| Feature | Action | Expected outcome | Pass/Fail |
+| --- | --- | --- | --- |
+| "Book tickets" button | click | if form input is valid by adding between 1-8 of tickets, make booking and redirect to My Bookings page where booking is displayed | pass |
+| "Book tickets" button | click | if form input is invalid by not adding between 1-8 of tickets, don´t make booking, redirect to booking page and show error message | pass |
+| "Book tickets" button | click | if error message is shown, it fades after 6 seconds | pass |
+| "Book tickets" button | hover | shadow on the button | pass |
+| "Book tickets" button | click | if only snacks but no number is added in the "number of tickets" form field, a form field alert help text is displayed for the tickets form field | pass |
+| "Book tickets" button | click | wave effect | pass |
+
+#### **My bookings page**
+| Feature | Action | Expected outcome | Pass/Fail |
+| --- | --- | --- | --- |
+| all buttons | hover | shadow on the button | pass |
+| all button | click | wave effect | pass |
+| all Edit buttons | click | open Edit page | pass |
+| all Cancel buttons | click | open Cancel page | pass |
+
+#### **Edit page**
+| Feature | Action | Expected outcome | Pass/Fail |
+| --- | --- | --- | --- |
+| "Update" button | hover | shadow on the button | pass |
+| "Tickets" table form field | click | be able to add a number by typing or clicking the arrow buttons | pass |
+| "Snacks" table form field | click | open select meny with snacks options that can be chosen (only on option) | pass |
+| "Update" button | click | if form input is valid by adding between 1-8 of tickets, update booking and redirect to booking page where updated booking is shown with a updated total cost. Also show a success message | pass |
+| "Update" button | click | if success or error message is shown, it fades after 6 seconds | pass |
+| "Update" button | click | if form input is invalid by not adding between 1-8 of tickets, don´t update booking, redirect to edit page, prefill form with stored booking data from database and show error message | pass |
+| "Update" button | click | if only snacks but no number is added in the "tickets" form field, a form field alert help text is displayed for the tickets form field | pass |
+| all button | click | wave effect | pass |
+
+#### **Cancel page**
+| Feature | Action | Expected outcome | Pass/Fail |
+| --- | --- | --- | --- |
+| "Yes, cancel booking" button | click | wave effect | pass |
+| "Yes, cancel booking" button | hover | shadow on the button | pass |
+| "Yes, cancel booking" button | click | cancel booking and redirect to My Bookings page where cancelled booking as been removed and a success message is shown | pass |
+| "Yes, cancel booking" button | click | if success message is shown, it fades after 6 seconds | pass |
+
+#### **Sign Up page**
+| Feature | Action | Expected outcome | Pass/Fail |
+| --- | --- | --- | --- |
+| "log in" link | click | open Log In page | pass |
+| "Register" button | click | wave effect | pass |
+| "Register" button | hover | shadow on the button | pass |
+| "Register" button | click | if user form input is valid by entering correct input to all fields, open home page, replace Sign Up navbar item with My Bookings item and Login item with Logout item, and show success message | pass |
+| "Register" button | click | if success message is shown, it fades after 6 seconds | pass |
+| "Register" button | click | if user form input is invalid by not entering correct input to all fields, show Django allauth error messages on form until all fields have correct input | pass |
+
+#### **Log In page**
+| Feature | Action | Expected outcome | Pass/Fail |
+| --- | --- | --- | --- |
+| "here" link | click | open Sign Up page | pass |
+| "Log In" button | click | wave effect | pass |
+| "Log In" button | hover | shadow on the button | pass |
+| "Log In" button | click | if user form input is valid by entering a registered username and password, open home page, replace Sign Up navbar item with My Bookings item and Login item with Logout item and show success message | pass |
+| "Log In" button | click | if user form input is invalid by not entering any input or only enter input in on form field, a form field alert help text is displayed prompting for input | pass |
+| "Log In" button | click | if user form input is invalid by entering invalid username and/or password, error message is shown | pass |
+| "Log in" button | click | if success or error message is shown, it fades after 6 seconds | pass |
+
+#### **Log Out page**
+| Feature | Action | Expected outcome | Pass/Fail |
+| --- | --- | --- | --- |
+| "Yes, log out" button | click | wave effect | pass |
+| "Yes, log out" button | hover | shadow on the button | pass |
+| "Yes, log out" button | click | log out, open home page, display log out information message, replace My Bookings navbar item with Sign Up item and Logout item with Login item | pass |
+| "Yes, log out" button | click | if succes message is shown, it fades after 6 seconds | pass |
 
 ### **Validator testing**
 
