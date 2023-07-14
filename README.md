@@ -136,7 +136,103 @@ The genre model was created so that each film can have a genre added to it. This
 
 ### **Existing features**
 
+#### **Features relevant to all pages**
 
+##### **Header**
+- Contains the logo and navigation bar. 
+- Is located at the top of every page, as the user would expect. 
+- The header provides links to all pages of the site to easily navigate between them. The logo is linked to the home page, making it easy to navigate back to it at any time. The navbar links to the other pages on the site; Book tickets, My bookings, Sign up, Login/Logout.
+- The links turn dark red or change background color when hovering over them, indicating to the user that the object is clickable.
+- When the user has logged in, the Sign Up navbar item changes My Bookings item instead, where the user gets access to it´s bookings.
+- The navbar collapses into a hamburger icon on mobile devices adn when clicking on it a sidnavbar opens up. 
+
+![Header](documentation/readme-header.png)
+
+##### **Footer**
+- The footer is located at the bottom of every page. 
+- Contains icons with links to external social media pages which is useful to the user in order to get even more interesting information about what Cinerama Cinema offers.
+- The links are opened in new tabs, so that the user can stay on the Cinerama Cinema site.
+- The links turn dark read when hovering over them, indicating to the user that the object is clickable.
+- Also contains contact information and opening hours so that the user quickly can see this information on all pages of the site. 
+
+![Footer](documentation/readme-footer.png)
+
+#### **Home page**
+
+##### **Intro section**
+- aims to give the user a warm welcome and is useful to the users as it gives them a first glance of what Cincerama Cinema offers. It aims to make them interested and to make them want to continue exploring the page.
+- the intro is short so that the user can go to the main part of the home page as quickly as possible (the film section)
+
+![Home page intro](documentation/readme-home-intro.png)
+
+##### **Film section**
+- provides the user with interesting facts about all films available to watch at the cinema. 
+- the facts are revealed when clicking on a film card, making the site more attractive to use. 
+- the most important fact (film title) and some extra facts are shown directly, without having to click. This has been done so that users that doesn´t want to read more about the films can use the home page as a list of films to quickly look through before heading to the booking page. 
+- The reveal functionality is done with Materialize. 
+
+![Home page films](documentation/readme-home-films.png)
+![Home page card](documentation/readme-card-reveal.png)
+
+#### **User pages**
+The sign up, log in and log out functionality was created with Django allauth.
+
+##### **Sign up**
+- useful to the user as it makes it possible to book tickets. Provides a form with a submit button in the end.
+- When a user has signed in the user is logged in.
+
+![Sign up page](documentation/readme-sign-up.png)
+
+##### **Log in**
+- A success toast message is shown when the user has logged in successfully.
+- When the user has logged in the My bookings navbar item replaces the Sign up item and the the Login navbar item changes to Logout. 
+
+![Log in page](documentation/readme-log-in.png)
+![Toast message](documentation/readme-toast.png)
+
+##### **Log out**
+- A success toast message is shown when the user has logged out successfully.
+- When the user has logged in the Logout navbar item changes to Login and the Sign up item replaces the My bookings item.
+
+![Log out page](documentation/readme-log-out.png)
+
+#### **Booking page**
+- shows all film showtimes/the film program in a table with a collapsible row for each film. Each row displays the film image, title and rundate.
+- When clicking on a film the film runtime and booking form for that film is revealed. The "Book tickets" button in the form only shows if the user is logged in.
+- The submit button has a green color and a check icon to make it inviting to the user.
+- The number of tickets can be chosen - min 1 and max 8 tickets. If the number of tickets entered by the user is outside of these limits, the user will get a toast message that the booking failed when they try to submit it by clicking the button.
+- Snacks can also be booked, from a dropdown menu. This is optional and will not return any error message if not added to the booking. The alternative Nono £0.00 is the initial value, so the user won´t get any unexpected costs if they happen to miss that snacks can be booked.
+- if the booking is successful the user is taken to the My Bookings page where they can see that the booking has been added to the list of bookings. 
+- this page also contains a filter. It filters the film showtimes depending on date chosen by the user. If no date is chosen all film showtimes are shown. To filter the films, the user needs to choose a date in the input form above the film showtimes and click the "Search" button. 
+
+![Booking page](documentation/readme-book-tickets1.png)
+![Booking page](documentation/readme-book-tickets2.png)
+![Booking page dropdown](documentation/readme-book-tickets3.png)
+![Booking page filter](documentation/readme-book-tickets4.png)
+
+#### **My bookings page**
+- show a table/list with all the bookings made by the logged in user, giving the user a useful overview of tickets they have booked and the cost for them.
+- on each booking row there is a Edit and a Cancel button which, when clicked, takes the user to a Edit and a Cancel page. 
+- The colors of the cancel button is a bit alarming to the user, which is usually the case for something that will delete a record. The color of the edit button is more neutral as the edit button won´t cause as much problems if unintentionally clicked.
+
+![My bookings page](documentation/readme-my-bookings1.png)
+
+#### **Edit page**
+- at this page the user can edit a booking. It provides the user with a edit form to edit the number of tickets and snacks. To edit the user needs add correct form input and click the "Update" button. 
+- the form is built up in the same way as in the book tickets page, so that the user recognise the format. This means that min 1 and max 8 tickets can be booked and the snacks are chosen from a dropdown menu. 
+- the form is prefilled with the booking data for the booking chosen to edit.
+- when a booking is updated the user is taken to the book tickets page (so that more tickets easily can be booked) and a success toast message is shown so the user knows the booking was added. 
+- if the editing of the booking wasn´t correct, i.e. less than 1 ticket chosen, the user is taken to the edit page again and the stored correct booking data is prefilled to the form again.
+
+![Edit page](documentation/readme-edit.png) 
+
+#### **Cancel page**
+- When the user chooses to cancel a booking by clicking the "Cancel" button on the My bookings page, they are taken to the Cancel page.
+- On this page they are asked to confirm that they want to cancel the booking, so that the user has a chance to rethink the decision. They also get a view of the booking they are about to cancel. 
+- To cancel the booking they need to confirm by clicking the button.
+- If the cancellation is successful the user is taken to the My bookings page again and a success toast message is shown. 
+
+![Cancel page](documentation/readme-cancel.png) 
 
 
 ### **Future features**
@@ -150,11 +246,16 @@ The above features are listed in a GitHub Project used as backlog for the app. T
 
 TABEEEEEEEEEEELL???????????
 
-The accessibility of the site has been checked with Lighthouse in DevTools. The results for the final site is shown below.
+The site has been tested so that it works on different browsers. It has been tested on Google Chrome, Microsoft Edge, Firefox and Samsung Internet.
 
-![Lighthouse testing score](documentation/validation/NNNNNNNNAAAAAAAAAMMMMMMMMMNNNNNN PÅ LIGHTHOUSE BILD FÖR FINAL SCORE)
+The accessibility of the site has been checked with Lighthouse in DevTools. The results for the final site is shown below. The first image is for the home page and the second for the booking page. The other pages had as high scores as the home page.
 
-The first Lighthouse test showed an overall good performance for the site. The testing showed a slightly lower score, 87-89% accessability, for the booking page (booking.html) and edit booking page (edit.html) due to missing labels on form fields and use of `<h6>` elements in the footer. To solve this a changed all `<h6>` elements to `<p>` elements. A label was added in filters.py to the filter date form, replacing a `<p>` element and icon that was there before. Then I did some restyling in style.css to make the form look good again. For the edit booking form I added labels in forms.py using a widget and then hidd the labels with `visibility: hidden` and `font-size: 0;` in style.css in order for the booking data to still fit into the table nicely. This made the accessability score increase to 91% and 98%. - KKKKKKAAAAAAAAAAAANNNNNNNNNSSSSSSKKKKEEE ÄNDRA NÅGOT, BEROENDE PÅ VAD SISTA TESTERNA VISAR!
+![Lighthouse testing score](documentation/validation/lighthouse1)
+![Lighthouse testing score](documentation/validation/lighthouse2)
+
+The first Lighthouse test showed an overall good performance for the site. The testing showed a slightly lower score, 87-89% accessability, for the booking page (booking.html) and edit booking page (edit.html) due to missing labels on form fields and use of `<h6>` elements in the footer. To solve this a changed all `<h6>` elements to `<p>` elements. A label was added in filters.py to the filter date form, replacing a `<p>` element and icon that was there before. Then I did some restyling in style.css to make the form look good again. For the edit booking form I added labels in forms.py using a widget and then hidd the labels with `visibility: hidden` and `font-size: 0;` in style.css in order for the booking data to still fit into the table nicely. This made the accessability score increase to 98%. 
+
+HUUUUUUURRRRR SEERRRR performance score ut för booking page när sidan är deployed till heroku? OMMMM det ser bra ut där, ta bort nedan ----->  For the booking page the performance score was lowered when adding data to the FilmShowtime model as it includes many images. These iamges are more or less the essence of the site layout and very important to make it attractive for the user. The choice of images are also limited to free images therefore making it hard to find images of smaller size.  
 
 ### **Validator testing**
 
@@ -387,7 +488,7 @@ When adding a new posts to a model, via the admin site, by default the new posts
 
 [Tinypng.com](https://tinypng.com/) was used to minimize the image size of all images used.
 
-I used the readme.md file for [The Easy Eater project](https://github.com/AliOKeeffe/PP4_My_Meal_Planner) as inspiration for the readme.md file for this project. I also used the entity-relationship diagram made for that project to help identify what data types to use for the data in this project. More inspiration for the readme was gotten from the [Traffic Sign Memory project](https://github.com/sarasm93/traffic-sign-memory) and the [Blog Website PP4 project](https://github.com/jyotiyadav2508/Blog_Website_PP4). Some text for the deployment section of the readme was taken from the readme of my own [Trivia quiz project](https://github.com/sarasm93/trivia-quiz).
+I used the readme.md file for [The Easy Eater project](https://github.com/AliOKeeffe/PP4_My_Meal_Planner) as inspiration for the readme.md file for this project. I also used the entity-relationship diagram made for that project to help identify what data types to use for the data in this project. More inspiration for the readme was gotten from the [Traffic Sign Memory project](https://github.com/sarasm93/traffic-sign-memory) and the [Blog Website PP4 project](https://github.com/jyotiyadav2508/Blog_Website_PP4). Some text for the deployment section of the readme was taken from the readme of my [Trivia quiz project](https://github.com/sarasm93/trivia-quiz), and for the features section some text was taken from my [Studio Dancers project](https://github.com/sarasm93/studio-dancers).
 
 The user interface design for this project was inspired by the website for [Spegeln cinema](https://biografspegeln.se/). 
 
