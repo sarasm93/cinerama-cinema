@@ -314,7 +314,7 @@ When logged in:
 | "Book tickets" button | click | if form input is invalid by not adding between 1-8 of tickets, don´t make booking, redirect to booking page and show error message | pass |
 | "Book tickets" button | click | if error message is shown, it fades after 6 seconds | pass |
 | "Book tickets" button | hover | shadow on the button | pass |
-| "Book tickets" button | click | if only snacks but no number is added in the "number of tickets" form field, a form field alert help text is displayed for the tickets form field | pass |
+| "Book tickets" button | click | if only snacks but no number is added in the "number of tickets" form field, nothing will happen | pass |
 | "Book tickets" button | click | wave effect | pass |
 
 #### **My bookings page**
@@ -334,7 +334,7 @@ When logged in:
 | "Update" button | click | if form input is valid by adding between 1-8 of tickets, update booking and redirect to booking page where updated booking is shown with a updated total cost. Also show a success message | pass |
 | "Update" button | click | if success or error message is shown, it fades after 6 seconds | pass |
 | "Update" button | click | if form input is invalid by not adding between 1-8 of tickets, don´t update booking, redirect to edit page, prefill form with stored booking data from database and show error message | pass |
-| "Update" button | click | if only snacks but no number is added in the "tickets" form field, a form field alert help text is displayed for the tickets form field | pass |
+| "Update" button | click | if only snacks but no number is added in the "tickets" form field, nothing will happen | pass |
 | all button | click | wave effect | pass |
 
 #### **Cancel page**
@@ -362,7 +362,7 @@ When logged in:
 | "Log In" button | click | wave effect | pass |
 | "Log In" button | hover | shadow on the button | pass |
 | "Log In" button | click | if user form input is valid by entering a registered username and password, open home page, replace Sign Up navbar item with My Bookings item and Login item with Logout item and show success message | pass |
-| "Log In" button | click | if user form input is invalid by not entering any input or only enter input in on form field, a form field alert help text is displayed prompting for input | pass |
+| "Log In" button | click | if user form input is invalid by not entering any input or only enter input in on form field, nothing will happen | pass |
 | "Log In" button | click | if user form input is invalid by entering invalid username and/or password, error message is shown | pass |
 | "Log in" button | click | if success or error message is shown, it fades after 6 seconds | pass |
 
