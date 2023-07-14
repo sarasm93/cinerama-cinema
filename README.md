@@ -440,7 +440,6 @@ After:
 #### **Edit page**
 **Error:** An error saying that the column with for `<td>` in the edit.html file is not matching the width for the `<th>`. This is caused by the fact that one extra `<th>` element had been added to the edit table to make the "Update" button fit nicely into the table, with som extra space around it. <br>
 **Solution:** As the space around the button can be added with styling instead, the extra `<th>` element was removed to solve the error. 
-![Validation error on edit page](documentation/validation/validation-edit-extra-th.png)
 
 ### **Resolved problems and bugs**
 
@@ -467,7 +466,7 @@ Another bug that showed up was for the sign up form. If a user tries to sign up 
 
 The site was deployed to Heroku from GitHub with the following steps:
 
-1. Create an external database using [ElephantSQL](elephantsql.com). When logged in to your ElephantSQL account, click on “Create New Instance”, choose a plan and give it a name. Then select a region, click the "Review" button to view the details for your plan and finally click "Create instance". 
+1. Create an external database using [ElephantSQL](https://www.elephantsql.com/). When logged in to your ElephantSQL account, click on “Create New Instance”, choose a plan and give it a name. Then select a region, click the "Review" button to view the details for your plan and finally click "Create instance". 
 
 2. Create a Heroku app by logging in to your Heroku account. Click the "New" button in the top right corner and then "Create new app". Give it a name, choose a region and then click the "Create app" button. 
 
@@ -531,7 +530,7 @@ The link the file to the templates directory in Heroku by typing `TEMPLATES_DIR 
 
 ### **Servers**
 - [Gunicorn](https://gunicorn.org/) - Python WSGI HTTP Server acting as the web server for the project
-- [PostgreSQL]()
+- [PostgreSQL](https://www.postgresql.org/)
 
 ### **Programs and Sites**
 - [GitHub](https://github.com/)- version control and as agile tool
@@ -555,7 +554,7 @@ To filter films on the "Book tickets" page based on their showtime date, code fr
 
 Code on lines 309-321 in style.css was taken from [this Stackoverflow site](https://stackoverflow.com/questions/34248898/how-to-validate-select-option-for-a-materialize-dropdown). It helps to show the error message for invalid input for "Choose number of tickets" field in booking form.
 
-All Javascript code in the script.js file is taken from [Materializecss.com](materializecss.com) and used for initialization of functionality provided by Materialize components used in the project.
+All Javascript code in the script.js file is taken from [Materializecss.com](https://materializecss.com/) and used for initialization of functionality provided by Materialize components used in the project.
 
 Code for alert messages was first taken from the [Django project documentation](https://docs.djangoproject.com/en/4.2/ref/contrib/messages/#displaying-messages). But as I discovered that Materialize toasts could be used instead, the code from the Django project was altered to make the toasters work. I also used this [Pythontutorial.net page](https://www.pythontutorial.net/django-tutorial/django-edit-form/) and this [Stackoverflow page](https://stackoverflow.com/questions/39770562/making-djangos-messages-appear-in-javascript-alert-rather-than-html) to better understand how to use messages.
 
@@ -602,8 +601,6 @@ When creating the user stories for this project, I used the stories for Code Ins
 When adding a new posts to a model, via the admin site, by default the new posts are shown in the admin site list as '<model name> Object (1)', '<model name> Object (2)' and so on. To show a meaningful string instead, so that each post is understandable the below function was taken from the [Hello Django project](https://github.com/ckz8780/ci-fsf-hello-django/blob/9f484408bea5cbc9cc5fb45c0feebc3998ff5f49/todo/models.py).
 `def __str__(self):
     return self.<model field>`
-
-[Tinypng.com](https://tinypng.com/) was used to minimize the image size of all images used.
 
 I used the readme.md file for [The Easy Eater project](https://github.com/AliOKeeffe/PP4_My_Meal_Planner) as inspiration for the readme.md file for this project. I also used the entity-relationship diagram made for that project to help identify what data types to use for the data in this project. More inspiration for the readme was gotten from the [Traffic Sign Memory project](https://github.com/sarasm93/traffic-sign-memory) and the [Blog Website PP4 project](https://github.com/jyotiyadav2508/Blog_Website_PP4). Some text for the deployment section of the readme was taken from the readme of my [Trivia quiz project](https://github.com/sarasm93/trivia-quiz), and for the features section some text was taken from my [Studio Dancers project](https://github.com/sarasm93/studio-dancers).
 
